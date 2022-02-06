@@ -12,11 +12,17 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "compile:sass": "node-sass src/scss/styles.scss src/css/styles.css -w"
   },
   "dependencies": {
     "gatsby": "^4.6.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.1"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1"
   }
 }
