@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5, h6, p {
     .menu.ui.navbar .navbarHolder .item {
       color: white;
       font-size: 25px; }
+      .menu.ui.navbar .navbarHolder .item a {
+        color: white; }
     .menu.ui.navbar .navbarHolder .item:hover {
       cursor: pointer;
       background-color: #2196c4;

@@ -1,6 +1,7 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.css';
-import { Container, Menu, Image } from 'semantic-ui-react'
+import { Link } from 'gatsby';
+import { Container, Menu, Image } from 'semantic-ui-react';
 import "../css/styles.css";
 import burgerMenu from '../images/bars-solid.png';
 
@@ -13,15 +14,16 @@ const HomePage = () => {
             <main>
                 <Menu className='navbar'>
                     <div className='navbarHolder'>
+
                         <Menu.Item
                             name='ABOUT'
                         >
-                            ABOUT
+                            <Link to="/"> ABOUT</Link>
                         </Menu.Item>
                         <Menu.Item
                             name='LOGIN/REGISTER'
                         >
-                            LOGIN / REGISTER
+                            <Link to="/login"> LOGIN / REGISTER</Link>
                         </Menu.Item>
                         <Menu.Item
                             name='TRACKING'
