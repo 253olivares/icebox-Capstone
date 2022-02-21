@@ -515,25 +515,41 @@ h1, h2, h3, h4, h5, h6, p {
 
 .container.ui.dashboardHouseholds {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 75px;
+  padding-bottom: 75px;
   background-color: #CCEAF6; }
   .container.ui.dashboardHouseholds .houseContainer {
     max-width: 1127px;
     margin-left: auto;
     margin-right: auto; }
     .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
-      padding: 20px;
+      padding: 40px;
       border-radius: 25px;
       background-color: white;
       width: 100%;
       min-height: 200px;
       border: 1px solid black;
       margin-top: 50px; }
+      .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 225px;
+        height: 200px; }
+        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One img {
+          width: 225px;
+          height: 200px;
+          background-color: white;
+          margin-bottom: 10px; }
+        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One p {
+          font-size: 20px;
+          margin-bottom: 5px; }
+        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One span {
+          color: #FC9E02; }
 
 .container.ui.individualFrdges {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 75px;
   padding-bottom: 100px; }
   .container.ui.individualFrdges .iFContainer {
     max-width: 1127px;
