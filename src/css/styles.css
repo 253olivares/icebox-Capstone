@@ -534,7 +534,7 @@ h1, h2, h3, h4, h5, h6, p {
 .container.ui.individualFrdges {
   width: 100%;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 100px; }
   .container.ui.individualFrdges .iFContainer {
     max-width: 1127px;
     margin-left: auto;
@@ -552,9 +552,21 @@ h1, h2, h3, h4, h5, h6, p {
         border-radius: 25px;
         background-color: #FC9E02;
         color: white;
-        padding: 20px;
-        display: flex; }
+        padding: 30px;
+        display: flex;
+        align-items: center; }
         .container.ui.individualFrdges .iFContainer .fridges .fridges_One img {
           margin-right: 50px;
           width: 150px;
-          height: 100px; }
+          height: 100px;
+          background-color: white; }
+        .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation h1 {
+          margin-bottom: 5px;
+          font-size: 30px; }
+        .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation hr {
+          border: none;
+          background-color: white;
+          height: 5px;
+          margin-bottom: 10px; }
+        .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation P {
+          margin-bottom: 5px; }

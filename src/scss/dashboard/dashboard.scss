@@ -42,7 +42,7 @@
 .container.ui.individualFrdges{
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     .iFContainer{
         max-width: 1127px;
         margin-left: auto;
@@ -60,12 +60,30 @@
                 border-radius: 25px;
                 background-color: #FC9E02;
                 color: white;
-                padding: 20px;
+                padding: 30px;
                 display: flex;
+                align-items: center;
                 img{
                     margin-right: 50px;
                     width: 150px;
                     height: 100px;
+                    background-color: white;
+                }
+                .drigeinformation{
+                    h1{
+                        margin-bottom: 5px;
+                        font-size: 30px;
+                    }
+                    hr{
+                        border: none;
+                        background-color: white;
+                        height: 5px;
+                        margin-bottom: 10px;
+                    }
+                    P{
+
+                        margin-bottom: 5px;
+                    }
                 }
             }
         }
