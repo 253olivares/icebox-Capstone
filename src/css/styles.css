@@ -344,3 +344,156 @@ h1, h2, h3, h4, h5, h6, p {
   .container.ui.iceboxShopping .shoppingHolder .rightFlex img {
     width: 250px;
     height: 200px; } }
+
+.container.ui.loginBox {
+  min-height: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .container.ui.loginBox .loginContainer {
+    width: 100%;
+    min-height: 600px;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #707070; }
+    .container.ui.loginBox .loginContainer .leftBox {
+      display: flex;
+      width: 50%;
+      background-color: #FC9E02; }
+    .container.ui.loginBox .loginContainer .rightBox {
+      width: 50%;
+      text-align: center;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      position: relative; }
+      .container.ui.loginBox .loginContainer .rightBox .bigHead {
+        color: #4CB6E1;
+        margin-bottom: 0px;
+        font-size: 35px; }
+      .container.ui.loginBox .loginContainer .rightBox .subHead {
+        color: #4CB6E1;
+        margin-bottom: 0px;
+        font-size: 20px;
+        padding-bottom: 85px; }
+      .container.ui.loginBox .loginContainer .rightBox .emailInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        margin-bottom: 20px;
+        color: #4CB6E1; }
+      .container.ui.loginBox .loginContainer .rightBox .passwordInput {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px; }
+      .container.ui.loginBox .loginContainer .rightBox .subForgor {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: left;
+        margin-bottom: 15px; }
+      .container.ui.loginBox .loginContainer .rightBox .logOption {
+        background-color: #FC9E02;
+        width: 150px;
+        padding: 10px;
+        border-radius: 25px;
+        border: none;
+        color: white;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        font-weight: bold;
+        box-shadow: 0px 8px 6px  #888888; }
+      .container.ui.loginBox .loginContainer .rightBox .divider {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        height: 20px;
+        margin-bottom: 15px; }
+        .container.ui.loginBox .loginContainer .rightBox .divider p {
+          margin-bottom: 0px;
+          height: 20px;
+          padding-left: 5px;
+          padding-right: 5px; }
+        .container.ui.loginBox .loginContainer .rightBox .divider hr {
+          line-height: 20px;
+          width: 20px;
+          background-color: black;
+          height: 1px;
+          border: none;
+          margin-top: 10px; }
+      .container.ui.loginBox .loginContainer .rightBox .googleBtnSignIn {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto; }
+      .container.ui.loginBox .loginContainer .rightBox .newUser {
+        position: absolute;
+        bottom: 20px;
+        left: 20px; }
+
+.container.ui.createBox {
+  min-height: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .container.ui.createBox .createContainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 600px;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #707070;
+    flex-direction: column;
+    padding: 40px; }
+    .container.ui.createBox .createContainer h1 {
+      color: #4CB6E1;
+      margin-bottom: 45px;
+      text-align: center; }
+    .container.ui.createBox .createContainer .firstName {
+      width: 80%;
+      margin-bottom: 35px;
+      margin-left: auto;
+      margin-right: auto; }
+    .container.ui.createBox .createContainer .lastName {
+      width: 80%;
+      margin-bottom: 35px;
+      margin-left: auto;
+      margin-right: auto; }
+    .container.ui.createBox .createContainer .email {
+      width: 80%;
+      margin-bottom: 35px;
+      margin-left: auto;
+      margin-right: auto; }
+    .container.ui.createBox .createContainer .password {
+      width: 80%;
+      margin-bottom: 35px;
+      margin-left: auto;
+      margin-right: auto; }
+    .container.ui.createBox .createContainer P {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #FF3636;
+      margin-bottom: 5px; }
+    .container.ui.createBox .createContainer .createAccount {
+      background-color: #FC9E02;
+      width: 150px;
+      padding: 10px;
+      border-radius: 25px;
+      border: none;
+      color: white;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      box-shadow: 0px 8px 6px  #888888; }

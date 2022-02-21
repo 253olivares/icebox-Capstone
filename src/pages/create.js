@@ -5,9 +5,10 @@ import { Container, Menu, Image, Input, Button } from 'semantic-ui-react';
 import "../css/styles.css";
 import burgerMenu from '../images/bars-solid.png';
 
-const LoginPage = () => {
+const CreatePage = () => {
+
     return (
-        <React.Fragment>
+        < React.Fragment >
             <main>
                 <Menu className='navbar'>
                     <div className='navbarHolder'>
@@ -41,39 +42,19 @@ const LoginPage = () => {
                         </div>
                     </div>
                 </Menu>
-                <Container className='loginBox'>
 
-                    <div className='loginContainer'>
-                        <div className='leftBox'>
-                            <Image>
-
-                            </Image>
-                        </div>
-                        <div className='rightBox'>
-                            <h1 className='bigHead'>Welcome Back</h1>
-                            <p className='subHead'>so good to see you :)</p>
-
-                            <Input className='emailInput' placeholder='Email' />
-                            <Input className='passwordInput' placeholder='Password' />
-
-                            <p className='subForgor'>forgot password?</p>
-
-                            <button className='logOption'> Login </button>
-
-                            <div className='divider'>
-                                <hr></hr>
-                                <p>or</p>
-                                <hr></hr>
-                            </div>
-
-                            <Button className='googleBtnSignIn'>Sign in with Google</Button>
-
-                            <p className='newUser'>New user? <a>Create account</a> here!</p>
-
-                        </div>
+                <Container className='createBox'>
+                    <div className='createContainer'>
+                        <h1 className='head'>Welcome!</h1>
+                        <Input className='firstName' placeholder="First Name"></Input>
+                        <Input className='lastName' placeholder="Last Name"></Input>
+                        <p>*email cannot be changed</p>
+                        <Input className='email' placeholder="Email"></Input>
+                        <Input className='password' placeholder="Password"></Input>
+                        <button className='createAccount'> Sign Up </button>
                     </div>
-
                 </Container>
+
                 <Container className='footer'>
                     <div className='footerHolder'>
                         <div className='pagelogDesc'>
@@ -106,8 +87,9 @@ const LoginPage = () => {
                     </div>
                 </Container>
             </main>
+
         </React.Fragment >
     );
-}
 
-export default LoginPage;
+}
+export default CreatePage;
