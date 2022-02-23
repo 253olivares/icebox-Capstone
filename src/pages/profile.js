@@ -13,6 +13,33 @@ const ProfilePage = () => {
                 <Menu className='navbar'>
                     <div className='navbarHolder'>
                         <Menu.Item
+                            name='ACCOUNT'
+                        >
+                            <Link to="/profile">ACCOUNT</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            name='DASHBOARD'
+                        >
+                            <Link to="/dashboard">DASHBOARD</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            name='SIGNOUT'
+                        >
+                            SIGN OUT
+                        </Menu.Item>
+                    </div>
+                    <div className='navbarHolderMobile'>
+                        <div className='navbarMenu'>
+                            <img src={burgerMenu} alt="MenuBurger"></img>
+                        </div>
+                        <div className='appTitle'>
+                            <h1>ICEBOX</h1>
+                        </div>
+                    </div>
+                </Menu>
+                {/* <Menu className='navbar'>
+                    <div className='navbarHolder'>
+                        <Menu.Item
                             name='ABOUT'
                         >
                             <Link to="/">ABOUT</Link>
@@ -41,7 +68,7 @@ const ProfilePage = () => {
                             <h1>ICEBOX</h1>
                         </div>
                     </div>
-                </Menu>
+                </Menu> */}
 
                 <Container className='profileSection'>
                     <h1>PROFILE</h1>

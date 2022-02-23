@@ -13,6 +13,33 @@ const FridgePage = () => {
                 <Menu className='navbar'>
                     <div className='navbarHolder'>
                         <Menu.Item
+                            name='ACCOUNT'
+                        >
+                            <Link to="/profile">ACCOUNT</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            name='DASHBOARD'
+                        >
+                            <Link to="/dashboard">DASHBOARD</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            name='SIGNOUT'
+                        >
+                            SIGN OUT
+                        </Menu.Item>
+                    </div>
+                    <div className='navbarHolderMobile'>
+                        <div className='navbarMenu'>
+                            <img src={burgerMenu} alt="MenuBurger"></img>
+                        </div>
+                        <div className='appTitle'>
+                            <h1>ICEBOX</h1>
+                        </div>
+                    </div>
+                </Menu>
+                {/* <Menu className='navbar'>
+                    <div className='navbarHolder'>
+                        <Menu.Item
                             name='ABOUT'
                         >
                             <Link to="/">ABOUT</Link>
@@ -41,12 +68,12 @@ const FridgePage = () => {
                             <h1>ICEBOX</h1>
                         </div>
                     </div>
-                </Menu>
+                </Menu> */}
 
                 <Container className='fridgeInformation'>
                     <div className='fridgeInfoHolder'>
                         <div className='fridgeImage'>
-
+                            <img src="" alt='fridgeIcon'></img>
                         </div>
                         <div className='fridgeIn'>
                             <h1>FRIDGE NAME</h1>
@@ -58,13 +85,46 @@ const FridgePage = () => {
                 </Container>
 
                 <Container className='fridgeItems'>
-                    <div className='itemsHolder'>
-                        <div className='item'>
-                            <img></img>
-                            <h1>Food Item</h1>
-                            <p>Exp Date: 1/29/12</p>
-                            <p>Qty: 1</p>
+                    <div className='marginHolder'>
+                        <div className='itemsHolder'>
+                            <div className='item'>
+                                <img></img>
+                                <h1>Food Item</h1>
+                                <p>Exp Date: 1/29/12</p>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div className='item'>
+                                <img></img>
+                                <h1>Food Item</h1>
+                                <p>Exp Date: 1/29/12</p>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div className='item'>
+                                <img></img>
+                                <h1>Food Item</h1>
+                                <p>Exp Date: 1/29/12</p>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div className='item'>
+                                <img></img>
+                                <h1>Food Item</h1>
+                                <p>Exp Date: 1/29/12</p>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div className='item'>
+                                <img></img>
+                                <h1>Food Item</h1>
+                                <p>Exp Date: 1/29/12</p>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div className='item'>
+                                <img></img>
+                                <h1>Food Item</h1>
+                                <p>Exp Date: 1/29/12</p>
+                                <p>Qty: 1</p>
+                            </div>
                         </div>
+
                     </div>
                 </Container>
 

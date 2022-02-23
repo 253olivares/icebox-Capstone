@@ -6,6 +6,7 @@
         width: 50%;
         margin-left: auto;
         margin-right: auto;
+        min-width: 275px;
         min-height: 600px;
         border-radius: 25px;
         display: flex;
@@ -44,7 +45,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        P{
+        p{
             width: 80%;
             margin-left: auto;
             margin-right: auto;
@@ -65,6 +66,35 @@
             margin-bottom: 30px;
             font-weight: bold;
             box-shadow: 0px 8px 6px  #888888;
+        }
+    }
+}
+
+@media screen and (max-width: 830px){
+    .container.ui.createBox{
+        .createContainer{
+            h1{
+
+            }
+            .firstName{
+                width: 100%;
+            }
+            .lastName{
+                width: 100%;
+            }
+            .email{
+                width: 100%;
+            }
+            .password{
+                width: 100%;
+            }
+            p{
+                font-size: 12px;
+                width: 100%;
+            }
+            .createAccount{
+
+            }
         }
     }
 }

@@ -104,3 +104,90 @@
         }
     }
 }
+@media screen and (max-width: 830px){
+
+    .container.ui.loginBox{
+        .loginContainer{
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            .leftBox{
+                display: none;
+            }
+            .rightBox{
+                width: 100%;
+                .bigHead{
+                    margin-top: 50px;
+                }
+                .subHead{
+                    padding-bottom: 50px;
+                }
+                .emailInput{
+
+                }
+                .passwordInput{
+
+                }
+                .subForgor{
+
+                }
+                .logOption{
+
+                }
+                .divider{
+
+                }
+                .googleBtnSignIn{
+
+                }
+                .newUser{
+                    width: 100%;
+                    text-align: center;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 580px){
+
+    .container.ui.loginBox{
+        .loginContainer{
+            max-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            .leftBox{
+            }
+            .rightBox{
+                .bigHead{
+                    font-size: 25px;
+                }
+                .subHead{
+                    font-size: 15px;
+                }
+                .emailInput{
+
+                }
+                .passwordInput{
+
+                }
+                .subForgor{
+
+                }
+                .logOption{
+                    font-size: 15px;
+                }
+                .divider{
+
+                }
+                .googleBtnSignIn{
+
+                }
+                .newUser{
+                }
+            }
+        }
+    }
+
+}

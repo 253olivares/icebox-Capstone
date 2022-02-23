@@ -436,6 +436,36 @@ h1, h2, h3, h4, h5, h6, p {
         bottom: 20px;
         left: 20px; }
 
+@media screen and (max-width: 830px) {
+  .container.ui.loginBox .loginContainer {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto; }
+    .container.ui.loginBox .loginContainer .leftBox {
+      display: none; }
+    .container.ui.loginBox .loginContainer .rightBox {
+      width: 100%; }
+      .container.ui.loginBox .loginContainer .rightBox .bigHead {
+        margin-top: 50px; }
+      .container.ui.loginBox .loginContainer .rightBox .subHead {
+        padding-bottom: 50px; }
+      .container.ui.loginBox .loginContainer .rightBox .newUser {
+        width: 100%;
+        text-align: center;
+        left: 0; } }
+
+@media screen and (max-width: 580px) {
+  .container.ui.loginBox .loginContainer {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto; }
+    .container.ui.loginBox .loginContainer .rightBox .bigHead {
+      font-size: 25px; }
+    .container.ui.loginBox .loginContainer .rightBox .subHead {
+      font-size: 15px; }
+    .container.ui.loginBox .loginContainer .rightBox .logOption {
+      font-size: 15px; } }
+
 .container.ui.createBox {
   min-height: 100px;
   padding-top: 100px;
@@ -444,6 +474,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    min-width: 275px;
     min-height: 600px;
     border-radius: 25px;
     display: flex;
@@ -477,7 +508,7 @@ h1, h2, h3, h4, h5, h6, p {
       margin-bottom: 35px;
       margin-left: auto;
       margin-right: auto; }
-    .container.ui.createBox .createContainer P {
+    .container.ui.createBox .createContainer p {
       width: 80%;
       margin-left: auto;
       margin-right: auto;
@@ -497,6 +528,19 @@ h1, h2, h3, h4, h5, h6, p {
       margin-bottom: 30px;
       font-weight: bold;
       box-shadow: 0px 8px 6px  #888888; }
+
+@media screen and (max-width: 830px) {
+  .container.ui.createBox .createContainer .firstName {
+    width: 100%; }
+  .container.ui.createBox .createContainer .lastName {
+    width: 100%; }
+  .container.ui.createBox .createContainer .email {
+    width: 100%; }
+  .container.ui.createBox .createContainer .password {
+    width: 100%; }
+  .container.ui.createBox .createContainer p {
+    font-size: 12px;
+    width: 100%; } }
 
 .container.ui.dashboardName {
   margin-top: 100px;
@@ -653,3 +697,79 @@ h1, h2, h3, h4, h5, h6, p {
       box-shadow: 0px 8px 6px  #888888;
       margin-left: auto;
       margin-right: auto; }
+
+.container.ui.fridgeInformation {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+  .container.ui.fridgeInformation .fridgeInfoHolder {
+    display: flex;
+    justify-content: center; }
+    .container.ui.fridgeInformation .fridgeInfoHolder .fridgeImage {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeImage img {
+        border: solid;
+        border-color: black;
+        border-width: 2px; }
+    .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn {
+      position: relative;
+      width: 70%; }
+      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn h1 {
+        font-size: 30px;
+        color: #FC9E02;
+        margin-bottom: 25px; }
+      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn p {
+        margin-bottom: 25px; }
+      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn button {
+        position: absolute;
+        background-color: #FC9E02;
+        right: 0;
+        bottom: 0;
+        width: 150px;
+        padding: 7px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        box-shadow: 0px 8px 6px #888888; }
+
+.container.ui.fridgeItems {
+  width: 100%;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #FC9E02; }
+  .container.ui.fridgeItems .marginHolder {
+    max-width: 1127px;
+    margin-left: auto;
+    margin-right: auto; }
+    .container.ui.fridgeItems .marginHolder .itemsHolder {
+      padding: 40px;
+      border-radius: 25px;
+      background-color: white;
+      width: 100%;
+      min-height: 200px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .container.ui.fridgeItems .marginHolder .itemsHolder .item {
+        display: flex;
+        flex-direction: column;
+        width: 175px;
+        margin: 15px; }
+        .container.ui.fridgeItems .marginHolder .itemsHolder .item img {
+          width: 175px;
+          height: 125px;
+          display: block;
+          border: 1px solid black;
+          margin-bottom: 10px; }
+        .container.ui.fridgeItems .marginHolder .itemsHolder .item h1 {
+          margin-top: 0px;
+          text-align: center; }
+        .container.ui.fridgeItems .marginHolder .itemsHolder .item p {
+          font-style: italic; }
