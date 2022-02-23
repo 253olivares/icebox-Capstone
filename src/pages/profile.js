@@ -44,7 +44,24 @@ const ProfilePage = () => {
                 </Menu>
 
                 <Container className='profileSection'>
-
+                    <h1>PROFILE</h1>
+                    <div className='profileInformationHolder'>
+                        <div className='profileImageChangeButton'>
+                            <Image src="" size='large' alt="profile Icon"></Image>
+                            <button className='changeIcon'>Change</button>
+                        </div>
+                        <div className='profileInformation'>
+                            <Input className='inputPad' placeholder='First Name...'></Input>
+                            <Input className='inputPad' placeholder='Last Name...'></Input>
+                            <h1 className='uI'>USER INFO</h1>
+                            <p className='emailChange'>*email cannot be changed</p>
+                            <Input className='inputPad' placeholder='Email...'></Input>
+                            <Input className='inputPad' placeholder='Enter New Password'></Input>
+                        </div>
+                    </div>
+                    <div className='buttonDiv'>
+                        <button className='updateProfileButton'>Update Profile</button>
+                    </div>
                 </Container>
 
                 <Container className='footer'>
