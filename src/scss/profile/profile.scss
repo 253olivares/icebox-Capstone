@@ -18,6 +18,13 @@
             display: flex;
             flex-direction: column;
             width: 45%;
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 50px;
+                background-color: #FF3636;
+            }
             .changeIcon {
                 background-color: #FC9E02;
                  width: 150px;
@@ -77,4 +84,110 @@
         }
     }
 
+}
+
+@media screen and (max-width: 1000px){
+    .container.ui.profileSection{
+        h1{
+
+        }
+        .profileInformationHolder{
+            .profileImageChangeButton{
+                .changeIcon{
+                    
+                }
+            }
+            .profileInformation{
+                padding-left: 30px;
+                padding-right: 30px;
+                .inputPad{
+
+                }
+                .uI {
+
+                }
+                .emailChange{
+                    
+                }
+            }
+        }
+        .buttonDiv{
+            .updateProfileButton{
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 830px){
+    .container.ui.profileSection{
+        h1{
+
+        }
+        .profileInformationHolder{
+            flex-direction: column;
+            align-items: center;
+            .profileImageChangeButton{
+                width: 60%;
+                .changeIcon{
+                    
+                }
+            }
+            .profileInformation{
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 75%;
+                .inputPad{
+
+                }
+                .uI {
+
+                }
+                .emailChange{
+                    
+                }
+            }
+        }
+        .buttonDiv{
+            .updateProfileButton{
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .container.ui.profileSection{
+        h1{
+
+        }
+        .profileInformationHolder{
+            .profileImageChangeButton{
+                width: 60%;
+                .changeIcon{
+                    
+                }
+            }
+            .profileInformation{
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 100%;
+                .inputPad{
+
+                }
+                .uI {
+
+                }
+                .emailChange{
+                    
+                }
+            }
+        }
+        .buttonDiv{
+            .updateProfileButton{
+                width: 225px;
+            }
+        }
+    }
 }

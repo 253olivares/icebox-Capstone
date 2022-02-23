@@ -100,15 +100,17 @@ const DashboardPage = () => {
                             INDIVIDUAL FRIDGES
                         </h1>
                         <div className='fridges'>
-                            <div className='fridges_One'>
-                                <img></img>
-                                <div className='drigeinformation'>
-                                    <h1>FRIDGE'S NAME</h1>
-                                    <hr></hr>
-                                    <p>Number of Items: X</p>
-                                    <p>Recent Expired Items: X</p>
+                            <a href='/fridge'>
+                                <div className='fridges_One'>
+                                    <img></img>
+                                    <div className='drigeinformation'>
+                                        <h1>FRIDGE'S NAME</h1>
+                                        <hr></hr>
+                                        <p>Number of Items: X</p>
+                                        <p>Recent Expired Items: X</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </Container>

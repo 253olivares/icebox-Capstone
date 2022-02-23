@@ -74,7 +74,7 @@ const ProfilePage = () => {
                     <h1>PROFILE</h1>
                     <div className='profileInformationHolder'>
                         <div className='profileImageChangeButton'>
-                            <Image src="" size='large' alt="profile Icon"></Image>
+                            <img src='' alt='profile icon'></img>
                             <button className='changeIcon'>Change</button>
                         </div>
                         <div className='profileInformation'>

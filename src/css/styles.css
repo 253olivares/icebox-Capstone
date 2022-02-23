@@ -650,6 +650,12 @@ h1, h2, h3, h4, h5, h6, p {
       display: flex;
       flex-direction: column;
       width: 45%; }
+      .container.ui.profileSection .profileInformationHolder .profileImageChangeButton img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        background-color: #FF3636; }
       .container.ui.profileSection .profileInformationHolder .profileImageChangeButton .changeIcon {
         background-color: #FC9E02;
         width: 150px;
@@ -697,6 +703,32 @@ h1, h2, h3, h4, h5, h6, p {
       box-shadow: 0px 8px 6px  #888888;
       margin-left: auto;
       margin-right: auto; }
+
+@media screen and (max-width: 1000px) {
+  .container.ui.profileSection .profileInformationHolder .profileInformation {
+    padding-left: 30px;
+    padding-right: 30px; } }
+
+@media screen and (max-width: 830px) {
+  .container.ui.profileSection .profileInformationHolder {
+    flex-direction: column;
+    align-items: center; }
+    .container.ui.profileSection .profileInformationHolder .profileImageChangeButton {
+      width: 60%; }
+    .container.ui.profileSection .profileInformationHolder .profileInformation {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 75%; } }
+
+@media screen and (max-width: 400px) {
+  .container.ui.profileSection .profileInformationHolder .profileImageChangeButton {
+    width: 60%; }
+  .container.ui.profileSection .profileInformationHolder .profileInformation {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%; }
+  .container.ui.profileSection .buttonDiv .updateProfileButton {
+    width: 225px; } }
 
 .container.ui.fridgeInformation {
   margin-top: 100px;
