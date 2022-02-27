@@ -577,7 +577,9 @@ h1, h2, h3, h4, h5, h6, p {
       width: 100%;
       min-height: 200px;
       border: 1px solid black;
-      margin-top: 50px; }
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap; }
       .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One {
         display: flex;
         flex-direction: column;
@@ -654,8 +656,25 @@ h1, h2, h3, h4, h5, h6, p {
       text-align: center; }
   .container.ui.dashboardHouseholds .houseContainer h1 {
     text-align: center; }
+  .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
+    justify-content: center; }
   .container.ui.individualFrdges .iFContainer h1 {
-    text-align: center; } }
+    text-align: center; }
+  .container.ui.individualFrdges .iFContainer .fridges {
+    align-items: center; }
+    .container.ui.individualFrdges .iFContainer .fridges .fridges_One {
+      flex-direction: column;
+      width: 250px; }
+      .container.ui.individualFrdges .iFContainer .fridges .fridges_One img {
+        width: 100%;
+        margin: auto; }
+      .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation h1 {
+        margin-top: 10px;
+        font-size: 20px; }
+      .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation hr {
+        width: 100%; }
+      .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation p {
+        text-align: center; } }
 
 @media screen and (max-width: 500px) {
   .container.ui.dashboardName {
@@ -669,6 +688,12 @@ h1, h2, h3, h4, h5, h6, p {
   .container.ui.dashboardHouseholds {
     padding-left: 10px;
     padding-right: 10px; }
+    .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
+      padding: 20px; }
+      .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One {
+        width: 200px; }
+        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One img {
+          width: 200px; }
   .container.ui.individualFrdges {
     padding-left: 10px;
     padding-right: 10px; } }

@@ -39,7 +39,8 @@
             min-height: 200px;
             border: 1px solid black;
             margin-top: 50px;
-            
+            display: flex;
+            flex-wrap: wrap;
             .householdFridge_One{
                 display: flex;
                 flex-direction: column;
@@ -147,7 +148,9 @@
                 text-align: center;
             }
             .householdsContainer{
+                justify-content: center;
                 .householdFridge_One{
+                    
                     img{
 
                     }
@@ -167,19 +170,24 @@
                 text-align: center;
             }
             .fridges{
+                align-items: center;
                 .fridges_One{
+                    flex-direction: column;
+                    width: 250px;
                     img{
-
+                        width: 100%;
+                        margin: auto;
                     }
                     .drigeinformation{
                         h1{
-
+                            margin-top: 10px;
+                            font-size: 20px;
                         }
                         hr{
-
+                            width: 100%;
                         }
                         p{
-
+                            text-align: center;
                         }
                     }
                 }
@@ -215,9 +223,11 @@
             h1{
             }
             .householdsContainer{
+                padding: 20px;
                 .householdFridge_One{
+                    width: 200px;
                     img{
-
+                        width: 200px;
                     }
                     p{
 
