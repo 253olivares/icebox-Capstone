@@ -44,18 +44,54 @@
     .MobileNavHolder{
         display: flex;
         flex-direction: column;
+        position: relative;
+        height: 100%;
         .MNWelcome{
             color: white;
             font-size: 30px;
+            margin-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
         .MNMore{
             color: white;
             font-size: 20px;
+            margin-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
         .firsthr{
-            
+            height: 5px;
+            background-color: white;
+            border: none;
+            color: white;
         }
         .followinghr{
+            background-color: white;
+            border: none;
+            height: 2px;
+        }
+        .MNbottomInfo{
+            margin: auto;
+            width: 100%;
+            bottom: 0;
+            color: white;
+            position: absolute;
+            img{
+                width: 65%;
+                height: 55px;
+                display: block;
+                background-color: white;
+                margin: auto;
+            }
+            p{
+                padding-top: 20px;
+                text-align: center;
+                margin: auto;
+                width: 75%;
+                font-size: 15px;
+                padding-bottom: 20px;
+            }
 
         }
     }

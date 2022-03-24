@@ -56,13 +56,49 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute; }
   .menu.ui.MobileNavMenu .MobileNavHolder {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative;
+    height: 100%; }
     .menu.ui.MobileNavMenu .MobileNavHolder .MNWelcome {
       color: white;
-      font-size: 30px; }
+      font-size: 30px;
+      margin-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
     .menu.ui.MobileNavMenu .MobileNavHolder .MNMore {
       color: white;
-      font-size: 20px; }
+      font-size: 20px;
+      margin-left: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px; }
+    .menu.ui.MobileNavMenu .MobileNavHolder .firsthr {
+      height: 5px;
+      background-color: white;
+      border: none;
+      color: white; }
+    .menu.ui.MobileNavMenu .MobileNavHolder .followinghr {
+      background-color: white;
+      border: none;
+      height: 2px; }
+    .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo {
+      margin: auto;
+      width: 100%;
+      bottom: 0;
+      color: white;
+      position: absolute; }
+      .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo img {
+        width: 65%;
+        height: 55px;
+        display: block;
+        background-color: white;
+        margin: auto; }
+      .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo p {
+        padding-top: 20px;
+        text-align: center;
+        margin: auto;
+        width: 75%;
+        font-size: 15px;
+        padding-bottom: 20px; }
 
 @media screen and (max-width: 950px) {
   .menu.ui.navbar .navbarHolder {
