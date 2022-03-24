@@ -12,6 +12,7 @@ const HomePage = () => {
         <React.Fragment>
             {/* Main page code */}
             <main>
+
                 <Menu className='navbar'>
                     <div className='navbarHolder'>
 
@@ -45,6 +46,38 @@ const HomePage = () => {
                         </div>
                     </div>
                 </Menu>
+
+                <Menu className='MobileNavMenu'>
+                    <div className='MobileNavHolder'>
+                        <div>
+                            <h1 className='MNWelcome'>Welcome</h1>
+                        </div>
+                        <hr className='firsthr'></hr>
+                        <div>
+                            <h1 className='MNMore MNOption'>ABOUT</h1>
+                        </div>
+                        <hr className='followinghr'></hr>
+                        <div>
+                            <h1 className='MNMore MNOption'>LOGIN / REGISTER</h1>
+                        </div>
+                        <hr className='followinghr'></hr>
+                        <div>
+                            <h1 className='MNMore MNOption'>TRACKING</h1>
+                        </div>
+                        <hr className='followinghr'></hr>
+                        <div>
+                            <h1 className='MNMore MNOption'>SHOPPING</h1>
+                        </div>
+                        <hr className='followinghr'></hr>
+
+
+                        <div>
+                            <img className='MNFooter'></img>
+                            <p className='MNDesc'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu</p>
+                        </div>
+                    </div>
+                </Menu>
+
                 <Container className='iceboxDesc'>
                     <div className='decHolder'>
                         <div className='leftFlex'>
