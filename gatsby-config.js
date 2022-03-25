@@ -3,9 +3,9 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    ...otherPlugins,
+    // ...otherPlugins,
     {
-      resolve: "gatsby-plugin-firebase",
+      resolve: "gatsby-plugin-firebase-v9.0",
       options: {
         credentials: {
           apiKey: "AIzaSyDoVUvgsG9ZbpA-LnjuGMeVgr1JrcyUI2A",
