@@ -43,6 +43,7 @@ export function signOutUser() {
       console.log("error signing out user" + error);
     });
 }
+
 export function createUser(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {

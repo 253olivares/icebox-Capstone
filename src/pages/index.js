@@ -8,11 +8,14 @@ import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 
 const HomePage = () => {
+
+  var GlobalVarIfLogged;
+
   return (
     <React.Fragment>
       {/* Main page code */}
       <main>
-        <Nav></Nav>
+        {GlobalVarIfLogged ? (<UserNav></UserNav>) : (<Nav></Nav>)}
         {/* <UserNav></UserNav> */}
         <MobileNav></MobileNav>
         <Container className="iceboxDesc">
