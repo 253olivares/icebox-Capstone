@@ -3,6 +3,7 @@ import "semantic-ui-css/semantic.css";
 import { Container } from "semantic-ui-react";
 import "../css/styles.css";
 
+import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 
@@ -12,7 +13,8 @@ const HomePage = () => {
       {/* Main page code */}
       <main>
         <Nav></Nav>
-
+        {/* <UserNav></UserNav> */}
+        <MobileNav></MobileNav>
         <Container className="iceboxDesc">
           <div className="decHolder">
             <div className="leftFlex">

@@ -1,10 +1,9 @@
-import React from "react";
-import "semantic-ui-css/semantic.css";
-import { Menu } from "semantic-ui-react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
+import Navbar from '../../components/Navbar';
+import { Container, Segment, Menu } from 'semantic-ui-react';
 
 import "../css/styles.css";
-import burgerMenu from "../images/bars-solid.png";
 
 const MobileNav = () => {
     return (
