@@ -6,8 +6,9 @@ import { Container, Menu, Image, Input, Button } from "semantic-ui-react";
 import "../css/styles.css";
 import burgerMenu from "../images/bars-solid.png";
 
-import Nav from "../components/Nav";
+import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
+import Nav from "../components/Nav";
 
 import { signIn, createUser } from "../services/db";
 
@@ -20,6 +21,7 @@ const LoginPage = () => {
     <React.Fragment>
       <main>
         <UserNav></UserNav>
+        <MobileNav></MobileNav>
         <Container className="loginBox">
           <div className="loginContainer">
             <div className="leftBox">

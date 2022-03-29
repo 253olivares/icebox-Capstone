@@ -5,38 +5,17 @@ import { Container, Menu, Image, Input, Button } from 'semantic-ui-react';
 import "../css/styles.css";
 import burgerMenu from '../images/bars-solid.png';
 
+import MobileNav from "../components/MobileNav";
+import UserNav from "../components/NavLogged";
+import Nav from "../components/Nav";
+
 const ProfilePage = () => {
 
     return (
         <React.Fragment>
             <main>
-                <Menu className='navbar'>
-                    <div className='navbarHolder'>
-                        <Menu.Item
-                            name='ACCOUNT'
-                        >
-                            <Link to="/profile">ACCOUNT</Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='DASHBOARD'
-                        >
-                            <Link to="/dashboard">DASHBOARD</Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='SIGNOUT'
-                        >
-                            SIGN OUT
-                        </Menu.Item>
-                    </div>
-                    <div className='navbarHolderMobile'>
-                        <div className='navbarMenu'>
-                            <img src={burgerMenu} alt="MenuBurger"></img>
-                        </div>
-                        <div className='appTitle'>
-                            <h1>ICEBOX</h1>
-                        </div>
-                    </div>
-                </Menu>
+                <UserNav></UserNav>
+                <MobileNav></MobileNav>
                 {/* <Menu className='navbar'>
                     <div className='navbarHolder'>
                         <Menu.Item
