@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Container, Segment, Menu } from 'semantic-ui-react';
 
+
+
+
 import "../css/styles.css";
 
 const MobileNav = () => {
