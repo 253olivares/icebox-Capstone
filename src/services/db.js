@@ -26,7 +26,7 @@ export function signIn(email, password) {
     });
 }
 
-export function signOut() {
+export function signOutUser() {
   signOut(auth)
     .then(() => {
       // Sign-out successful.
@@ -34,10 +34,9 @@ export function signOut() {
     })
     .catch((error) => {
       // An error happened.
-      console.log("error signing out user");
+      console.log("error signing out user" + error);
     });
 }
-
 export function createUser(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
