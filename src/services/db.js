@@ -5,6 +5,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 
 // sign in function (?) - pulled from firebase docs
@@ -22,6 +23,18 @@ export function signIn(email, password) {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorMessage);
+    });
+}
+
+export function signOut() {
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+      console.log("user signed out");
+    })
+    .catch((error) => {
+      // An error happened.
+      console.log("error signing out user");
     });
 }
 
