@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Navbar from '../../components/Navbar';
 import { Container, Segment, Menu } from 'semantic-ui-react';
 
-const NavLogged = ({ active }) => {
+const MobileNav = ({ active }) => {
     return (
         <React.Fragment>
 
@@ -11,5 +11,5 @@ const NavLogged = ({ active }) => {
     )
 };
 
-export default NavLogged;
+export default MobileNav;
 
