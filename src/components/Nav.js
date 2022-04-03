@@ -2,11 +2,12 @@ import React from "react";
 import "semantic-ui-css/semantic.css";
 import { Link } from "gatsby";
 import { Menu } from "semantic-ui-react";
+import { MobileNav } from "./MobileNav.js";
 
 import "../css/styles.css";
 import burgerMenu from "../images/bars-solid.png";
 
-const Nav = () => {
+const Nav = ({ openCloseNav }) => {
   return (
     <React.Fragment>
       <Menu className="navbar">
@@ -22,7 +23,7 @@ const Nav = () => {
         </div>
         <div className="navbarHolderMobile">
           <div className="navbarMenu">
-            <img src={burgerMenu} alt="MenuBurger"></img>
+            <img src={burgerMenu} alt="MenuBurger" onClick={openCloseNav}></img>
           </div>
           <div className="appTitle">
             <h1>ICEBOX</h1>

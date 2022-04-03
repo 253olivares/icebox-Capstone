@@ -8,13 +8,19 @@ import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 
 const HomePage = () => {
+  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+
+  const openCloseNav = () => {
+    setMobileNavOpen(!mobileNavOpen);
+  };
   return (
     <React.Fragment>
       {/* Main page code */}
       <main>
-        <Nav></Nav>
+        <Nav openCloseNav={openCloseNav}></Nav>
         {/* <UserNav></UserNav> */}
-        <MobileNav></MobileNav>
+        {/* <MobileNav></MobileNav> */}
+        {mobileNavOpen ? <MobileNav></MobileNav> : null}
         <Container className="iceboxDesc">
           <div className="decHolder">
             <div className="leftFlex">

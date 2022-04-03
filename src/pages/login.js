@@ -19,9 +19,7 @@ const LoginPage = () => {
 
   const [userLogin, setUserLogin] = React.useState(initialUserLogin);
   function newUser() {
-    // const login = { email: email.value, password: password.value };
     setUserLogin(userLogin);
-    // signIn("test@email.com", "password");
     signIn(userLogin.email, userLogin.password);
   }
 
