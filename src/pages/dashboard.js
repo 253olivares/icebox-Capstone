@@ -75,8 +75,8 @@ const DashboardPage = () => {
 
                 <Container className='individualFrdges'>
                     <div className='iFContainer'>
-                        <h1>
-                            INDIVIDUAL FRIDGES
+                        <h1 className='iFCHead'>
+                            INDIVIDUAL FRIDGES <Button className='addF'> <Link to="/addf"> Add Fridge</Link></Button>
                         </h1>
                         <div className='fridges'>
                             <a href='/fridge'>

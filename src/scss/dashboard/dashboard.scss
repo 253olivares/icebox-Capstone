@@ -3,9 +3,11 @@
     margin-bottom: 100px;
     padding-left: 25px;
     padding-right: 25px;
-    .dashcontainer{
-        display:flex;
+
+    .dashcontainer {
+        display: flex;
         align-items: center;
+
         .dashboardImage {
             width: 300px;
             height: 175px;
@@ -13,25 +15,29 @@
             margin-right: 60px;
             border-width: 1px;
         }
-        .dashboardInformation{
-            .userName{
+
+        .dashboardInformation {
+            .userName {
                 color: #FC9E02;
             }
         }
     }
 }
-.container.ui.dashboardHouseholds{
+
+.container.ui.dashboardHouseholds {
     width: 100%;
     padding-top: 75px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 75px;
     background-color: #CCEAF6;
-    .houseContainer{
+
+    .houseContainer {
         max-width: 1127px;
         margin-left: auto;
         margin-right: auto;
-        .householdsContainer{
+
+        .householdsContainer {
             padding: 40px;
             border-radius: 25px;
             background-color: white;
@@ -41,23 +47,27 @@
             margin-top: 50px;
             display: flex;
             flex-wrap: wrap;
-            .householdFridge_One{
+
+            .householdFridge_One {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
                 width: 225px;
                 height: 200px;
-                img{
+
+                img {
                     width: 225px;
                     height: 200px;
                     background-color: white;
                     margin-bottom: 10px;
                 }
-                p{
+
+                p {
                     font-size: 20px;
                     margin-bottom: 5px;
 
                 }
+
                 span {
                     color: #FC9E02;
                 }
@@ -66,16 +76,39 @@
     }
 
 }
-.container.ui.individualFrdges{
+
+.container.ui.individualFrdges {
     width: 100%;
     padding-top: 75px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 100px;
-    .iFContainer{
+
+    .iFContainer {
         max-width: 1127px;
         margin-left: auto;
         margin-right: auto;
+
+        .iFCHead {
+            display: flex;
+            justify-content: space-between;
+
+            .button.ui.addF {
+                background-color: #FC9E02;
+                color: white;
+                font-weight: bold;
+                box-shadow: 0px 8px 6px #888888;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                font-size: 15px;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
         .fridges {
             display: flex;
             flex-direction: column;
@@ -83,7 +116,8 @@
             margin-left: auto;
             margin-right: auto;
             margin-top: 50px;
-            .fridges_One{
+
+            .fridges_One {
                 border: 1px solid black;
                 border-width: 1px;
                 border-radius: 25px;
@@ -92,24 +126,28 @@
                 padding: 30px;
                 display: flex;
                 align-items: center;
-                img{
+
+                img {
                     margin-right: 50px;
                     width: 150px;
                     height: 100px;
                     background-color: white;
                 }
-                .drigeinformation{
-                    h1{
+
+                .drigeinformation {
+                    h1 {
                         margin-bottom: 5px;
                         font-size: 30px;
                     }
-                    hr{
+
+                    hr {
                         border: none;
                         background-color: white;
                         height: 5px;
                         margin-bottom: 10px;
                     }
-                    P{
+
+                    P {
 
                         margin-bottom: 5px;
                     }
@@ -119,74 +157,93 @@
     }
 }
 
-@media screen and (max-width: 830px){
-    .container.ui.dashboardName{
-        .dashcontainer{
+@media screen and (max-width: 830px) {
+    .container.ui.dashboardName {
+        .dashcontainer {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            .dashboardImage{
+
+            .dashboardImage {
                 margin-bottom: 30px;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
-            .dashboardInformation{
-                .userName{
+
+            .dashboardInformation {
+                .userName {
                     text-align: center;
                 }
-                p{
+
+                p {
                     text-align: center;
                 }
             }
         }
     }
-    .container.ui.dashboardHouseholds{
-        .houseContainer{
-            h1{
+
+    .container.ui.dashboardHouseholds {
+        .houseContainer {
+            h1 {
                 text-align: center;
             }
-            .householdsContainer{
+
+            .householdsContainer {
                 justify-content: center;
-                .householdFridge_One{
-                    
-                    img{
 
-                    }
-                    p{
+                .householdFridge_One {
 
-                    }
-                    span{
-                        
-                    }
+                    img {}
+
+                    p {}
+
+                    span {}
                 }
             }
         }
     }
-    .container.ui.individualFrdges{
-        .iFContainer{
-            h1{
+
+    .container.ui.individualFrdges {
+        .iFContainer {
+
+            .iFCHead {
                 text-align: center;
-            }
-            .fridges{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                .fridges_One{
+
+                .button.ui.addF {
+                    margin-top: 15px;
+
+                }
+            }
+
+            .fridges {
+                align-items: center;
+
+                .fridges_One {
                     flex-direction: column;
                     width: 250px;
-                    img{
+
+                    img {
                         width: 100%;
                         margin: auto;
                     }
-                    .drigeinformation{
-                        h1{
+
+                    .drigeinformation {
+                        h1 {
                             margin-top: 10px;
                             font-size: 20px;
                         }
-                        hr{
+
+                        hr {
                             width: 100%;
                         }
-                        p{
+
+                        p {
                             text-align: center;
                         }
                     }
@@ -196,70 +253,71 @@
     }
 }
 
-@media screen and (max-width: 500px){
-    .container.ui.dashboardName{
+@media screen and (max-width: 500px) {
+    .container.ui.dashboardName {
         padding-left: 10px;
         padding-right: 10px;
-        .dashcontainer{
-            .dashboardImage{
+
+        .dashcontainer {
+            .dashboardImage {
                 width: 275px;
                 height: 150px;
             }
-            .dashboardInformation{
-                h1{
+
+            .dashboardInformation {
+                h1 {
                     font-size: 20px;
                 }
-                .userName{
-                }
-                p{
-                }
+
+                .userName {}
+
+                p {}
             }
         }
     }
-    .container.ui.dashboardHouseholds{
+
+    .container.ui.dashboardHouseholds {
         padding-left: 10px;
         padding-right: 10px;
-        .houseContainer{
-            h1{
-            }
-            .householdsContainer{
+
+        .houseContainer {
+            h1 {}
+
+            .householdsContainer {
                 padding: 20px;
-                .householdFridge_One{
+
+                .householdFridge_One {
                     width: 200px;
-                    img{
+
+                    img {
                         width: 200px;
                     }
-                    p{
 
-                    }
-                    span{
-                        
-                    }
+                    p {}
+
+                    span {}
                 }
             }
         }
     }
-    .container.ui.individualFrdges{
+
+    .container.ui.individualFrdges {
         padding-left: 10px;
         padding-right: 10px;
-        .iFContainer{
-            h1{
-            }
-            .fridges{
-                .fridges_One{
-                    img{
 
-                    }
-                    .drigeinformation{
-                        h1{
+        .iFContainer {
+            h1 {}
 
-                        }
-                        hr{
+            .fridges {
+                .fridges_One {
+                    img {}
 
-                        }
-                        p{
+                    .drigeinformation {
+                        h1 {}
 
-                        }
+                        hr {}
+
+                        p {}
                     }
                 }
             }
