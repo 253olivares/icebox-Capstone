@@ -6,22 +6,32 @@ import { Container, Menu, Image, Input, Button } from "semantic-ui-react";
 import "../css/styles.css";
 import burgerMenu from "../images/bars-solid.png";
 
-import MobileNav from "../components/MobileNav";
-import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
+import UserNav from "../components/NavLogged";
 
-import { signIn, createUser } from "../services/db";
+import { signIn } from "../services/db";
 
 const LoginPage = () => {
+  const initialUserLogin = {
+    email: "",
+    password: "",
+  };
+
+  const [userLogin, setUserLogin] = React.useState(initialUserLogin);
   function newUser() {
-    signIn("test@email.com", "password");
+    setUserLogin(userLogin);
+    signIn(userLogin.email, userLogin.password);
   }
 
+  function changeUserLogin(e, { value, name }) {
+    const userLoginClone = { ...userLogin };
+    userLoginClone[name] = value;
+    setUserLogin(userLoginClone);
+  }
   return (
     <React.Fragment>
       <main>
         <UserNav></UserNav>
-        <MobileNav></MobileNav>
         <Container className="loginBox">
           <div className="loginContainer">
             <div className="leftBox">
@@ -31,8 +41,21 @@ const LoginPage = () => {
               <h1 className="bigHead">Welcome Back</h1>
               <p className="subHead">so good to see you :)</p>
 
-              <Input className="emailInput" placeholder="Email" />
-              <Input className="passwordInput" placeholder="Password" />
+              <Input
+                className="emailInput"
+                placeholder="Email"
+                value={userLogin.email}
+                name="email"
+                onChange={changeUserLogin}
+              />
+              <Input
+                className="passwordInput"
+                placeholder="Password"
+                type="password"
+                value={userLogin.password}
+                name="password"
+                onChange={changeUserLogin}
+              />
 
               <p className="subForgor">forgot password?</p>
 

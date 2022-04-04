@@ -7,18 +7,21 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
 } from "firebase/auth";
+
+import { doc, getFirestore, setDoc } from "firebase/firestore";
 
 // sign in function (?) - pulled from firebase docs
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-var GlobalVarIfLogged = false;
-
-export function signIn(email, password) {
+export function signIn(email, password, first, last) {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
+      console.log(user);
       console.log("user signed in successfully");
       console.log(GlobalVarIfLogged);
       GlobalVarIfLogged = true;
@@ -43,13 +46,28 @@ export function signOutUser() {
       console.log("error signing out user" + error);
     });
 }
+function updateUser(username) {
+  updateProfile(auth.currentUser, {
+    displayName: username,
+  }).then(() => {
+    console.log("display name updated");
+  });
+}
 
-export function createUser(email, password) {
+export function createUser(email, password, first, last) {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
+      let username = first + " " + last;
       console.log("user created successfully");
+      updateUser(username);
+
+      setDoc(doc(db, "users", user.uid), {
+        email: email,
+        first_name: first,
+        last_name: last,
+      });
       // ...
     })
     .catch((error) => {
