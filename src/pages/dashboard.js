@@ -62,7 +62,7 @@ const DashboardPage = () => {
 
                 <Container className='dashboardHouseholds'>
                     <div className='houseContainer'>
-                        <h1>HOUSEHOLDS</h1>
+                        <h1 className='hCHead'>HOUSEHOLDS <Button className='addH'> <Link to="/addh"> Add House</Link></Button></h1>
                         <div className='householdsContainer'>
                             <div className='householdFridge_One'>
                                 <img></img>

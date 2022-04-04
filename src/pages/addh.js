@@ -8,28 +8,20 @@ import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 
 
-const addFridge = () => {
+const addHouse = () => {
+
     return (
         <React.Fragment>
             <UserNav></UserNav>
             <MobileNav></MobileNav>
-            <Container className="addFridgePage">
+            <Container className="addHousePage">
                 <Form>
-                    <Form.Field>
-                        <label>Name of Fridge</label>
-                        <input placeholder="" />
-                    </Form.Field>
-                    <Form.Field>
-                        <label>Fridge Location</label>
-                    </Form.Field>
-                    <Form.Field>
-                        <label>Fridge Owner</label>
-                    </Form.Field>
                     <Button type='submit'>Submit</Button>
                 </Form>
             </Container>
         </React.Fragment>
     );
+
 };
 
-export default addFridge;
+export default addHouse;
