@@ -6,6 +6,9 @@ import "../css/styles.css";
 import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
+import MobileNavLogged from "../components/MobileNavLogged";
+
+import Footer from "../components/Footer";
 
 
 const addFridge = () => {
@@ -28,6 +31,7 @@ const addFridge = () => {
                     <Button type='submit'>Submit</Button>
                 </Form>
             </Container>
+            <Footer></Footer>
         </React.Fragment>
     );
 };

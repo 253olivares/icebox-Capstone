@@ -8,6 +8,9 @@ import burgerMenu from '../images/bars-solid.png';
 import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
+import MobileNavLogged from "../components/MobileNavLogged";
+
+import Footer from "../components/Footer";
 
 const DashboardPage = () => {
 
@@ -16,38 +19,6 @@ const DashboardPage = () => {
             <main>
                 <UserNav></UserNav>
                 <MobileNav></MobileNav>
-                {/* <Menu className='navbar'>
-                    <div className='navbarHolder'>
-                        <Menu.Item
-                            name='ABOUT'
-                        >
-                            <Link to="/">ABOUT</Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='LOGIN/REGISTER'
-                        >
-                            <Link to="/login">LOGIN / REGISTER</Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='TRACKING'
-                        >
-                            TRACKING
-                        </Menu.Item>
-                        <Menu.Item
-                            name='SHOPPING'
-                        >
-                            SHOPPING
-                        </Menu.Item>
-                    </div>
-                    <div className='navbarHolderMobile'>
-                        <div className='navbarMenu'>
-                            <img src={burgerMenu} alt="MenuBurger"></img>
-                        </div>
-                        <div className='appTitle'>
-                            <h1>ICEBOX</h1>
-                        </div>
-                    </div>
-                </Menu> */}
 
                 <Container className='dashboardName'>
                     <div className='dashcontainer'>
@@ -94,37 +65,7 @@ const DashboardPage = () => {
                     </div>
                 </Container>
 
-                <Container className='footer'>
-                    <div className='footerHolder'>
-                        <div className='pagelogDesc'>
-                            <img src='' alt='AppImg'></img>
-                            <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu</p>
-                        </div>
-                        <div className='CatNav'>
-                            <div className='cat'>
-                                <h1>ABOUT</h1>
-                                <hr></hr>
-                                <p>App</p>
-                                <p>Tracking</p>
-                                <p>Sharing</p>
-                                <p>Shopping</p>
-                            </div>
-                            <div className='cat'>
-                                <h1>ACCOUNT</h1>
-                                <hr></hr>
-                                <p>Loggin</p>
-                                <p>Logout</p>
-                            </div>
-                            <div className='cat'>
-                                <h1>LICENSING</h1>
-                                <hr></hr>
-                                <p>Location</p>
-                                <p>Contacting</p>
-                                <p>Permission</p>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
+                <Footer></Footer>
             </main>
         </React.Fragment>
     );

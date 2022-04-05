@@ -6,6 +6,9 @@ import "../css/styles.css";
 import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
+import MobileNavLogged from "../components/MobileNavLogged";
+
+import Footer from "../components/Footer";
 
 
 const addHouse = () => {
@@ -15,10 +18,12 @@ const addHouse = () => {
             <UserNav></UserNav>
             <MobileNav></MobileNav>
             <Container className="addHousePage">
-                <Form>
+                <Form className="addhouseForm">
+
                     <Button type='submit'>Submit</Button>
                 </Form>
             </Container>
+            <Footer></Footer>
         </React.Fragment>
     );
 

@@ -968,3 +968,14 @@ h1, h2, h3, h4, h5, h6, p {
           text-align: center; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item p {
           font-style: italic; }
+
+.container.ui.addHousePage .form.ui.addhouseForm {
+  background-color: red; }
+
+@media screen and (max-width: 767px) {
+  .container.ui.addHousePage {
+    width: 100%; }
+    .container.ui.addHousePage .form.ui.addhouseForm {
+      width: 95%;
+      background-color: orange;
+      margin: auto; } }
