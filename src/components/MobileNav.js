@@ -5,8 +5,6 @@ import { Container, Segment, Menu } from "semantic-ui-react";
 
 import "../css/styles.css";
 
-// { closeMobileNav }
-
 const MobileNav = () => {
   return (
     <React.Fragment>
@@ -17,22 +15,19 @@ const MobileNav = () => {
           </div>
           <hr className="firsthr"></hr>
           <div>
-            <h1 className="MNMore MNOption">ABOUT</h1>
+            <h1 className="MNMore MNOption"> <Link to="/">ABOUT</Link> </h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption">LOGIN / REGISTER</h1>
+            <h1 className="MNMore MNOption"> <Link to="/login"> LOGIN / REGISTER</Link></h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption">TRACKING</h1>
+            <h1 className="MNMore MNOption"> <Link to="/ "> TRACKING </Link></h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption">SHOPPING</h1>
-          </div>
-          <div>
-            <h1 className="MNMore MNClose">CLOSE NAV</h1>
+            <h1 className="MNMore MNOption"> <Link to="/"> </Link> SHOPPING</h1>
           </div>
           <hr className="followinghr"></hr>
 
@@ -47,8 +42,8 @@ const MobileNav = () => {
             </p>
           </div>
         </div>
-      </Menu>
-    </React.Fragment>
+      </Menu >
+    </React.Fragment >
   );
 };
 

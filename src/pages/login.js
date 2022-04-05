@@ -12,6 +12,8 @@ import UserNav from "../components/NavLogged";
 import { signIn } from "../services/db";
 
 const LoginPage = () => {
+
+
   const initialUserLogin = {
     email: "",
     password: "",

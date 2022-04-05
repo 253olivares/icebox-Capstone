@@ -20,7 +20,7 @@ const HomePage = () => {
         <Nav openCloseNav={openCloseNav}></Nav>
         {/* <UserNav></UserNav> */}
         {/* <MobileNav></MobileNav> */}
-        {mobileNavOpen ? <MobileNav></MobileNav> : null}
+        {mobileNavOpen ? <MobileNav ></MobileNav> : null}
         <Container className="iceboxDesc">
           <div className="decHolder">
             <div className="leftFlex">
