@@ -8,7 +8,7 @@ import burgerMenu from "../images/bars-solid.png";
 
 import { signOutUser } from "../services/db";
 
-const UserNav = () => {
+const UserNav = ({ openCloseNav }) => {
   return (
     <React.Fragment>
       <Menu className="navbar">
@@ -25,7 +25,7 @@ const UserNav = () => {
         </div>
         <div className="navbarHolderMobile">
           <div className="navbarMenu">
-            <img src={burgerMenu} alt="MenuBurger"></img>
+            <img src={burgerMenu} alt="MenuBurger" onClick={openCloseNav}></img>
           </div>
           <div className="appTitle">
             <h1>ICEBOX</h1>

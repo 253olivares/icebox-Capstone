@@ -23,8 +23,9 @@ export function signIn(email, password, first, last) {
       const user = userCredential.user;
       console.log(user);
       console.log("user signed in successfully");
-      console.log(GlobalVarIfLogged);
-      GlobalVarIfLogged = true;
+      // console.log(GlobalVarIfLogged);
+      // GlobalVarIfLogged = true;
+      window.location.href = "/dashboard";
       // ...
     })
     .catch((error) => {
@@ -39,7 +40,8 @@ export function signOutUser() {
     .then(() => {
       // Sign-out successful.
       console.log("user signed out");
-      GlobalVarIfLogged = false;
+      // GlobalVarIfLogged = false;
+      window.location.href = "/";
     })
     .catch((error) => {
       // An error happened.
@@ -68,6 +70,7 @@ export function createUser(email, password, first, last) {
         first_name: first,
         last_name: last,
       });
+      window.location.href = "/dashboard";
       // ...
     })
     .catch((error) => {

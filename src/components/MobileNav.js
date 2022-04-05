@@ -5,6 +5,8 @@ import { Container, Segment, Menu } from "semantic-ui-react";
 
 import "../css/styles.css";
 
+// { closeMobileNav }
+
 const MobileNav = () => {
   return (
     <React.Fragment>
@@ -28,6 +30,9 @@ const MobileNav = () => {
           <hr className="followinghr"></hr>
           <div>
             <h1 className="MNMore MNOption">SHOPPING</h1>
+          </div>
+          <div>
+            <h1 className="MNMore MNClose">CLOSE NAV</h1>
           </div>
           <hr className="followinghr"></hr>
 
