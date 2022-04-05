@@ -16,38 +16,6 @@ const ProfilePage = () => {
             <main>
                 <UserNav></UserNav>
                 <MobileNav></MobileNav>
-                {/* <Menu className='navbar'>
-                    <div className='navbarHolder'>
-                        <Menu.Item
-                            name='ABOUT'
-                        >
-                            <Link to="/">ABOUT</Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='LOGIN/REGISTER'
-                        >
-                            <Link to="/login">LOGIN / REGISTER</Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='TRACKING'
-                        >
-                            TRACKING
-                        </Menu.Item>
-                        <Menu.Item
-                            name='SHOPPING'
-                        >
-                            SHOPPING
-                        </Menu.Item>
-                    </div>
-                    <div className='navbarHolderMobile'>
-                        <div className='navbarMenu'>
-                            <img src={burgerMenu} alt="MenuBurger"></img>
-                        </div>
-                        <div className='appTitle'>
-                            <h1>ICEBOX</h1>
-                        </div>
-                    </div>
-                </Menu> */}
 
                 <Container className='profileSection'>
                     <h1>PROFILE</h1>
@@ -61,7 +29,7 @@ const ProfilePage = () => {
                             <Input className='inputPad' placeholder='Last Name...'></Input>
                             <h1 className='uI'>USER INFO</h1>
                             <p className='emailChange'>*email cannot be changed</p>
-                            <Input className='inputPad' placeholder='Email...'></Input>
+                            <Input className='inputPad' placeholder='Email...' disabled></Input>
                             <Input className='inputPad' placeholder='Enter New Password'></Input>
                         </div>
                     </div>
