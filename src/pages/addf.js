@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 import State from "../state";
 
 
-const addFridge = () => {
+const AddFridge = () => {
     const state = React.useContext(State);
     return (
         <React.Fragment>
@@ -39,4 +39,4 @@ const addFridge = () => {
     );
 };
 
-export default addFridge;
+export default AddFridge;

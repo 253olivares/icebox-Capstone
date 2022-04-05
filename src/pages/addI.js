@@ -12,7 +12,7 @@ import MobileNavLogged from "../components/MobileNavLogged";
 import Footer from "../components/Footer";
 import State from "../state";
 
-const addInvetory = () => {
+const AddInvetory = () => {
     const state = React.useContext(State);
 
     return (
@@ -28,4 +28,4 @@ const addInvetory = () => {
 
 };
 
-export default addInvetory;
+export default AddInvetory;

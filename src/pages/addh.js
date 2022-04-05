@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 import State from "../state";
 
 
-const addHouse = () => {
+const AddHouse = () => {
 
     const state = React.useContext(State);
 
@@ -32,4 +32,4 @@ const addHouse = () => {
 
 };
 
-export default addHouse;
+export default AddHouse;
