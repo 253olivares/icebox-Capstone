@@ -9,12 +9,15 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+import State from "../state";
+
 
 import Footer from "../components/Footer";
 
 import { createUser } from "../services/db";
 
 const CreatePage = () => {
+  const state = React.useContext(State);
   const initialUserInfo = {
     email: "",
     password: "",

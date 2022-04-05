@@ -10,8 +10,11 @@ import MobileNavLogged from "../components/MobileNavLogged";
 
 import Footer from "../components/Footer";
 
+import State from "../state";
+
 
 const addFridge = () => {
+    const state = React.useContext(State);
     return (
         <React.Fragment>
             <UserNav></UserNav>

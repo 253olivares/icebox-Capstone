@@ -15,10 +15,20 @@ export const Provider = ({ children }) => {
     setState({ ...state, fridges });
   }
 
+  function signedIn(user) {
+    setState({ ...state, user });
+  }
+
+  function clearState() {
+    setState({ ...state, user: null });
+  };
+
   const stateVals = {
     ...state,
     addFridge,
     loadFridges,
+    signedIn,
+    clearState
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;

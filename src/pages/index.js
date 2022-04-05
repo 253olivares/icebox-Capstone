@@ -7,19 +7,27 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+import State from "../state";
 
 import Footer from "../components/Footer";
 const HomePage = () => {
+  const state = React.useContext(State);
+
+
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
 
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
   };
+
+
+
+  // const [NavLogged, GlobalVarIfLogged] = React.useState(false);
   return (
     <React.Fragment>
       {/* Main page code */}
       <main>
-        <Nav openCloseNav={openCloseNav}></Nav>
+        {state.user ? <UserNav></UserNav> : <Nav openCloseNav={openCloseNav}></Nav>}
         {/* <UserNav></UserNav> */}
         {/* <MobileNav></MobileNav> */}
         {mobileNavOpen ? <MobileNav ></MobileNav> : null}

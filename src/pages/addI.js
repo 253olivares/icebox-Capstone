@@ -8,9 +8,12 @@ import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
 
+
 import Footer from "../components/Footer";
+import State from "../state";
 
 const addInvetory = () => {
+    const state = React.useContext(State);
 
     return (
         <React.Fragment>

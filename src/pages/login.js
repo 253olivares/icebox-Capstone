@@ -1,6 +1,6 @@
 import React from "react";
 import "semantic-ui-css/semantic.css";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { Container, Menu, Image, Input, Button } from "semantic-ui-react";
 
 import "../css/styles.css";
@@ -12,8 +12,13 @@ import Footer from "../components/Footer";
 import MobileNavLogged from "../components/MobileNavLogged";
 
 import { signIn } from "../services/db";
+import State from "../state";
+
+
 
 const LoginPage = () => {
+
+  const state = React.useContext(State);
 
 
   const initialUserLogin = {
@@ -22,9 +27,11 @@ const LoginPage = () => {
   };
 
   const [userLogin, setUserLogin] = React.useState(initialUserLogin);
-  function newUser() {
+  async function newUser() {
     setUserLogin(userLogin);
-    signIn(userLogin.email, userLogin.password);
+    const user = await signIn(userLogin.email, userLogin.password);
+    state.signedIn(user);
+    navigate("/dashboard");
   }
 
   function changeUserLogin(e, { value, name }) {
@@ -32,10 +39,11 @@ const LoginPage = () => {
     userLoginClone[name] = value;
     setUserLogin(userLoginClone);
   }
+
   return (
     <React.Fragment>
       <main>
-        <UserNav></UserNav>
+        {state.user ? <UserNav></UserNav> : <Nav></Nav>}
         <Container className="loginBox">
           <div className="loginContainer">
             <div className="leftBox">

@@ -9,15 +9,21 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+import State from "../state";
+
 
 import Footer from "../components/Footer";
 
 const DashboardPage = () => {
 
+    const state = React.useContext(State);
+
+
+
     return (
         <React.Fragment>
             <main>
-                <UserNav></UserNav>
+                {state.user ? <UserNav></UserNav> : <Nav></Nav>}
                 <MobileNav></MobileNav>
 
                 <Container className='dashboardName'>

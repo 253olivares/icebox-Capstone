@@ -6,9 +6,19 @@ import { Link } from "gatsby";
 import "../css/styles.css";
 import burgerMenu from "../images/bars-solid.png";
 
+import State from "../state";
+
 import { signOutUser } from "../services/db";
 
 const UserNav = ({ openCloseNav }) => {
+
+  const state = React.useContext(State);
+
+  function ClickedSignout() {
+    signOutUser();
+    state.clearState()
+  }
+
   return (
     <React.Fragment>
       <Menu className="navbar">
@@ -19,7 +29,7 @@ const UserNav = ({ openCloseNav }) => {
           <Menu.Item name="DASHBOARD">
             <Link to="/dashboard">DASHBOARD</Link>
           </Menu.Item>
-          <Menu.Item name="SIGNOUT" onClick={signOutUser}>
+          <Menu.Item name="SIGNOUT" onClick={ClickedSignout}>
             SIGN OUT
           </Menu.Item>
         </div>

@@ -9,9 +9,12 @@ import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
 
 import Footer from "../components/Footer";
+import State from "../state";
 
 
 const addHouse = () => {
+
+    const state = React.useContext(State);
 
     return (
         <React.Fragment>

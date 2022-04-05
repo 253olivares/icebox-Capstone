@@ -1,4 +1,5 @@
 import app from "gatsby-plugin-firebase-v9.0";
+import { navigate } from "gatsby";
 
 
 // initializes the auth, but we need to pass app to auth function
@@ -8,6 +9,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   updateProfile,
+  onAuthStateChanged,
 } from "firebase/auth";
 
 import { doc, getFirestore, setDoc } from "firebase/firestore";
@@ -16,8 +18,19 @@ import { doc, getFirestore, setDoc } from "firebase/firestore";
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export function signIn(email, password, first, last) {
-  signInWithEmailAndPassword(auth, email, password)
+onAuthStateChanged(auth, user => {
+
+  if (user != null) {
+    console.log('Logged in!');
+
+  } else {
+    console.log('no user');
+
+  }
+})
+
+export async function signIn(email, password, first, last) {
+  return await signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
@@ -25,7 +38,8 @@ export function signIn(email, password, first, last) {
       console.log("user signed in successfully");
       // console.log(GlobalVarIfLogged);
       // GlobalVarIfLogged = true;
-      window.location.href = "/dashboard";
+
+      return user
       // ...
     })
     .catch((error) => {
@@ -41,7 +55,8 @@ export function signOutUser() {
       // Sign-out successful.
       console.log("user signed out");
       // GlobalVarIfLogged = false;
-      window.location.href = "/";
+      navigate("/");
+
     })
     .catch((error) => {
       // An error happened.

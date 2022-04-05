@@ -9,10 +9,13 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+import State from "../state";
 
 import Footer from "../components/Footer";
 
 const ProfilePage = () => {
+
+    const state = React.useContext(State);
 
     return (
         <React.Fragment>
