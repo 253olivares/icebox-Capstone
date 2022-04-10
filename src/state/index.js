@@ -5,6 +5,10 @@ const State = React.createContext();
 export const Provider = ({ children }) => {
   const [state, setState] = React.useState();
 
+  function testing() {
+    setState({ ...state, testing: true })
+  }
+
   function addFridge(newFridge) {
     const oldFridges = state.fridges;
 
@@ -28,7 +32,8 @@ export const Provider = ({ children }) => {
     addFridge,
     loadFridges,
     signedIn,
-    clearState
+    clearState,
+    testing
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;

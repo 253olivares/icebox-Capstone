@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
 import { Container, Form, Button } from "semantic-ui-react";
 import "../css/styles.css";
@@ -16,10 +17,15 @@ const AddHouse = () => {
 
     const state = React.useContext(State);
 
+    const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+    const openCloseNav = () => {
+        setMobileNavOpen(!mobileNavOpen);
+    };
+
     return (
         <React.Fragment>
-            <UserNav></UserNav>
-            <MobileNav></MobileNav>
+            {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
+
             <Container className="addHousePage">
                 <Form className="addhouseForm">
                     <Form.Field>
@@ -28,7 +34,7 @@ const AddHouse = () => {
                     </Form.Field>
                     <Form.Field>
                         <label>Household User:</label>
-                        <input disabled />
+                        <input disabled placeholder={state.user.displayName} value={state.user.displayName} />
                     </Form.Field>
                     <Form.Field>
                         <label>Description:</label>

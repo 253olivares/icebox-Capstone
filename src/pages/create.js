@@ -1,9 +1,8 @@
 import React from "react";
+import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
-import { Link } from "gatsby";
-import { Container, Menu, Image, Input, Button } from "semantic-ui-react";
+import { Container, Input } from "semantic-ui-react";
 import "../css/styles.css";
-import burgerMenu from "../images/bars-solid.png";
 
 import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
@@ -18,6 +17,12 @@ import { createUser } from "../services/db";
 
 const CreatePage = () => {
   const state = React.useContext(State);
+
+  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+  const openCloseNav = () => {
+    setMobileNavOpen(!mobileNavOpen);
+  };
+
   const initialUserInfo = {
     email: "",
     password: "",
@@ -45,8 +50,7 @@ const CreatePage = () => {
   return (
     <React.Fragment>
       <main>
-        <Nav></Nav>
-        <MobileNav></MobileNav>
+        {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
 
         <Container className="createBox">
           <div className="createContainer">

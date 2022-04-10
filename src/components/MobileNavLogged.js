@@ -1,11 +1,22 @@
 import React from "react";
 import { Link } from "gatsby";
 // import Navbar from '../../components/Navbar';
-import { Container, Segment, Menu } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
+import State from "../state";
+
+import { signOutUser } from "../services/db";
 
 import "../css/styles.css";
 
 const MobileNavLogged = () => {
+
+    const state = React.useContext(State);
+
+    function ClickedSignout() {
+        signOutUser();
+        state.clearState()
+    }
+
     return (
         <React.Fragment>
             <Menu className="MobileNavMenu">
@@ -22,7 +33,10 @@ const MobileNavLogged = () => {
                         <h1 className="MNMore MNOption"> <Link to="/dashboard">DASHBOARD</Link></h1>
                     </div>
                     <hr className="followinghr"></hr>
-
+                    <div>
+                        <h1 className="MNMore MNOption" onClick={ClickedSignout}> LOGOUT</h1>
+                    </div>
+                    <hr className="followinghr"></hr>
                     <div className="MNbottomInfo">
                         <img className="MNFooter"></img>
                         <p className="MNDesc">

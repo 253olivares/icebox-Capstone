@@ -2,8 +2,6 @@ import React from "react";
 import "semantic-ui-css/semantic.css";
 import { Link } from "gatsby";
 import { Menu } from "semantic-ui-react";
-import { MobileNav } from "./MobileNav.js";
-
 import "../css/styles.css";
 import burgerMenu from "../images/bars-solid.png";
 

@@ -1,15 +1,16 @@
 import React from "react";
+import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
-import { Link, navigate } from "gatsby";
-import { Container, Menu, Image, Input, Button } from "semantic-ui-react";
+import { Container, Image, Input, Button } from "semantic-ui-react";
 
 import "../css/styles.css";
-import burgerMenu from "../images/bars-solid.png";
 
-import Nav from "../components/Nav";
+
+import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
-import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+import Footer from "../components/Footer";
 
 import { signIn } from "../services/db";
 import State from "../state";
@@ -20,6 +21,10 @@ const LoginPage = () => {
 
   const state = React.useContext(State);
 
+  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+  const openCloseNav = () => {
+    setMobileNavOpen(!mobileNavOpen);
+  };
 
   const initialUserLogin = {
     email: "",
@@ -42,7 +47,7 @@ const LoginPage = () => {
   return (
     <React.Fragment>
       <main>
-        {state.user ? <UserNav></UserNav> : <Nav></Nav>}
+        {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
         <Container className="loginBox">
           <div className="loginContainer">
             <div className="leftBox">

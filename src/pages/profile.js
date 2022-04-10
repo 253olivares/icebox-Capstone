@@ -1,28 +1,29 @@
 import React from 'react';
+import { navigate } from "gatsby";
 import 'semantic-ui-css/semantic.css';
-import { Link } from 'gatsby';
-import { Container, Menu, Image, Input, Button } from 'semantic-ui-react';
+import { Container, Input } from 'semantic-ui-react';
 import "../css/styles.css";
-import burgerMenu from '../images/bars-solid.png';
 
 import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
-import State from "../state";
-
 import Footer from "../components/Footer";
+
+import State from "../state";
 
 const ProfilePage = () => {
 
     const state = React.useContext(State);
 
+    const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+    const openCloseNav = () => {
+        setMobileNavOpen(!mobileNavOpen);
+    };
     return (
         <React.Fragment>
             <main>
-                <UserNav></UserNav>
-                <MobileNav></MobileNav>
-
+                {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
                 <Container className='profileSection'>
                     <h1>PROFILE</h1>
                     <div className='profileInformationHolder'>

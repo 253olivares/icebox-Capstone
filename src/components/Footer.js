@@ -3,7 +3,7 @@ import "semantic-ui-css/semantic.css";
 import { Container } from "semantic-ui-react";
 import "../css/styles.css";
 
-const appFooter = () => {
+const AppFooter = () => {
     return (
         <React.Fragment>
             <Container className="footer">
@@ -48,4 +48,4 @@ const appFooter = () => {
     );
 };
 
-export default appFooter;
+export default AppFooter;

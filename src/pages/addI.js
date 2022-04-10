@@ -1,6 +1,7 @@
 import React from "react";
+import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
-import { Container, Form, Button } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import "../css/styles.css";
 
 import MobileNav from "../components/MobileNav";
@@ -15,10 +16,15 @@ import State from "../state";
 const AddInvetory = () => {
     const state = React.useContext(State);
 
+    const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+    const openCloseNav = () => {
+        setMobileNavOpen(!mobileNavOpen);
+    };
+
+
     return (
         <React.Fragment>
-            <UserNav></UserNav>
-            <MobileNav></MobileNav>
+            {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
             <Container className="addInvetory">
 
             </Container>

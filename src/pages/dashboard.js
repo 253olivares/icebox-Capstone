@@ -1,9 +1,10 @@
 import React from 'react';
+import { navigate } from "gatsby";
 import 'semantic-ui-css/semantic.css';
 import { Link } from 'gatsby';
-import { Container, Menu, Image, Input, Button } from 'semantic-ui-react';
+import { Container, Button } from 'semantic-ui-react';
 import "../css/styles.css";
-import burgerMenu from '../images/bars-solid.png';
+
 
 import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
@@ -18,19 +19,21 @@ const DashboardPage = () => {
 
     const state = React.useContext(State);
 
+    const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+    const openCloseNav = () => {
+        setMobileNavOpen(!mobileNavOpen);
+    };
 
 
     return (
         <React.Fragment>
             <main>
-                {state.user ? <UserNav></UserNav> : <Nav></Nav>}
-                <MobileNav></MobileNav>
-
+                {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
                 <Container className='dashboardName'>
                     <div className='dashcontainer'>
                         <img className='dashboardImage'></img>
                         <div className='dashboardInformation'>
-                            <h1><span className='userName'>USER'S NAME</span> DASHBOARD</h1>
+                            <h1><span className='userName'>{state.user.displayName}</span> DASHBOARD</h1>
                             <p>Number of Households: X</p>
                             <p>Number of Fridges: X</p>
                         </div>

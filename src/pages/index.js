@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
 import { Container } from "semantic-ui-react";
 import "../css/styles.css";
@@ -7,15 +8,14 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
-import State from "../state";
 
 import Footer from "../components/Footer";
+
+import State from "../state";
 const HomePage = () => {
   const state = React.useContext(State);
 
-
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
-
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
   };
@@ -27,10 +27,7 @@ const HomePage = () => {
     <React.Fragment>
       {/* Main page code */}
       <main>
-        {state.user ? <UserNav></UserNav> : <Nav openCloseNav={openCloseNav}></Nav>}
-        {/* <UserNav></UserNav> */}
-        {/* <MobileNav></MobileNav> */}
-        {mobileNavOpen ? <MobileNav ></MobileNav> : null}
+        {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
         <Container className="iceboxDesc">
           <div className="decHolder">
             <div className="leftFlex">
