@@ -33,7 +33,9 @@ const DashboardPage = () => {
                     <div className='dashcontainer'>
                         <img className='dashboardImage'></img>
                         <div className='dashboardInformation'>
-                            <h1><span className='userName'>{state.user.displayName}</span> DASHBOARD</h1>
+                            <h1><span className='userName'>
+                                {state.user ? <>{state.user.displayName}</> : <>User's Name</>}
+                            </span> DASHBOARD</h1>
                             <p>Number of Households: X</p>
                             <p>Number of Fridges: X</p>
                         </div>

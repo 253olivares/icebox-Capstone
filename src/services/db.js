@@ -55,7 +55,6 @@ export function signOutUser() {
       // Sign-out successful.
       console.log("user signed out");
       // GlobalVarIfLogged = false;
-      navigate("/");
 
     })
     .catch((error) => {

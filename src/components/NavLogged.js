@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
 import { Menu } from "semantic-ui-react";
 import { Link } from "gatsby";
@@ -15,6 +16,7 @@ const UserNav = ({ openCloseNav }) => {
   const state = React.useContext(State);
 
   function ClickedSignout() {
+    navigate("/");
     signOutUser();
     state.clearState()
   }

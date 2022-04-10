@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import { Link } from "gatsby";
 // import Navbar from '../../components/Navbar';
 import { Menu } from "semantic-ui-react";
