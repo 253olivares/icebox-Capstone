@@ -22,7 +22,18 @@ const AddHouse = () => {
             <MobileNav></MobileNav>
             <Container className="addHousePage">
                 <Form className="addhouseForm">
-
+                    <Form.Field>
+                        <label>Household Name:</label>
+                        <input placeholder='First Name' />
+                    </Form.Field>
+                    <Form.Field>
+                        <label>Household User:</label>
+                        <input placeholder='First Name' />
+                    </Form.Field>
+                    <Form.Field>
+                        <label>Description:</label>
+                        <input placeholder='First Name' />
+                    </Form.Field>
                     <Button type='submit'>Submit</Button>
                 </Form>
             </Container>

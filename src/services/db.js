@@ -36,9 +36,9 @@ export async function signIn(email, password, first, last) {
       const user = userCredential.user;
       console.log(user);
       console.log("user signed in successfully");
+      navigate("/dashboard");
       // console.log(GlobalVarIfLogged);
       // GlobalVarIfLogged = true;
-
       return user
       // ...
     })

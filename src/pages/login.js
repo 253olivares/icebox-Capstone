@@ -31,7 +31,6 @@ const LoginPage = () => {
     setUserLogin(userLogin);
     const user = await signIn(userLogin.email, userLogin.password);
     state.signedIn(user);
-    navigate("/dashboard");
   }
 
   function changeUserLogin(e, { value, name }) {
