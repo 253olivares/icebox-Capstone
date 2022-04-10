@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 
 import State from "../state";
 
+const HouseholdOptions = []
 
 const AddFridge = () => {
     const state = React.useContext(State);
@@ -22,14 +23,24 @@ const AddFridge = () => {
             <Container className="addFridgePage">
                 <Form>
                     <Form.Field>
-                        <label>Name of Fridge</label>
-                        <input placeholder="" />
+                        <label>Name of Fridge:</label>
+                        <input placeholder="Name of Fridge..." />
                     </Form.Field>
                     <Form.Field>
-                        <label>Fridge Location</label>
+                        <label>Fridge Description:</label>
+                        <input placeholder="Description of Fridge Location, Food type, Ect...." />
                     </Form.Field>
                     <Form.Field>
                         <label>Fridge Owner</label>
+                        <input disabled />
+                    </Form.Field>
+                    <Form.Field>
+                        <Form.Select
+                            fluid
+                            label='Household:'
+                            options={HouseholdOptions}
+                            placeholder='Select HouseHold...'
+                        />
                     </Form.Field>
                     <Button type='submit'>Submit</Button>
                 </Form>

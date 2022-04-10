@@ -28,7 +28,7 @@ const AddHouse = () => {
                     </Form.Field>
                     <Form.Field>
                         <label>Household User:</label>
-                        <input placeholder='First Name' />
+                        <input disabled />
                     </Form.Field>
                     <Form.Field>
                         <label>Description:</label>
