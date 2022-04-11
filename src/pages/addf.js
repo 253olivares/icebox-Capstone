@@ -28,7 +28,7 @@ const AddFridge = () => {
             {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
 
             <Container className="addFridgePage">
-                <Form>
+                <Form className="addFridgeForm">
                     <Form.Field>
                         <label>Name of Fridge:</label>
                         <input placeholder="Name of Fridge..." />
