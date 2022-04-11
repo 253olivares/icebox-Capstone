@@ -27,13 +27,18 @@ export const Provider = ({ children }) => {
     setState({ ...state, user: null });
   };
 
+  function createNstore(user) {
+    setState({ ...state, user });
+  }
+
   const stateVals = {
     ...state,
     addFridge,
     loadFridges,
     signedIn,
     clearState,
-    testing
+    testing,
+    createNstore
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;

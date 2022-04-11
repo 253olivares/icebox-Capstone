@@ -32,14 +32,15 @@ const CreatePage = () => {
 
   const [userInfo, setUserInfo] = React.useState(initialUserInfo);
 
-  function createNewUser() {
+  async function createNewUser() {
     setUserInfo(userInfo);
-    createUser(
+    const user = await createUser(
       userInfo.email,
       userInfo.password,
       userInfo.first,
       userInfo.last
     );
+    state.createNstore(user);
   }
 
   function changeNewUser(e, { value, name }) {

@@ -70,8 +70,8 @@ function updateUser(username) {
   });
 }
 
-export function createUser(email, password, first, last) {
-  createUserWithEmailAndPassword(auth, email, password)
+export async function createUser(email, password, first, last) {
+  return await createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
@@ -84,7 +84,9 @@ export function createUser(email, password, first, last) {
         first_name: first,
         last_name: last,
       });
-      window.location.href = "/dashboard";
+      console.log(user);
+      navigate("/dashboard");
+      return user
       // ...
     })
     .catch((error) => {
