@@ -41,14 +41,12 @@ const AddFridge = () => {
                         <label>Fridge Owner:</label>
                         {state.user ? <input disabled placeholder={state.user.displayName} value={state.user.displayName} /> : <input disabled placeholder="Null" value="Null" />}
                     </Form.Field>
-                    <Form.Field>
-                        <Form.Select
-                            fluid
-                            label='Household:'
-                            options={HouseholdOptions}
-                            placeholder='Select HouseHold...'
-                        />
-                    </Form.Field>
+                    <Form.Select
+                        fluid
+                        label='Household:'
+                        options={HouseholdOptions}
+                        placeholder='Select HouseHold...'
+                    />
                     <Button type='submit'>Submit</Button>
                 </Form>
             </Container>

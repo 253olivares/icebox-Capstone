@@ -976,8 +976,13 @@ h1, h2, h3, h4, h5, h6, p {
           font-style: italic; }
 
 .container.ui.addFridgePage .form.ui.addFridgeForm {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #707070;
   margin-top: 100px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  border-radius: 25px;
+  padding: 25px 5px 30px 5px; }
   .container.ui.addFridgePage .form.ui.addFridgeForm .field {
     padding: 10px; }
   .container.ui.addFridgePage .form.ui.addFridgeForm .button.ui.button {
@@ -993,14 +998,20 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media screen and (max-width: 767px) {
   .container.ui.addFridgePage {
-    width: 100%; }
+    width: 100%;
+    margin-top: 100px; }
     .container.ui.addFridgePage .form.ui.addFridgeForm {
       width: 95%;
       margin: auto; } }
 
 .container.ui.addHousePage .form.ui.addhouseForm {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #707070;
   margin-top: 100px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  border-radius: 25px;
+  padding: 25px 5px 30px 5px; }
   .container.ui.addHousePage .form.ui.addhouseForm .field {
     padding: 10px; }
   .container.ui.addHousePage .form.ui.addhouseForm .button.ui.button {
@@ -1016,7 +1027,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media screen and (max-width: 767px) {
   .container.ui.addHousePage {
-    width: 100%; }
+    width: 100%;
+    margin-top: 100px; }
     .container.ui.addHousePage .form.ui.addhouseForm {
       width: 95%;
       margin: auto; } }
