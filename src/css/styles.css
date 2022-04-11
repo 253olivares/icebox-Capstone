@@ -976,12 +976,12 @@ h1, h2, h3, h4, h5, h6, p {
           font-style: italic; }
 
 .container.ui.addHousePage .form.ui.addhouseForm {
-  background-color: red; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
 
 @media screen and (max-width: 767px) {
   .container.ui.addHousePage {
     width: 100%; }
     .container.ui.addHousePage .form.ui.addhouseForm {
       width: 95%;
-      background-color: orange;
       margin: auto; } }
