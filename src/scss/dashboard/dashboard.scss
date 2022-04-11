@@ -206,8 +206,17 @@
 
     .container.ui.dashboardHouseholds {
         .houseContainer {
-            h1 {
+            .hCHead {
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .button.ui.addH {
+                    margin-top: 15px;
+
+                }
             }
 
             .householdsContainer {
@@ -275,8 +284,7 @@
 
 @media screen and (max-width: 500px) {
     .container.ui.dashboardName {
-        padding-left: 10px;
-        padding-right: 10px;
+        text-align: center;
 
         .dashcontainer {
             .dashboardImage {

@@ -61,7 +61,7 @@ const DashboardPage = () => {
                             INDIVIDUAL FRIDGES <Button className='addF'> <Link to="/addf"> Add Fridge</Link></Button>
                         </h1>
                         <div className='fridges'>
-                            <a href='/fridge'>
+                            <Link to="/fridge">
                                 <div className='fridges_One'>
                                     <img></img>
                                     <div className='drigeinformation'>
@@ -71,7 +71,7 @@ const DashboardPage = () => {
                                         <p>Recent Expired Items: X</p>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </Container>

@@ -53,7 +53,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0px;
   border: 0px;
   border-radius: 0px;
-  position: absolute; }
+  position: absolute;
+  z-index: 5; }
   .menu.ui.MobileNavMenu .MobileNavHolder {
     display: flex;
     flex-direction: column;
@@ -124,7 +125,7 @@ h1, h2, h3, h4, h5, h6, p {
     .menu.ui.navbar .navbarHolderMobile .navbarMenu {
       width: 80px;
       position: absolute;
-      z-index: 1; }
+      z-index: 5; }
       .menu.ui.navbar .navbarHolderMobile .navbarMenu img {
         margin-top: 10px;
         margin-left: 5px;
@@ -743,8 +744,14 @@ h1, h2, h3, h4, h5, h6, p {
       text-align: center; }
     .container.ui.dashboardName .dashcontainer .dashboardInformation p {
       text-align: center; }
-  .container.ui.dashboardHouseholds .houseContainer h1 {
-    text-align: center; }
+  .container.ui.dashboardHouseholds .houseContainer .hCHead {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .container.ui.dashboardHouseholds .houseContainer .hCHead .button.ui.addH {
+      margin-top: 15px; }
   .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
     justify-content: center; }
   .container.ui.individualFrdges .iFContainer .iFCHead {
@@ -773,8 +780,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media screen and (max-width: 500px) {
   .container.ui.dashboardName {
-    padding-left: 10px;
-    padding-right: 10px; }
+    text-align: center; }
     .container.ui.dashboardName .dashcontainer .dashboardImage {
       width: 275px;
       height: 150px; }
