@@ -300,8 +300,7 @@ p {
       .container.ui.iceboxShopping .shoppingHolder .rightFlex img {
         display: block;
         width: 400px;
-        height: 350px;
-        background-color: white; }
+        height: 350px; }
 
 .container.ui.footer {
   width: 100%;
@@ -445,7 +444,7 @@ p {
       background-image: url(../images/Icebox_assets/stockphoto_2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center; }
+      background-position: right 30% center; }
     .container.ui.loginBox .loginContainer .rightBox {
       width: 50%;
       text-align: center;

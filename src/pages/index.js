@@ -12,6 +12,7 @@ import MobileNavLogged from "../components/MobileNavLogged";
 import sharedFridges from "../images/Icebox_assets/fridge_cluster.svg";
 import iceFridge from "../images/Icebox_assets/ice_fridge.svg";
 import trackApp from "../images/Icebox_assets/phone.svg";
+import easyshop from "../images/Icebox_assets/home_fridge.svg"
 
 import Footer from "../components/Footer";
 
@@ -111,7 +112,7 @@ const HomePage = () => {
               </p>
             </div>
             <div className="rightFlex">
-              <img src="" alt="SHOPPING IMAGE"></img>
+              <img src={easyshop} alt="SHOPPING IMAGE"></img>
             </div>
           </div>
         </Container>

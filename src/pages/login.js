@@ -13,6 +13,7 @@ import MobileNavLogged from "../components/MobileNavLogged";
 import Footer from "../components/Footer";
 
 import { signIn } from "../services/db";
+
 import State from "../state";
 
 
@@ -77,8 +78,7 @@ const LoginPage = () => {
               <p className="subForgor">forgot password?</p>
 
               <button className="logOption" onClick={newUser}>
-                {" "}
-                Login{" "}
+                Login
               </button>
 
               <div className="divider">
