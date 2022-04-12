@@ -18,19 +18,19 @@ const MobileNav = () => {
           </div>
           <hr className="firsthr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/">ABOUT</Link> </h1>
+            <h1 className="MNMore MNOption"> <Link to="/" onClick={document.body.style.overflow = "scroll"}>ABOUT</Link> </h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/login"> LOGIN / REGISTER</Link></h1>
+            <h1 className="MNMore MNOption"> <Link to="/login" onClick={document.body.style.overflow = "scroll"}> LOGIN / REGISTER</Link></h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/ "> TRACKING </Link></h1>
+            <h1 className="MNMore MNOption"> <Link to="/ " onClick={document.body.style.overflow = "scroll"}> TRACKING </Link></h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/"> </Link> SHOPPING</h1>
+            <h1 className="MNMore MNOption"> <Link to="/" onClick={document.body.style.overflow = "scroll"}> </Link> SHOPPING</h1>
           </div>
           <hr className="followinghr"></hr>
 
