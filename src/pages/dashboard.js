@@ -10,6 +10,11 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+
+import { DashImage } from "../images/Icebox_assets/home_fridge.svg";
+import { HouseImage } from "../images/Icebox_assets/home_icon.svg";
+import { FridgeImage } from "../images/Icebox_assets/fridge_icon.svg";
+
 import State from "../state";
 
 
@@ -31,7 +36,7 @@ const DashboardPage = () => {
                 {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
                 <Container className='dashboardName'>
                     <div className='dashcontainer'>
-                        <img className='dashboardImage'></img>
+                        <img src={DashImage} className='dashboardImage'></img>
                         <div className='dashboardInformation'>
                             <h1><span className='userName'>
                                 {state.user ? <>{state.user.displayName}</> : <>User's Name</>}
@@ -47,7 +52,7 @@ const DashboardPage = () => {
                         <h1 className='hCHead'>HOUSEHOLDS <Button className='addH'> <Link to="/addh"> Add House</Link></Button></h1>
                         <div className='householdsContainer'>
                             <div className='householdFridge_One'>
-                                <img></img>
+                                <img src={HouseImage}></img>
                                 <p><span>Household</span> Name</p>
                                 <p>1 Fridge</p>
                             </div>
@@ -63,7 +68,7 @@ const DashboardPage = () => {
                         <div className='fridges'>
                             <Link to="/fridge">
                                 <div className='fridges_One'>
-                                    <img></img>
+                                    <img src={FridgeImage}></img>
                                     <div className='drigeinformation'>
                                         <h1>FRIDGE'S NAME</h1>
                                         <hr></hr>

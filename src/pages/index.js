@@ -9,6 +9,10 @@ import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
 
+import sharedFridges from "../images/Icebox_assets/fridge_cluster.svg";
+import iceFridge from "../images/Icebox_assets/ice_fridge.svg";
+import trackApp from "../images/Icebox_assets/phone.svg";
+
 import Footer from "../components/Footer";
 
 import State from "../state";
@@ -18,6 +22,7 @@ const HomePage = () => {
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
+
   };
 
 
@@ -33,7 +38,7 @@ const HomePage = () => {
             <div className="leftFlex">
               <div>
                 <h1>ICEBOX</h1>
-                <img src="" alt="ICEBOXLOGO"></img>
+                <img src={iceFridge} alt="ICEBOXLOGO"></img>
               </div>
             </div>
             <div className="rightFlex">
@@ -68,14 +73,14 @@ const HomePage = () => {
               </p>
             </div>
             <div className="rightFlex">
-              <img src="" alt="TRACK FRESH IMAGE"></img>
+              <img src={trackApp} alt="TRACK FRESH IMAGE"></img>
             </div>
           </div>
         </Container>
         <Container className="iceboxShare">
           <div className="shareHolder">
             <div className="leftFlex">
-              <img src="" alt="SHARING IMAGE"></img>
+              <img src={sharedFridges} alt="SHARING IMAGE"></img>
             </div>
             <div className="rightFlex">
               <h1>SHARE WITH OTHERS</h1>

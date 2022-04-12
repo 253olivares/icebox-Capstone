@@ -1,62 +1,71 @@
 // css for the main page
-.container.ui.iceboxDesc{
+.container.ui.iceboxDesc {
     width: 100%;
     min-height: 100px;
-    background-color:#FC9E02;
-.decHolder{
-    margin: auto;
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-around;
-    padding: 80px 15px 75px 15px;
-    .leftFlex{
-        width: 55%;
+    background-color: #FC9E02;
+
+    .decHolder {
+        margin: auto;
+        width: 100%;
+        max-width: 1280px;
         display: flex;
-        justify-content: center;
-        h1{
-            color: white;
-            font-size: 50px;
-            text-align: center;
+        justify-content: space-around;
+        padding: 80px 15px 75px 15px;
+
+        .leftFlex {
+            width: 55%;
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                color: white;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            img {
+                display: block;
+                width: 400px;
+                height: 350px;
+            }
         }
-        img{
-            display: block;
-            width: 400px;
-            height: 350px;
-            background-color: white;
-        }
-    }
-    .rightFlex{
-        width: 45%;
-        display: flex;
-        justify-content: center;
-        padding-top: 10px;
-        p{
-            color: white;
-            font-size: 23px;
-            margin-bottom: 30px;
-        }
-        button{
-            padding: 15px 30px 15px 30px;
-            color: white;
-            background-color: #1E85AE;
-            border: none;
-            border-radius: 50px;
-            font-size: 25px;
-            margin: auto;
-            display:  block;
-        }
-        button:hover{
-            cursor: pointer;
+
+        .rightFlex {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+
+            p {
+                color: white;
+                font-size: 23px;
+                margin-bottom: 30px;
+            }
+
+            button {
+                padding: 15px 30px 15px 30px;
+                color: white;
+                background-color: #1E85AE;
+                border: none;
+                border-radius: 50px;
+                font-size: 25px;
+                margin: auto;
+                display: block;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
         }
     }
 }
-}
-.container.ui.iceboxTrack{
+
+.container.ui.iceboxTrack {
     width: 100%;
     min-height: 100px;
-    background-color:#FFFFFF;
-    .trackHolder{
+    background-color: #FFFFFF;
+
+    .trackHolder {
         margin: auto;
         width: 100%;
         max-width: 1280px;
@@ -65,36 +74,42 @@
         align-items: center;
         padding: 80px 15px 75px 15px;
         color: #1E85AE;
-        .leftFlex{
-            h1{
+
+        .leftFlex {
+            h1 {
                 font-style: italic;
                 font-size: 50px;
                 text-align: center;
                 margin-bottom: 20px;
             }
-            p{
+
+            p {
                 font-size: 23px;
             }
+
             width: 45%;
         }
-        .rightFlex{
+
+        .rightFlex {
             width: 55%;
             display: flex;
             justify-content: center;
-            img{
+
+            img {
                 display: block;
                 width: 400px;
                 height: 350px;
-                background-color: #CCEAF6;
             }
         }
     }
 }
-.container.ui.iceboxShare{
+
+.container.ui.iceboxShare {
     width: 100%;
     min-height: 100px;
-    background-color:#CCEAF6;
-    .shareHolder{
+    background-color: #CCEAF6;
+
+    .shareHolder {
         margin: auto;
         width: 100%;
         max-width: 1280px;
@@ -102,37 +117,43 @@
         justify-content: space-around;
         align-items: center;
         padding: 80px 15px 75px 15px;
-        .leftFlex{
+
+        .leftFlex {
             width: 55%;
             display: flex;
             justify-content: center;
-            img{
+
+            img {
                 display: block;
                 width: 400px;
                 height: 350px;
-                background-color: #4CB6E1;
             }
         }
-        .rightFlex{
+
+        .rightFlex {
             width: 45%;
             color: #1E85AE;
-            h1{
+
+            h1 {
                 font-style: italic;
                 font-size: 50px;
                 text-align: center;
                 margin-bottom: 20px;
             }
-            p{
+
+            p {
                 font-size: 23px;
             }
         }
     }
 }
-.container.ui.iceboxShopping{
+
+.container.ui.iceboxShopping {
     width: 100%;
     min-height: 100px;
-    background-color:#4CB6E1;
-    .shoppingHolder{
+    background-color: #4CB6E1;
+
+    .shoppingHolder {
         margin: auto;
         width: 100%;
         max-width: 1280px;
@@ -140,24 +161,30 @@
         justify-content: space-around;
         align-items: center;
         padding: 80px 15px 75px 15px;
-        .leftFlex{
+
+        .leftFlex {
             width: 45%;
-            h1{
+
+            h1 {
                 font-style: italic;
                 font-size: 50px;
                 text-align: center;
                 margin-bottom: 20px;
             }
-            p{
+
+            p {
                 font-size: 23px;
             }
+
             color: white;
         }
-        .rightFlex{
+
+        .rightFlex {
             display: flex;
             justify-content: center;
             width: 55%;
-            img{
+
+            img {
                 display: block;
                 width: 400px;
                 height: 350px;
@@ -166,11 +193,13 @@
         }
     }
 }
-.container.ui.footer{
+
+.container.ui.footer {
     width: 100%;
     min-height: 250px;
-    background-color:#1E85AE;
-    .footerHolder{
+    background-color: #1E85AE;
+
+    .footerHolder {
         margin: auto;
         width: 100%;
         max-width: 1280px;
@@ -178,41 +207,60 @@
         justify-content: space-between;
         align-items: center;
         padding: 80px 15px 75px 15px;
-        .pagelogDesc{
+
+        .pagelogDesc {
             padding: 10px;
             width: 30%;
-            img{
-                display: block;
+
+            .imageNText {
+                display: flex;
+                align-items: center;
                 margin-bottom: 20px;
-                width: 100%;
-                height: 55px;
-                background-color: white;
+
+                img {
+                    display: block;
+                    margin-bottom: 20px;
+                    height: 55px;
+                    margin-bottom: 0px;
+                }
+
+                h1 {
+                    margin-left: 20px;
+                    color: white;
+                    margin-top: 0px;
+                }
             }
-            P{
+
+            P {
                 font-size: 15px;
                 color: white;
             }
         }
-        .CatNav{
+
+        .CatNav {
             width: 70%;
             display: flex;
             justify-content: space-around;
             padding: 0px 20px 0px 20px;
-            .cat{
-                h1{
+
+            .cat {
+                h1 {
                     font-size: 20px;
                     margin-bottom: 5px;
                 }
-                hr{
+
+                hr {
                     margin-bottom: 15px;
                     height: 2px;
                     border: none;
                     background-color: white;
                 }
-                p{
+
+                p {
                     font-size: 15px;
                     margin-bottom: 10px;
                 }
+
                 display: flex;
                 color: white;
                 flex-direction: column;
@@ -221,218 +269,237 @@
     }
 }
 
-@media screen and (max-width: 950px){
-    .container.ui.iceboxDesc{
-    .decHolder{
-        flex-direction: column;
-        .leftFlex{
-            width: 100%;
-            h1{
-            }
-            img{
-
-            }
-        }
-        .rightFlex{
-            padding-top: 50px;
-            margin: auto;
-            width: 80%;
-            p{
-
-            }
-            button{
-            }
-            button:hover{
-            }
-        }
-    }
-    }
-    .container.ui.iceboxTrack{
-        .trackHolder{
+@media screen and (max-width: 950px) {
+    .container.ui.iceboxDesc {
+        .decHolder {
             flex-direction: column;
-            .leftFlex{
-                padding-bottom: 50px;
-                margin: auto;
-                width: 80%;
-                h1{
-                }
-                p{
-                }
-            }
-            .rightFlex{
-                width: 100%;
-                img{
-                }
-            }
-        }
-    }
-    .container.ui.iceboxShare{
-        .shareHolder{
-            flex-direction: column;
-            .leftFlex{
-                width: 100%;
-                img{
 
-                }
+            .leftFlex {
+                width: 100%;
+
+                h1 {}
+
+                img {}
             }
-            .rightFlex{
+
+            .rightFlex {
                 padding-top: 50px;
                 margin: auto;
                 width: 80%;
-                h1{
 
-                }
-                p{
+                p {}
 
-                }
+                button {}
+
+                button:hover {}
             }
         }
     }
-    .container.ui.iceboxShopping{
-        .shoppingHolder{
+
+    .container.ui.iceboxTrack {
+        .trackHolder {
             flex-direction: column;
-            .leftFlex{
+
+            .leftFlex {
                 padding-bottom: 50px;
                 margin: auto;
                 width: 80%;
-                h1{
 
-                }
-                p{
-                }
+                h1 {}
+
+                p {}
             }
-            .rightFlex{
+
+            .rightFlex {
                 width: 100%;
-                img{
-                }
+
+                img {}
             }
         }
     }
-    .container.ui.footer{
-        display: none;
-        .footerHolder{
-            .pagelogDesc{
-                img{
-                }
-                P{
-                }
+
+    .container.ui.iceboxShare {
+        .shareHolder {
+            flex-direction: column;
+
+            .leftFlex {
+                width: 100%;
+
+                img {}
             }
-            .CatNav{
-                .cat{
-                    h1{
-                    }
-                    hr{
-                    }
-                    p{
-                    }
+
+            .rightFlex {
+                padding-top: 50px;
+                margin: auto;
+                width: 80%;
+
+                h1 {}
+
+                p {}
+            }
+        }
+    }
+
+    .container.ui.iceboxShopping {
+        .shoppingHolder {
+            flex-direction: column;
+
+            .leftFlex {
+                padding-bottom: 50px;
+                margin: auto;
+                width: 80%;
+
+                h1 {}
+
+                p {}
+            }
+
+            .rightFlex {
+                width: 100%;
+
+                img {}
+            }
+        }
+    }
+
+    .container.ui.footer {
+        display: none;
+
+        .footerHolder {
+            .pagelogDesc {
+                img {}
+
+                P {}
+            }
+
+            .CatNav {
+                .cat {
+                    h1 {}
+
+                    hr {}
+
+                    p {}
                 }
             }
         }
     }
 }
-@media screen and (max-width: 800px){
-    .container.ui{
+
+@media screen and (max-width: 800px) {
+    .container.ui {
         margin-left: auto !important;
         margin-right: auto !important;
     }
 }
-@media screen and (max-width: 600px){
-    .container.ui.iceboxDesc{
-        .decHolder{
-            .leftFlex{
 
-                h1{
-                }
-                img{
+@media screen and (max-width: 600px) {
+    .container.ui.iceboxDesc {
+        .decHolder {
+            .leftFlex {
+
+                h1 {}
+
+                img {
                     width: 250px;
-                    height:200px;
+                    height: 200px;
                 }
             }
-            .rightFlex{
-                p{
-                    font-size: 18px;
-                }
-                button{
-                    font-size: 18px;
-                }
-                button:hover{
-                }
-            }
-        }
-        }
-        .container.ui.iceboxTrack{
-            .trackHolder{
-                .leftFlex{
-                    h1{
-                        font-size: 45px;
-                    }
-                    p{
-                        font-size: 18px;
-                    }
-                }
-                .rightFlex{
-                    img{
-                        width: 250px;
-                    height:200px;
-                    }
-                }
-            }
-        }
-        .container.ui.iceboxShare{
-            .shareHolder{
-                .leftFlex{
-                    img{
-                        width: 250px;
-                        height:200px;
-                    }
-                }
-                .rightFlex{
-                    h1{
-                        font-size: 45px;
-                    }
-                    p{
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-        .container.ui.iceboxShopping{
-            .shoppingHolder{
-                .leftFlex{
 
-                    h1{
-                        font-size: 45px;
-                    }
-                    p{
-                        font-size: 18px;
-                    }
+            .rightFlex {
+                p {
+                    font-size: 18px;
                 }
-                .rightFlex{
-                    img{
-                        width: 250px;
-                        height:200px;
-                    }
+
+                button {
+                    font-size: 18px;
+                }
+
+                button:hover {}
+            }
+        }
+    }
+
+    .container.ui.iceboxTrack {
+        .trackHolder {
+            .leftFlex {
+                h1 {
+                    font-size: 45px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            .rightFlex {
+                img {
+                    width: 250px;
+                    height: 200px;
                 }
             }
         }
-        .container.ui.footer{
-            .footerHolder{
-                .pagelogDesc{
-                    img{
-                    }
-                    P{
-                    }
+    }
+
+    .container.ui.iceboxShare {
+        .shareHolder {
+            .leftFlex {
+                img {
+                    width: 250px;
+                    height: 200px;
                 }
-                .CatNav{
-                    .cat{
-                        h1{
-                        }
-                        hr{
-                        }
-                        p{
-                        }
-                    }
+            }
+
+            .rightFlex {
+                h1 {
+                    font-size: 45px;
+                }
+
+                p {
+                    font-size: 18px;
                 }
             }
         }
+    }
+
+    .container.ui.iceboxShopping {
+        .shoppingHolder {
+            .leftFlex {
+
+                h1 {
+                    font-size: 45px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            .rightFlex {
+                img {
+                    width: 250px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    .container.ui.footer {
+        .footerHolder {
+            .pagelogDesc {
+                img {}
+
+                P {}
+            }
+
+            .CatNav {
+                .cat {
+                    h1 {}
+
+                    hr {}
+
+                    p {}
+                }
+            }
+        }
+    }
 }

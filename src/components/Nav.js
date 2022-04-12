@@ -1,10 +1,9 @@
 import React from "react";
-import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
 import { Link } from "gatsby";
 import { Menu } from "semantic-ui-react";
 import "../css/styles.css";
-import burgerMenu from "../images/bars-solid.png";
+import burgerMenu from "../images/Icebox_assets/bars-solid.png";
 
 const Nav = ({ openCloseNav }) => {
   return (

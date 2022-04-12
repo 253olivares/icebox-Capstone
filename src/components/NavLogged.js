@@ -5,7 +5,7 @@ import { Menu } from "semantic-ui-react";
 import { Link } from "gatsby";
 
 import "../css/styles.css";
-import burgerMenu from "../images/bars-solid.png";
+import burgerMenu from "../images/Icebox_assets/bars-solid.png";
 
 import State from "../state";
 

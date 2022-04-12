@@ -7,6 +7,8 @@ import State from "../state";
 
 import { signOutUser } from "../services/db";
 
+import { iceboxLognav } from "../images/Icebox_assets/logo.svg"
+
 import "../css/styles.css";
 
 const MobileNavLogged = () => {
@@ -40,7 +42,10 @@ const MobileNavLogged = () => {
                     </div>
                     <hr className="followinghr"></hr>
                     <div className="MNbottomInfo">
-                        <img className="MNFooter"></img>
+                        <div className="imageNTextNav">
+                            <img src={iceboxLognav} alt="AppImg"></img>
+                            <h1>ICEBOX</h1>
+                        </div>
                         <p className="MNDesc">
                             {" "}
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

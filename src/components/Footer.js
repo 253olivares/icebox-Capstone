@@ -3,15 +3,19 @@ import "semantic-ui-css/semantic.css";
 import { Container } from "semantic-ui-react";
 import "../css/styles.css";
 
+import iceboxLogo from "../images/Icebox_assets/logo.svg";
+
 const AppFooter = () => {
     return (
         <React.Fragment>
             <Container className="footer">
                 <div className="footerHolder">
                     <div className="pagelogDesc">
-                        <img src="" alt="AppImg"></img>
+                        <div className="imageNText">
+                            <img src={iceboxLogo} alt="AppImg"></img>
+                            <h1>ICEBOX</h1>
+                        </div>
                         <p>
-                            {" "}
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                             enim ad minim veniam, quis nostrud exercitation ullamco laboris
