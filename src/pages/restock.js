@@ -41,7 +41,7 @@ const RestockPage = () => {
             <main>
                 {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
                 <Container className="addFoodItems">
-                    <Form>
+                    <Form className="addfoodForm">
                         <Form.Field>
                             <label>Food Name:</label>
                             <Input
@@ -58,6 +58,10 @@ const RestockPage = () => {
                         <Form.Field>
                             <label>Expiration Date:</label>
                             <Input placeholder='Expiration Format: MM/DD/YY'></Input>
+                        </Form.Field>
+                        <Form.Field>
+                            <label>QTY:</label>
+                            <Input placeholder='Quantity of Food...'></Input>
                         </Form.Field>
                         <Button type="submit" onClick={AddFood}> Submit </Button>
                     </Form>
