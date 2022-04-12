@@ -9,6 +9,11 @@ import iceboxLognav from "../images/Icebox_assets/logo.svg";
 import "../css/styles.css";
 
 const MobileNav = () => {
+
+  function resetStyle() {
+    document.body.style.overflow = "scroll";
+  }
+
   return (
     <React.Fragment>
       <Menu className="MobileNavMenu">
@@ -18,19 +23,19 @@ const MobileNav = () => {
           </div>
           <hr className="firsthr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/" onClick={document.body.style.overflow = "scroll"}>ABOUT</Link> </h1>
+            <h1 className="MNMore MNOption"> <Link to="/" onClick={resetStyle}>ABOUT</Link> </h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/login" onClick={document.body.style.overflow = "scroll"}> LOGIN / REGISTER</Link></h1>
+            <h1 className="MNMore MNOption"> <Link to="/login" onClick={resetStyle}> LOGIN / REGISTER</Link></h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/ " onClick={document.body.style.overflow = "scroll"}> TRACKING </Link></h1>
+            <h1 className="MNMore MNOption"> <Link to="/ " onClick={resetStyle}> TRACKING </Link></h1>
           </div>
           <hr className="followinghr"></hr>
           <div>
-            <h1 className="MNMore MNOption"> <Link to="/" onClick={document.body.style.overflow = "scroll"}> </Link> SHOPPING</h1>
+            <h1 className="MNMore MNOption"> <Link to="/" onClick={resetStyle}> </Link> SHOPPING</h1>
           </div>
           <hr className="followinghr"></hr>
 

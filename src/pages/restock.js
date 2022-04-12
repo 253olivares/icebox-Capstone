@@ -17,12 +17,24 @@ const RestockPage = () => {
 
     const state = React.useContext(State);
 
+    const foodOptions = [
+        { key: 'f', text: 'Fruits', value: 'Fruits' },
+        { key: 'v', text: 'Vegetables', value: 'Vegetables' },
+        { key: 'g', text: 'Grains', value: 'Grains' },
+        { key: 'p', text: 'Protein', value: 'Protein' },
+        { key: 'd', text: 'Dairy', value: 'Dairy' },
+        { key: 'o', text: 'Other', value: 'Other' },
+    ]
 
     const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
     const openCloseNav = () => {
         setMobileNavOpen(!mobileNavOpen);
         { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
     };
+
+    async function AddFood() {
+        navigate("/dashboard");
+    }
 
     return (
         <React.Fragment>
@@ -40,13 +52,14 @@ const RestockPage = () => {
                             fluid
                             label="Food Type"
                             placeholder="Food Type..."
+                            options={foodOptions}
                         >
                         </Form.Select>
                         <Form.Field>
                             <label>Expiration Date:</label>
-                            <Input placeholder='Enter Expiration Date...'></Input>
+                            <Input placeholder='Expiration Format: MM/DD/YY'></Input>
                         </Form.Field>
-                        <Button></Button>
+                        <Button type="submit" onClick={AddFood}> Submit </Button>
                     </Form>
                 </Container>
 
