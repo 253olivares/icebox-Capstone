@@ -990,8 +990,10 @@ h1, h2, h3, h4, h5, h6, p {
     margin: auto;
     text-align: center; }
     .container.ui.fridgeInformation .fridgeIn button {
-      position: relative;
-      margin: auto; } }
+      position: relative !important;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .container.ui.addFridgePage .form.ui.addFridgeForm {
   border-style: solid;
