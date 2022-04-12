@@ -21,6 +21,8 @@ const FridgePage = () => {
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
+    { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
+
   };
 
   return (

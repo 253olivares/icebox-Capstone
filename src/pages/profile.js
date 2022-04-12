@@ -8,6 +8,9 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+
+import profileIcon from "../images/Icebox_assets/profile_icon.png";
+
 import Footer from "../components/Footer";
 
 import State from "../state";
@@ -19,6 +22,7 @@ const ProfilePage = () => {
     const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
     const openCloseNav = () => {
         setMobileNavOpen(!mobileNavOpen);
+        { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
     };
     return (
         <React.Fragment>
@@ -28,7 +32,7 @@ const ProfilePage = () => {
                     <h1>PROFILE</h1>
                     <div className='profileInformationHolder'>
                         <div className='profileImageChangeButton'>
-                            <img src='' alt='profile icon'></img>
+                            <img src={profileIcon} alt='profile icon'></img>
                             <button className='changeIcon'>Change</button>
                         </div>
                         <div className='profileInformation'>

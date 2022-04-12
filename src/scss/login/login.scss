@@ -1,9 +1,10 @@
-.container.ui.loginBox{
-    
+.container.ui.loginBox {
+
     min-height: 100px;
     padding-top: 100px;
     padding-bottom: 100px;
-    .loginContainer{
+
+    .loginContainer {
         width: 100%;
         min-height: 600px;
         border-radius: 25px;
@@ -12,135 +13,151 @@
         border-style: solid;
         border-width: 2px;
         border-color: #707070;
-        .leftBox{
+
+        .leftBox {
             display: flex;
             width: 50%;
-            background-color:#FC9E02;
+            background-image: url(../images/Icebox_assets/stockphoto_2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-        .rightBox{
+
+        .rightBox {
             width: 50%;
             text-align: center;
             padding: 25px;
             display: flex;
             flex-direction: column;
             position: relative;
-             .bigHead{
-                 color: #4CB6E1;
-                 margin-bottom: 0px;
-                 font-size: 35px;
-             }
-             .subHead{
-                 color: #4CB6E1;
-                 margin-bottom: 0px;
-                 font-size: 20px;
-                 padding-bottom: 85px;
-             }
-             .emailInput{
-                 margin-left: auto;
-                 margin-right: auto;
-                 width: 80%;
-                 margin-bottom: 20px;
-                 color: #4CB6E1;
-             }
-             .passwordInput {
-                 width: 80%;
-                 margin-left: auto;
-                 margin-right: auto;
-                 margin-bottom: 20px;
-             }
-             .subForgor{
-                 margin-left: auto;
-                 margin-right: auto;
-                 width: 80%;
-                 text-align: left;
-                 margin-bottom: 15px;
-             }
-             .logOption{
-                 background-color: #FC9E02;
-                 width: 150px;
-                 padding: 10px;
-                 border-radius: 25px;
-                 border: none;
-                 color: white;
-                 font-size: 20px;
-                 margin-left: auto;
-                 margin-right: auto;
-                 margin-bottom: 30px;
-                 font-weight: bold;
-                 box-shadow: 0px 8px 6px  #888888;
-             }
-             .divider{
-                 display: flex;
-                 width: 100%;
-                 justify-content: center;
-                 align-content: center;
-                 height: 20px;
-                 margin-bottom: 15px;
-                 p{
-                     margin-bottom: 0px;
-                     height: 20px;
-                     padding-left: 5px;
-                     padding-right: 5px;
-                 }
-                 hr{
+
+            .bigHead {
+                color: #4CB6E1;
+                margin-bottom: 0px;
+                font-size: 35px;
+            }
+
+            .subHead {
+                color: #4CB6E1;
+                margin-bottom: 0px;
+                font-size: 20px;
+                padding-bottom: 85px;
+            }
+
+            .emailInput {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-bottom: 20px;
+                color: #4CB6E1;
+            }
+
+            .passwordInput {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+            }
+
+            .subForgor {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                text-align: left;
+                margin-bottom: 15px;
+            }
+
+            .logOption {
+                background-color: #FC9E02;
+                width: 150px;
+                padding: 10px;
+                border-radius: 25px;
+                border: none;
+                color: white;
+                font-size: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+                font-weight: bold;
+                box-shadow: 0px 8px 6px #888888;
+            }
+
+            .divider {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-content: center;
+                height: 20px;
+                margin-bottom: 15px;
+
+                p {
+                    margin-bottom: 0px;
+                    height: 20px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+
+                hr {
                     line-height: 20px;
                     width: 20px;
                     background-color: black;
                     height: 1px;
                     border: none;
                     margin-top: 10px;
-                 }
-             }
-             .googleBtnSignIn{
+                }
+            }
+
+            .googleBtnSignIn {
                 width: 200px;
                 margin-left: auto;
                 margin-right: auto;
-             }
-             .newUser{
-                 position: absolute;
-                 bottom: 20px;
-                 left: 20px;
-             }
+            }
+
+            .newUser {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+            }
         }
     }
 }
-@media screen and (max-width: 830px){
 
-    .container.ui.loginBox{
-        .loginContainer{
+@media screen and (max-width: 830px) {
+
+    .container.ui.loginBox {
+        .loginContainer {
             max-width: 500px;
             margin-left: auto;
             margin-right: auto;
-            .leftBox{
+
+            .leftBox {
                 display: none;
             }
-            .rightBox{
+
+            .rightBox {
                 width: 100%;
-                .bigHead{
+
+                .bigHead {
                     margin-top: 50px;
                 }
-                .subHead{
+
+                .subHead {
                     padding-bottom: 50px;
                 }
-                .emailInput{
 
-                }
-                .passwordInput{
+                .emailInput {}
 
-                }
-                .subForgor{
+                .passwordInput {}
 
-                }
-                .logOption{
+                .subForgor {}
 
-                }
-                .divider{
+                .logOption {}
 
-                }
-                .googleBtnSignIn{
+                .divider {}
 
-                }
-                .newUser{
+                .googleBtnSignIn {}
+
+                .newUser {
                     width: 100%;
                     text-align: center;
                     left: 0;
@@ -150,42 +167,41 @@
     }
 
 }
-@media screen and (max-width: 580px){
 
-    .container.ui.loginBox{
-        .loginContainer{
+@media screen and (max-width: 580px) {
+
+    .container.ui.loginBox {
+        .loginContainer {
             max-width: 250px;
             margin-left: auto;
             margin-right: auto;
-            .leftBox{
-            }
-            .rightBox{
-                .bigHead{
+
+            .leftBox {}
+
+            .rightBox {
+                .bigHead {
                     font-size: 25px;
                 }
-                .subHead{
+
+                .subHead {
                     font-size: 15px;
                 }
-                .emailInput{
 
-                }
-                .passwordInput{
+                .emailInput {}
 
-                }
-                .subForgor{
+                .passwordInput {}
 
-                }
-                .logOption{
+                .subForgor {}
+
+                .logOption {
                     font-size: 15px;
                 }
-                .divider{
 
-                }
-                .googleBtnSignIn{
+                .divider {}
 
-                }
-                .newUser{
-                }
+                .googleBtnSignIn {}
+
+                .newUser {}
             }
         }
     }
