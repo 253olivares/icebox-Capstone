@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 import { Menu } from "semantic-ui-react";
 
-import { iceboxLognav } from "../images/Icebox_assets/logo.svg";
+import iceboxLognav from "../images/Icebox_assets/logo.svg";
 
 import "../css/styles.css";
 

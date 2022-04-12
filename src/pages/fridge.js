@@ -8,6 +8,9 @@ import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
+
+import fridgeIcon from "../images/Icebox_assets/fridge_icon.svg";
+
 import State from "../state";
 
 import Footer from "../components/Footer";
@@ -28,7 +31,7 @@ const FridgePage = () => {
         <Container className="fridgeInformation">
           <div className="fridgeInfoHolder">
             <div className="fridgeImage">
-              <img src="" alt="fridgeIcon"></img>
+              <img src={fridgeIcon} alt="fridgeIcon"></img>
             </div>
             <div className="fridgeIn">
               <h1>FRIDGE NAME</h1>

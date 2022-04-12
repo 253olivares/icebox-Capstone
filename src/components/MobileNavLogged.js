@@ -7,7 +7,7 @@ import State from "../state";
 
 import { signOutUser } from "../services/db";
 
-import { iceboxLognav } from "../images/Icebox_assets/logo.svg"
+import iceboxLognav from "../images/Icebox_assets/logo.svg"
 
 import "../css/styles.css";
 

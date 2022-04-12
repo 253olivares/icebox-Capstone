@@ -11,9 +11,9 @@ import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
 
-import { DashImage } from "../images/Icebox_assets/home_fridge.svg";
-import { HouseImage } from "../images/Icebox_assets/home_icon.svg";
-import { FridgeImage } from "../images/Icebox_assets/fridge_icon.svg";
+import DashImage from "../images/Icebox_assets/home_fridge.svg";
+import HouseImage from "../images/Icebox_assets/home_icon.svg";
+import FridgeImage from "../images/Icebox_assets/fridge_icon.svg";
 
 import State from "../state";
 
@@ -52,7 +52,7 @@ const DashboardPage = () => {
                         <h1 className='hCHead'>HOUSEHOLDS <Button className='addH'> <Link to="/addh"> Add House</Link></Button></h1>
                         <div className='householdsContainer'>
                             <div className='householdFridge_One'>
-                                <img src={HouseImage}></img>
+                                <img src={HouseImage} width="125px" height="100px"></img>
                                 <p><span>Household</span> Name</p>
                                 <p>1 Fridge</p>
                             </div>
@@ -83,7 +83,7 @@ const DashboardPage = () => {
 
                 <Footer></Footer>
             </main>
-        </React.Fragment>
+        </React.Fragment >
     );
 
 
