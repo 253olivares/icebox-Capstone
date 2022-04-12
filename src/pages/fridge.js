@@ -39,7 +39,7 @@ const FridgePage = () => {
               <h1>FRIDGE NAME</h1>
               <p>Fridge Location: Living Room</p>
               <p>Last Restock: 1/23/22</p>
-              <button>Restock Food</button>
+              <button onClick={navigate('/restock')}>Restock Food</button>
             </div>
           </div>
         </Container>
@@ -89,7 +89,7 @@ const FridgePage = () => {
 
         <Footer></Footer>
       </main>
-    </React.Fragment>
+    </React.Fragment >
   );
 };
 
