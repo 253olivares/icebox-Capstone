@@ -6,13 +6,14 @@ export const Provider = ({ children }) => {
   const [state, setState] = React.useState();
 
   function testing() {
-    setState({ ...state, testing: true })
+    setState({ ...state, testing: true });
   }
 
   function addFridge(newFridge) {
-    const oldFridges = state.fridges;
+    const oldFridges = state.fridges || [];
 
     setState({ ...state, fridges: [...oldFridges, newFridge] });
+    console.log(state.fridges);
   }
 
   function loadFridges(fridges) {
@@ -25,7 +26,7 @@ export const Provider = ({ children }) => {
 
   function clearState() {
     setState({ ...state, user: null });
-  };
+  }
 
   function createNstore(user) {
     setState({ ...state, user });
@@ -38,7 +39,7 @@ export const Provider = ({ children }) => {
     signedIn,
     clearState,
     testing,
-    createNstore
+    createNstore,
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;

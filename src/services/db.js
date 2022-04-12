@@ -1,7 +1,6 @@
 import app from "gatsby-plugin-firebase-v9.0";
 import { navigate } from "gatsby";
 
-
 // initializes the auth, but we need to pass app to auth function
 import {
   getAuth,
@@ -12,22 +11,26 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 
-import { doc, getFirestore, setDoc } from "firebase/firestore";
+import {
+  doc,
+  getFirestore,
+  setDoc,
+  addDoc,
+  collection,
+  getDoc,
+} from "firebase/firestore";
 
 // sign in function (?) - pulled from firebase docs
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-onAuthStateChanged(auth, user => {
-
+onAuthStateChanged(auth, (user) => {
   if (user != null) {
-    console.log('Logged in!');
-
+    console.log("Logged in!");
   } else {
-    console.log('no user');
-
+    console.log("no user");
   }
-})
+});
 
 export async function signIn(email, password, first, last) {
   return await signInWithEmailAndPassword(auth, email, password)
@@ -39,7 +42,7 @@ export async function signIn(email, password, first, last) {
       navigate("/dashboard");
       // console.log(GlobalVarIfLogged);
       // GlobalVarIfLogged = true;
-      return user
+      return user;
       // ...
     })
     .catch((error) => {
@@ -55,7 +58,6 @@ export function signOutUser() {
       // Sign-out successful.
       console.log("user signed out");
       // GlobalVarIfLogged = false;
-
     })
     .catch((error) => {
       // An error happened.
@@ -68,6 +70,18 @@ function updateUser(username) {
   }).then(() => {
     console.log("display name updated");
   });
+}
+
+export async function addHouse(newHouse) {
+  const docRef = await addDoc(collection(db, "houses"), {
+    owner: newHouse.owner,
+    ownerName: newHouse.ownerName,
+    houseName: newHouse.houseName,
+    description: newHouse.description,
+  });
+  const docSnap = getDoc(docRef);
+  const docData = (await docSnap).data();
+  return docData;
 }
 
 export async function createUser(email, password, first, last) {
@@ -86,7 +100,7 @@ export async function createUser(email, password, first, last) {
       });
       console.log(user);
       navigate("/dashboard");
-      return user
+      return user;
       // ...
     })
     .catch((error) => {
