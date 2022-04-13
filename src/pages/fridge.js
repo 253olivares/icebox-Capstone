@@ -1,5 +1,5 @@
 import React from "react";
-import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
 import { Container } from "semantic-ui-react";
 import "../css/styles.css";
@@ -39,7 +39,7 @@ const FridgePage = () => {
               <h1>FRIDGE NAME</h1>
               <p>Fridge Location: Living Room</p>
               <p>Last Restock: 1/23/22</p>
-              <button onClick={navigate('/restock')}>Restock Food</button>
+              <Link to="/restock"> <button> Restock Food</button> </Link>
             </div>
           </div>
         </Container>

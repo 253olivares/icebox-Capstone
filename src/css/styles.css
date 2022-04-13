@@ -1060,3 +1060,27 @@ p {
     .container.ui.addHousePage .form.ui.addhouseForm {
       width: 95%;
       margin: auto; } }
+
+.container.ui.addFoodItems {
+  margin-top: 75px;
+  margin-bottom: 75px; }
+  .container.ui.addFoodItems form.ui.addfoodForm {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #707070;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    padding: 25px 5px 30px 5px; }
+    .container.ui.addFoodItems form.ui.addfoodForm .field {
+      padding: 10px; }
+    .container.ui.addFoodItems form.ui.addfoodForm .button.ui.button {
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: #FC9E02;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0px 8px 6px #888888;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px; }

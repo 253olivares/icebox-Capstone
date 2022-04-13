@@ -16,10 +16,14 @@ const MobileNavLogged = () => {
     const state = React.useContext(State);
 
     function ClickedSignout() {
-        document.body.style.overflow = "scroll"
+        document.body.style.overflow = "scroll";
         navigate("/");
         signOutUser();
-        state.clearState()
+        state.clearState();
+    }
+
+    function resetStyle2() {
+        document.body.style.overflow = "scroll";
     }
 
     return (
@@ -31,15 +35,15 @@ const MobileNavLogged = () => {
                     </div>
                     <hr className="firsthr"></hr>
                     <div>
-                        <h1 className="MNMore MNOption"> <Link to="/profile" onClick={document.body.style.overflow = "scroll"}>ACCOUNT</Link> </h1>
+                        <h1 className="MNMore MNOption"> <Link to="/profile" onClick={resetStyle2}>ACCOUNT</Link> </h1>
                     </div>
                     <hr className="followinghr"></hr>
                     <div>
-                        <h1 className="MNMore MNOption"> <Link to="/dashboard" onClick={document.body.style.overflow = "scroll"}>DASHBOARD</Link></h1>
+                        <h1 className="MNMore MNOption" > <Link to="/dashboard" onClick={resetStyle2}>DASHBOARD</Link></h1>
                     </div>
                     <hr className="followinghr"></hr>
                     <div>
-                        <h1 className="MNMore MNOption" onClick={ClickedSignout} > LOGOUT</h1>
+                        <h1 className="MNMore MNOption" onClick={ClickedSignout}> LOGOUT</h1>
                     </div>
                     <hr className="followinghr"></hr>
                     <div className="MNbottomInfo">
@@ -57,7 +61,7 @@ const MobileNavLogged = () => {
                     </div>
                 </div>
             </Menu >
-        </React.Fragment>
+        </React.Fragment >
     );
 };
 

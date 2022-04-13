@@ -18,7 +18,7 @@ const UserNav = ({ openCloseNav }) => {
   function ClickedSignout() {
     navigate("/");
     signOutUser();
-    state.clearState()
+    state.clearState();
   }
 
   return (
