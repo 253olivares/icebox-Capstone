@@ -18,6 +18,9 @@ import {
   addDoc,
   collection,
   getDoc,
+  getDocs,
+  query,
+  where,
 } from "firebase/firestore";
 
 // sign in function (?) - pulled from firebase docs
@@ -82,6 +85,19 @@ export async function addHouse(newHouse) {
   const docSnap = getDoc(docRef);
   const docData = (await docSnap).data();
   return docData;
+}
+
+export async function getHouses(user) {
+  const houses = [];
+  const q = query(collection(db, "houses"), where("owner", "==", user));
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    // console.log(doc.id, " => ", doc.data());
+    houses.push(doc.data());
+  });
+  console.log(houses);
+  return houses;
 }
 
 export async function createUser(email, password, first, last) {

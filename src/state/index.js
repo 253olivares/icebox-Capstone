@@ -9,11 +9,20 @@ export const Provider = ({ children }) => {
     setState({ ...state, testing: true });
   }
 
+  function addHouseState(newHouse) {
+    const oldHouses = state.houses || [];
+
+    setState({ ...state, houses: [...oldHouses, newHouse] });
+  }
+
+  function loadHouses(houses) {
+    setState({ ...state, houses });
+  }
+
   function addFridge(newFridge) {
     const oldFridges = state.fridges || [];
 
     setState({ ...state, fridges: [...oldFridges, newFridge] });
-    console.log(state.fridges);
   }
 
   function loadFridges(fridges) {
@@ -40,6 +49,8 @@ export const Provider = ({ children }) => {
     clearState,
     testing,
     createNstore,
+    addHouseState,
+    loadHouses,
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;
