@@ -33,7 +33,7 @@ const DashboardPage = () => {
   };
 
   const initialHouses = [];
-
+  const houseLength = initialHouses.length;
   const [listHouses, setListHouses] = React.useState(initialHouses);
 
   React.useEffect(() => {
@@ -87,7 +87,7 @@ const DashboardPage = () => {
                 </span>{" "}
                 DASHBOARD
               </h1>
-              <p>Number of Households: X</p>
+              <p>Number of Households: {houseLength}</p>
               <p>Number of Fridges: X</p>
             </div>
           </div>
