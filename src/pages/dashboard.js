@@ -15,6 +15,7 @@ import HouseImage from "../images/Icebox_assets/home_icon.svg";
 import FridgeImage from "../images/Icebox_assets/fridge_icon.svg";
 
 import State from "../state";
+import { getHouses } from "../services/db";
 
 import Footer from "../components/Footer";
 
@@ -36,10 +37,21 @@ const DashboardPage = () => {
   const houseLength = initialHouses.length;
   const [listHouses, setListHouses] = React.useState(initialHouses);
 
+  const [houses, setHouses] = React.useState(initialHouses);
+
   React.useEffect(() => {
-    if (state.fridges) {
-      const houses = state.fridges;
-      console.log(houses);
+    async function grabHouses() {
+      if (state.houses) {
+        // const houses = state.houses;
+        setHouses(state.houses);
+      } else {
+        // setHouses(getHouses(state.user.uid));
+        const housesFirebase = await getHouses(state.user.uid);
+        state.addHouseState(housesFirebase);
+        console.log(state.houses);
+        // setHouses(state.houses);
+        // console.log(houses);
+      }
       const houseList = houses.map((house, index) => {
         return (
           <React.Fragment key={`house-${index}`}>
@@ -54,9 +66,8 @@ const DashboardPage = () => {
         );
       });
       setListHouses(houseList);
-      console.log(listHouses);
-    } else {
     }
+    grabHouses();
   }, [""]);
 
   return (
