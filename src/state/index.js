@@ -1,4 +1,5 @@
 import React from "react";
+import { getHouses } from "../services/db";
 
 const State = React.createContext();
 
@@ -10,16 +11,20 @@ export const Provider = ({ children }) => {
   }
 
   function addHouseState(newHouse) {
+    console.log(newHouse);
     const oldHouses = state.houses || [];
 
     setState({ ...state, houses: [...oldHouses, newHouse] });
   }
 
-  function loadHouses(houses) {
+  async function loadHouses() {
+    const houses = await getHouses(state.user.uid);
+
     setState({ ...state, houses });
   }
 
   function addFridge(newFridge) {
+    console.log(newFridge);
     const oldFridges = state.fridges || [];
 
     setState({ ...state, fridges: [...oldFridges, newFridge] });
@@ -31,6 +36,7 @@ export const Provider = ({ children }) => {
 
   function signedIn(user) {
     setState({ ...state, user });
+    // loadHouses();
   }
 
   function clearState() {

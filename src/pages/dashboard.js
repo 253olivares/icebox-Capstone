@@ -33,26 +33,18 @@ const DashboardPage = () => {
     }
   };
 
-  const initialHouses = [];
+  const initialHouses = "";
   const houseLength = initialHouses.length;
   const [listHouses, setListHouses] = React.useState(initialHouses);
-
-  const [houses, setHouses] = React.useState(initialHouses);
 
   React.useEffect(() => {
     async function grabHouses() {
       if (state.houses) {
-        // const houses = state.houses;
-        setHouses(state.houses);
       } else {
-        // setHouses(getHouses(state.user.uid));
-        const housesFirebase = await getHouses(state.user.uid);
-        state.addHouseState(housesFirebase);
-        console.log(state.houses);
-        // setHouses(state.houses);
-        // console.log(houses);
+        const something = await state.loadHouses();
       }
-      const houseList = houses.map((house, index) => {
+      const housesDash = state.houses;
+      const houseList = housesDash.map((house, index) => {
         return (
           <React.Fragment key={`house-${index}`}>
             <div className="householdFridge_One">

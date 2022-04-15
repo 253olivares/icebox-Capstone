@@ -96,7 +96,7 @@ export async function getHouses(user) {
     // console.log(doc.id, " => ", doc.data());
     houses.push(doc.data());
   });
-  console.log(houses);
+  // console.log(houses);
   return houses;
 }
 
