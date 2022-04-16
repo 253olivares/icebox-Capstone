@@ -37,7 +37,7 @@ const LoginPage = () => {
   async function newUser() {
     setUserLogin(userLogin);
     const user = await signIn(userLogin.email, userLogin.password);
-    await state.signedIn(user);
+    state.signedInAndLoadAllInformation(user);
     navigate('/dashboard');
   }
 

@@ -33,33 +33,33 @@ const DashboardPage = () => {
   };
 
   const initialHouses = "";
-  // const [houseLength, setHouseLength] = React.useState(initialHouses.length);
+  const [houseLength, setHouseLength] = React.useState(initialHouses.length);
   const [listHouses, setListHouses] = React.useState(initialHouses);
 
   React.useEffect(() => {
 
     console.log(state.user);
-
     async function grabHouses() {
       if (!state.houses) {
         await state.loadHouses();
+      } else {
+        const housesDash = state.houses;
+        const houseList = housesDash.map((house, index) => {
+          return (
+            <React.Fragment key={`house-${index}`}>
+              <div className="householdFridge_One">
+                <img src={HouseImage} width="125px" height="100px"></img>
+                <p>
+                  <span>{house.houseName}</span>
+                </p>
+                <p>1 Fridge</p>
+              </div>
+            </React.Fragment>
+          );
+        });
+        setListHouses(houseList);
+        setHouseLength(houseList.length);
       }
-      const housesDash = state.houses;
-      const houseList = housesDash.map((house, index) => {
-        return (
-          <React.Fragment key={`house-${index}`}>
-            <div className="householdFridge_One">
-              <img src={HouseImage} width="125px" height="100px"></img>
-              <p>
-                <span>{house.houseName}</span>
-              </p>
-              <p>1 Fridge</p>
-            </div>
-          </React.Fragment>
-        );
-      });
-      setListHouses(houseList);
-      // setHouseLength(houseList.length);
     }
 
     grabHouses();
@@ -93,7 +93,7 @@ const DashboardPage = () => {
                 </span>{" "}
                 DASHBOARD
               </h1>
-              <p>Number of Households: 0</p>
+              <p>Number of Households: {houseLength}</p>
               <p>Number of Fridges: X</p>
             </div>
           </div>

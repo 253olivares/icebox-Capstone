@@ -32,9 +32,9 @@ export const Provider = ({ children }) => {
     setState({ ...state, fridges });
   }
 
-  function signedIn(user) {
-    setState({ ...state, user });
-
+  async function signedInAndLoadAllInformation(user) {
+    const houses = await getHouses(user.uid);
+    setState({ ...state, user, houses });
   }
 
   function clearState() {
@@ -49,7 +49,7 @@ export const Provider = ({ children }) => {
     ...state,
     addFridge,
     loadFridges,
-    signedIn,
+    signedInAndLoadAllInformation,
     clearState,
     testing,
     createNstore,
