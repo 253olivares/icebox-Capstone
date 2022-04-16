@@ -1,5 +1,5 @@
 import React from "react";
-
+import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
 import { Container, Form, Button } from "semantic-ui-react";
 import "../css/styles.css";
@@ -10,8 +10,8 @@ import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
 
 import Footer from "../components/Footer";
-
 import State from "../state";
+import { addHouse } from "../services/db";
 
 const HouseholdOptions = [];
 
@@ -28,7 +28,30 @@ const AddFridge = () => {
     }
   };
 
-  React.useEffect(() => {}, [""]);
+  const initialFridge = {
+    owner: state.user.uid,
+    ownerName: state.user.displayName,
+    fridgeName: "",
+    description: "",
+    household: "",
+  };
+
+  const [newFridge, setNewFridge] = React.useState(initialFridge);
+
+  async function createNewFridge() {
+    setNewFridge(newFridge);
+    const fridge = await addFridge(newFridge);
+
+    console.log(fridge);
+
+    state.addFridgeState(fridge);
+  }
+
+  function changeNewFridge(e, { value, name }) {
+    const newFridgeClone = { ...newFridge };
+    newFridgeClone[name] = value;
+    setNewFridge(newFridgeClone);
+  }
 
   return (
     <React.Fragment>
@@ -48,11 +71,21 @@ const AddFridge = () => {
         <Form className="addFridgeForm">
           <Form.Field>
             <label>Name of Fridge:</label>
-            <input placeholder="Name of Fridge..." />
+            <input
+              placeholder="Name of Fridge..."
+              name="fridgeName"
+              value={newFridge.fridgeName}
+              onChange={changeNewFridge}
+            />
           </Form.Field>
           <Form.Field>
             <label>Fridge Description:</label>
-            <input placeholder="Description of Fridge Location, Food type, Ect...." />
+            <input
+              placeholder="Description of Fridge Location, Food type, Ect...."
+              name="description"
+              value={newFridge.description}
+              onChange={changeNewFridge}
+            />
           </Form.Field>
           <Form.Field>
             <label>Fridge Owner:</label>
@@ -72,7 +105,9 @@ const AddFridge = () => {
             options={HouseholdOptions}
             placeholder="Select HouseHold..."
           />
-          <Button type="submit">Submit</Button>
+          <Button type="submit" onClick={createNewFridge}>
+            Submit
+          </Button>
         </Form>
       </Container>
       <Footer></Footer>
