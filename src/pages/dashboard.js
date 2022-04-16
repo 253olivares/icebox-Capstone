@@ -1,5 +1,5 @@
 import React from "react";
-import { navigate } from "gatsby";
+
 import "semantic-ui-css/semantic.css";
 import { Link } from "gatsby";
 import { Container, Button } from "semantic-ui-react";
@@ -15,7 +15,6 @@ import HouseImage from "../images/Icebox_assets/home_icon.svg";
 import FridgeImage from "../images/Icebox_assets/fridge_icon.svg";
 
 import State from "../state";
-import { getHouses } from "../services/db";
 
 import Footer from "../components/Footer";
 
@@ -23,7 +22,7 @@ const DashboardPage = () => {
   const state = React.useContext(State);
 
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
-  //   const [houses, setHouses] = React.useState();
+
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
     {
@@ -34,7 +33,7 @@ const DashboardPage = () => {
   };
 
   const initialHouses = "";
-  const houseLength = initialHouses.length;
+  const [houseLength, setHouseLength] = React.useState(initialHouses.length);
   const [listHouses, setListHouses] = React.useState(initialHouses);
 
   React.useEffect(() => {
@@ -61,8 +60,10 @@ const DashboardPage = () => {
           );
         });
         setListHouses(houseList);
+        setHouseLength(houseList.length);
       }
     }
+    async function grabFridges() { }
 
     grabHouses();
   }, [""]);
