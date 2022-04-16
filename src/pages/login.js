@@ -5,7 +5,6 @@ import { Container, Image, Input, Button } from "semantic-ui-react";
 
 import "../css/styles.css";
 
-
 import MobileNav from "../components/MobileNav";
 import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
@@ -16,16 +15,17 @@ import { signIn } from "../services/db";
 
 import State from "../state";
 
-
-
 const LoginPage = () => {
-
   const state = React.useContext(State);
 
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
-    { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
+    {
+      mobileNavOpen
+        ? (document.body.style.overflow = "scroll")
+        : (document.body.style.overflow = "hidden");
+    }
   };
 
   const initialUserLogin = {
@@ -37,7 +37,7 @@ const LoginPage = () => {
   async function newUser() {
     setUserLogin(userLogin);
     const user = await signIn(userLogin.email, userLogin.password);
-    state.signedIn(user);
+    await state.signedIn(user);
   }
 
   function changeUserLogin(e, { value, name }) {
@@ -49,7 +49,17 @@ const LoginPage = () => {
   return (
     <React.Fragment>
       <main>
-        {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
+        {state.user ? (
+          <>
+            <UserNav openCloseNav={openCloseNav}></UserNav>
+            {mobileNavOpen ? <MobileNavLogged></MobileNavLogged> : null}
+          </>
+        ) : (
+          <>
+            <Nav openCloseNav={openCloseNav}></Nav>
+            {mobileNavOpen ? <MobileNav></MobileNav> : null}
+          </>
+        )}
         <Container className="loginBox">
           <div className="loginContainer">
             <div className="leftBox">

@@ -41,7 +41,7 @@ const DashboardPage = () => {
     async function grabHouses() {
       if (state.houses) {
       } else {
-        const something = await state.loadHouses();
+        await state.loadHouses();
       }
       const housesDash = state.houses;
       const houseList = housesDash.map((house, index) => {
