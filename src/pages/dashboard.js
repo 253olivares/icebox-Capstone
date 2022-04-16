@@ -36,14 +36,19 @@ const DashboardPage = () => {
   const [houseLength, setHouseLength] = React.useState(initialHouses.length);
   const [listHouses, setListHouses] = React.useState(initialHouses);
 
-  React.useEffect(() => {
 
-    console.log(state.user);
+  // Runs when the page loads 
+  React.useEffect(() => {
+    // bug fix we check to see if a user is logged in at the start of use effect first thing to occur on this page
+    console.log("User is currently logged in!", state.user);
+    // this function checks and grabs houses in our state and then displays it under where the houses tab exists.
     async function grabHouses() {
       if (!state.houses) {
+        // If state does not exist then we bounce back an error and redirect the user to our 404 page
         console.log("Houses state does not exist redirecting to 404");
         navigate("/404");
       } else {
+        // If our state does exist then we run through the array using map 
         const housesDash = state.houses;
         const houseList = housesDash.map((house, index) => {
           return (
