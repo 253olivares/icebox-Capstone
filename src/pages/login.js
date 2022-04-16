@@ -38,6 +38,7 @@ const LoginPage = () => {
     setUserLogin(userLogin);
     const user = await signIn(userLogin.email, userLogin.password);
     await state.signedIn(user);
+    await state.loadHouses(user.uid);
     navigate('/dashboard');
   }
 
