@@ -86,6 +86,19 @@ export async function addHouse(newHouse) {
   return docData;
 }
 
+export async function addFridge(newFridge) {
+  const docRef = await addDoc(collection(db, "fridges"), {
+    owner: newFridge.owner,
+    ownerName: newFridge.ownerName,
+    fridgeName: newFridge.fridgeName,
+    description: newFridge.description,
+    household: newFridge.household,
+  });
+  const docSnap = getDoc(docRef);
+  const docData = (await docSnap).data();
+  return docData;
+}
+
 export async function getHouses(user) {
   const houses = [];
   const q = query(collection(db, "houses"), where("owner", "==", user));

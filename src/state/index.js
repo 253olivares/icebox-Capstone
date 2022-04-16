@@ -22,7 +22,7 @@ export const Provider = ({ children }) => {
     setState({ ...state, houses });
   }
 
-  function addFridge(newFridge) {
+  function addFridgeState(newFridge) {
     const oldFridges = state.fridges || [];
 
     setState({ ...state, fridges: [...oldFridges, newFridge] });
@@ -34,7 +34,6 @@ export const Provider = ({ children }) => {
 
   function signedIn(user) {
     setState({ ...state, user });
-
   }
 
   function clearState() {
@@ -47,7 +46,7 @@ export const Provider = ({ children }) => {
 
   const stateVals = {
     ...state,
-    addFridge,
+    addFridgeState,
     loadFridges,
     signedIn,
     clearState,

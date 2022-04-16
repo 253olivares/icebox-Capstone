@@ -11,7 +11,7 @@ import MobileNavLogged from "../components/MobileNavLogged";
 
 import Footer from "../components/Footer";
 import State from "../state";
-import { addHouse } from "../services/db";
+import { addFridge } from "../services/db";
 
 const HouseholdOptions = [];
 
