@@ -29,7 +29,7 @@ const db = getFirestore(app);
 
 onAuthStateChanged(auth, (user) => {
   if (user != null) {
-    console.log("Logged in!");
+    // console.log("Logged in!");
   } else {
     console.log("no user");
   }
@@ -40,9 +40,8 @@ export async function signIn(email, password, first, last) {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      console.log(user);
-      console.log("user signed in successfully");
-      navigate("/dashboard");
+      // console.log(user);
+      // console.log("user signed in successfully");
       // console.log(GlobalVarIfLogged);
       // GlobalVarIfLogged = true;
       return user;
@@ -59,7 +58,7 @@ export function signOutUser() {
   signOut(auth)
     .then(() => {
       // Sign-out successful.
-      console.log("user signed out");
+      // console.log("user signed out");
       // GlobalVarIfLogged = false;
     })
     .catch((error) => {
@@ -106,7 +105,7 @@ export async function createUser(email, password, first, last) {
       // Signed in
       const user = userCredential.user;
       let username = first + " " + last;
-      console.log("user created successfully");
+      // console.log("user created successfully");
       updateUser(username);
 
       setDoc(doc(db, "users", user.uid), {

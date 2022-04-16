@@ -33,7 +33,7 @@ const FridgePage = () => {
 
   };
 
-  const presetFoods = [{},];
+  const presetFoods = [];
 
   const foodList = [];
   const [listFood, setFoodList] = React.useState(foodList);

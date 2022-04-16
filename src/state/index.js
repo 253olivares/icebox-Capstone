@@ -1,5 +1,6 @@
 import React from "react";
 import { getHouses } from "../services/db";
+import { navigate } from "gatsby";
 
 const State = React.createContext();
 
@@ -11,20 +12,18 @@ export const Provider = ({ children }) => {
   }
 
   function addHouseState(newHouse) {
-    console.log(newHouse);
     const oldHouses = state.houses || [];
 
     setState({ ...state, houses: [...oldHouses, newHouse] });
   }
 
-  async function loadHouses() {
-    const houses = await getHouses(state.user.uid);
-
+  async function loadHouses(x) {
+    const houses = await getHouses(x);
+    console.log(houses);
     setState({ ...state, houses });
   }
 
   function addFridge(newFridge) {
-    console.log(newFridge);
     const oldFridges = state.fridges || [];
 
     setState({ ...state, fridges: [...oldFridges, newFridge] });
@@ -36,7 +35,7 @@ export const Provider = ({ children }) => {
 
   function signedIn(user) {
     setState({ ...state, user });
-    // loadHouses();
+
   }
 
   function clearState() {
