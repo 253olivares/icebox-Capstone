@@ -90,7 +90,7 @@ const AddHouse = () => {
           <Form.Field>
             <label>Description:</label>
             <Input
-              placeholder="Descrpition..."
+              placeholder="Description..."
               name="description"
               value={newHouse.description}
               onChange={changeNewHouse}
