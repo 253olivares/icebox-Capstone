@@ -24,6 +24,10 @@ const AddFridge = () => {
         { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
     };
 
+    React.useEffect(() => {
+
+    }, [""]);
+
     return (
         <React.Fragment>
             {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}

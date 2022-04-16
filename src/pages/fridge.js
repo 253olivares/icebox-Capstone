@@ -9,6 +9,14 @@ import UserNav from "../components/NavLogged";
 import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
 
+// images importing for food listing
+import Fruits from "../images/Icebox_assets/FruitIcon.png";
+import Vegetables from "../images/Icebox_assets/VeggiesIcon.png";
+import Grains from "../images/Icebox_assets/GrainsIcon.png";
+import Protein from "../images/Icebox_assets/MeatsIcon.png";
+import Dairy from "../images/Icebox_assets/DairyIcon.png";
+import Extra from "../images/Icebox_assets/Dish_icon.png";
+
 import fridgeIcon from "../images/Icebox_assets/fridge_icon.svg";
 
 import State from "../state";
@@ -24,6 +32,29 @@ const FridgePage = () => {
     { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
 
   };
+
+  const presetFoods = [{},];
+
+  const foodList = [];
+  const [listFood, setFoodList] = React.useState(foodList);
+
+  React.useEffect(() => {
+    const foods = presetFoods;
+    console.log(foods);
+    const foodList = foods.map((food, index) => {
+      return (
+        <React.Fragment key={`food-${index}`}>
+          <div className="item">
+            <img></img>
+            <h1>Food Item</h1>
+            <p>Exp Date: 1/29/12</p>
+            <p>Qty: 1</p>
+          </div>
+        </React.Fragment>
+      );
+    });
+    setFoodList(foodList);
+  }, [""]);
 
   return (
     <React.Fragment>
@@ -47,42 +78,7 @@ const FridgePage = () => {
         <Container className="fridgeItems">
           <div className="marginHolder">
             <div className="itemsHolder">
-              <div className="item">
-                <img></img>
-                <h1>Food Item</h1>
-                <p>Exp Date: 1/29/12</p>
-                <p>Qty: 1</p>
-              </div>
-              <div className="item">
-                <img></img>
-                <h1>Food Item</h1>
-                <p>Exp Date: 1/29/12</p>
-                <p>Qty: 1</p>
-              </div>
-              <div className="item">
-                <img></img>
-                <h1>Food Item</h1>
-                <p>Exp Date: 1/29/12</p>
-                <p>Qty: 1</p>
-              </div>
-              <div className="item">
-                <img></img>
-                <h1>Food Item</h1>
-                <p>Exp Date: 1/29/12</p>
-                <p>Qty: 1</p>
-              </div>
-              <div className="item">
-                <img></img>
-                <h1>Food Item</h1>
-                <p>Exp Date: 1/29/12</p>
-                <p>Qty: 1</p>
-              </div>
-              <div className="item">
-                <img></img>
-                <h1>Food Item</h1>
-                <p>Exp Date: 1/29/12</p>
-                <p>Qty: 1</p>
-              </div>
+              {listFood}
             </div>
           </div>
         </Container>
