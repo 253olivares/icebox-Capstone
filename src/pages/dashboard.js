@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 
 import "semantic-ui-css/semantic.css";
 import { Link } from "gatsby";
@@ -43,7 +44,6 @@ const DashboardPage = () => {
     async function grabHouses() {
       if (!state.houses) {
         await state.loadHouses();
-        navigate("/dashboard");
       } else {
         const housesDash = state.houses;
         const houseList = housesDash.map((house, index) => {
