@@ -17,6 +17,7 @@ import easyshop from "../images/Icebox_assets/home_fridge.svg";
 import Footer from "../components/Footer";
 
 import State from "../state";
+
 const HomePage = () => {
   const state = React.useContext(State);
 

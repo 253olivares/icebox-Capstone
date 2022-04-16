@@ -17,9 +17,8 @@ export const Provider = ({ children }) => {
     setState({ ...state, houses: [...oldHouses, newHouse] });
   }
 
-  async function loadHouses(x) {
-    const houses = await getHouses(x);
-    console.log(houses);
+  async function loadHouses() {
+    const houses = await getHouses(state.user.uid);
     setState({ ...state, houses });
   }
 
