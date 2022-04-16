@@ -1,7 +1,7 @@
 import React from "react";
 
 import "semantic-ui-css/semantic.css";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { Container, Button } from "semantic-ui-react";
 import "../css/styles.css";
 
@@ -41,7 +41,8 @@ const DashboardPage = () => {
     console.log(state.user);
     async function grabHouses() {
       if (!state.houses) {
-        await state.loadHouses();
+        console.log("Houses state does not exist redirecting to 404");
+        navigate("/404");
       } else {
         const housesDash = state.houses;
         const houseList = housesDash.map((house, index) => {

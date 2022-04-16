@@ -16,11 +16,11 @@ export const Provider = ({ children }) => {
 
     setState({ ...state, houses: [...oldHouses, newHouse] });
   }
-
-  async function loadHouses() {
-    const houses = await getHouses(state.user.uid);
-    setState({ ...state, houses });
-  }
+  // old code before combining code
+  // async function loadHouses() {
+  //   const houses = await getHouses(state.user.uid);
+  //   setState({ ...state, houses });
+  // }
 
   function addFridgeState(newFridge) {
     const oldFridges = state.fridges || [];
@@ -31,7 +31,8 @@ export const Provider = ({ children }) => {
   function loadFridges(fridges) {
     setState({ ...state, fridges });
   }
-
+  // main code that will run when user signs in with main objective
+  // to sign in user and grab all missing information
   async function signedInAndLoadAllInformation(user) {
     const houses = await getHouses(user.uid);
     setState({ ...state, user, houses });
@@ -54,7 +55,6 @@ export const Provider = ({ children }) => {
     testing,
     createNstore,
     addHouseState,
-    loadHouses,
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;
