@@ -67,7 +67,6 @@ const DashboardPage = () => {
         setHouseLength(houseList.length);
       }
     }
-
     grabHouses();
   }, [""]);
 

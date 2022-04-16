@@ -32,8 +32,8 @@ const FridgePage = () => {
     { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
 
   };
-
-  const presetFoods = [];
+  // This is for testing purposes
+  const presetFoods = [{ foodNamme: "", foodType: "", expirationDate: "", foodQty: "", fridgeId: 1 }, {}];
 
   const foodList = [];
   const [listFood, setFoodList] = React.useState(foodList);
