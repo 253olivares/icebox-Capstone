@@ -1,5 +1,5 @@
 import React from "react";
-import { navigate } from "gatsby";
+
 import "semantic-ui-css/semantic.css";
 import { Container } from "semantic-ui-react";
 import "../css/styles.css";
@@ -12,7 +12,7 @@ import MobileNavLogged from "../components/MobileNavLogged";
 import sharedFridges from "../images/Icebox_assets/fridge_cluster.svg";
 import iceFridge from "../images/Icebox_assets/ice_fridge.svg";
 import trackApp from "../images/Icebox_assets/phone.svg";
-import easyshop from "../images/Icebox_assets/home_fridge.svg"
+import easyshop from "../images/Icebox_assets/home_fridge.svg";
 
 import Footer from "../components/Footer";
 
@@ -23,17 +23,28 @@ const HomePage = () => {
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
-    { mobileNavOpen ? document.body.style.overflow = "scroll" : document.body.style.overflow = "hidden"; }
+    {
+      mobileNavOpen
+        ? (document.body.style.overflow = "scroll")
+        : (document.body.style.overflow = "hidden");
+    }
   };
 
-
-
-  // const [NavLogged, GlobalVarIfLogged] = React.useState(false);
   return (
     <React.Fragment>
       {/* Main page code */}
       <main>
-        {state.user ? <><UserNav openCloseNav={openCloseNav}></UserNav>{mobileNavOpen ? <MobileNavLogged ></MobileNavLogged> : null}</> : <><Nav openCloseNav={openCloseNav}></Nav>{mobileNavOpen ? <MobileNav ></MobileNav> : null}</>}
+        {state.user ? (
+          <>
+            <UserNav openCloseNav={openCloseNav}></UserNav>
+            {mobileNavOpen ? <MobileNavLogged></MobileNavLogged> : null}
+          </>
+        ) : (
+          <>
+            <Nav openCloseNav={openCloseNav}></Nav>
+            {mobileNavOpen ? <MobileNav></MobileNav> : null}
+          </>
+        )}
         <Container className="iceboxDesc">
           <div className="decHolder">
             <div className="leftFlex">
