@@ -37,8 +37,12 @@ const LoginPage = () => {
   async function newUser() {
     setUserLogin(userLogin);
     const user = await signIn(userLogin.email, userLogin.password);
-    state.signedInAndLoadAllInformation(user);
-    navigate('/dashboard');
+    if (!user) {
+      newUser()
+    } else {
+      state.signedInAndLoadAllInformation(user);
+      navigate('/dashboard');
+    }
   }
 
   function changeUserLogin(e, { value, name }) {
