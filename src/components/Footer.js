@@ -35,7 +35,7 @@ const AppFooter = () => {
                         <div className="cat">
                             <h1>ACCOUNT</h1>
                             <hr></hr>
-                            <p>Loggin</p>
+                            <p>Login</p>
                             <p>Logout</p>
                         </div>
                         <div className="cat">

@@ -17,6 +17,7 @@ import easyshop from "../images/Icebox_assets/home_fridge.svg";
 import Footer from "../components/Footer";
 
 import State from "../state";
+import { Link } from "gatsby";
 
 const HomePage = () => {
   const state = React.useContext(State);
@@ -66,7 +67,8 @@ const HomePage = () => {
                   cupidatat non proident, sunt in culpa qui officia deserunt
                   mollit anim id est laborum.
                 </p>
-                <button>SIGN UP / LOGIN</button>
+                <button>
+                  <Link to="/login">SIGN UP / LOGIN</Link></button>
               </div>
             </div>
           </div>

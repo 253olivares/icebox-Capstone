@@ -66,6 +66,7 @@
             margin-top: 50px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
 
             .householdFridge_One {
                 display: flex;
@@ -73,6 +74,7 @@
                 text-align: center;
                 width: 225px;
                 height: 200px;
+                margin-bottom: 20px;
 
                 img {
                     margin-left: auto;
