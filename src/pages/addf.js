@@ -1,7 +1,7 @@
 import React from "react";
 import { navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
-import { Container, Form, Button } from "semantic-ui-react";
+import { Container, Form, Button, Input } from "semantic-ui-react";
 import "../css/styles.css";
 
 import MobileNav from "../components/MobileNav";
@@ -36,14 +36,14 @@ const AddFridge = () => {
     household: "",
   };
 
+  const HouseholdOptions = state.houses;
+
   const [newFridge, setNewFridge] = React.useState(initialFridge);
 
   async function createNewFridge() {
     setNewFridge(newFridge);
     const fridge = await addFridge(newFridge);
-
     console.log(fridge);
-
     state.addFridgeState(fridge);
   }
 
@@ -71,7 +71,7 @@ const AddFridge = () => {
         <Form className="addFridgeForm">
           <Form.Field>
             <label>Name of Fridge:</label>
-            <input
+            <Input
               placeholder="Name of Fridge..."
               name="fridgeName"
               value={newFridge.fridgeName}
@@ -80,7 +80,7 @@ const AddFridge = () => {
           </Form.Field>
           <Form.Field>
             <label>Fridge Description:</label>
-            <input
+            <Input
               placeholder="Description of Fridge Location, Food type, Ect...."
               name="description"
               value={newFridge.description}

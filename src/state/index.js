@@ -1,14 +1,19 @@
 import React from "react";
-import { getHouses } from "../services/db";
-import { navigate } from "gatsby";
+import { getFridges, getHouses } from "../services/db";
 
 const State = React.createContext();
 
 export const Provider = ({ children }) => {
   const [state, setState] = React.useState();
 
-  function testing() {
-    setState({ ...state, testing: true });
+  function currentHouse(selectedHouse) {
+    setState({ ...state, selectedHouse });
+  }
+
+  function currentFridge(selectedFridge) {
+    // console.log(selectedFridge);
+    setState({ ...state, selectedFridge });
+    // navigate("/fridge");
   }
 
   function addHouseState(newHouse) {
@@ -16,11 +21,6 @@ export const Provider = ({ children }) => {
 
     setState({ ...state, houses: [...oldHouses, newHouse] });
   }
-  // old code before combining code
-  // async function loadHouses() {
-  //   const houses = await getHouses(state.user.uid);
-  //   setState({ ...state, houses });
-  // }
 
   function addFridgeState(newFridge) {
     const oldFridges = state.fridges || [];
@@ -28,14 +28,12 @@ export const Provider = ({ children }) => {
     setState({ ...state, fridges: [...oldFridges, newFridge] });
   }
 
-  function loadFridges(fridges) {
-    setState({ ...state, fridges });
-  }
   // main code that will run when user signs in with main objective
   // to sign in user and grab all missing information
   async function signedInAndLoadAllInformation(user) {
     const houses = await getHouses(user.uid);
-    setState({ ...state, user, houses });
+    const fridges = await getFridges(user.uid);
+    setState({ ...state, user, houses, fridges });
   }
 
   function clearState() {
@@ -49,12 +47,12 @@ export const Provider = ({ children }) => {
   const stateVals = {
     ...state,
     addFridgeState,
-    loadFridges,
     signedInAndLoadAllInformation,
     clearState,
-    testing,
     createNstore,
     addHouseState,
+    currentHouse,
+    currentFridge,
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;
