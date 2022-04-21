@@ -90,13 +90,13 @@ const AddFridge = () => {
           <Form.Field>
             <label>Fridge Owner:</label>
             {state.user ? (
-              <input
+              <Input
                 disabled
                 placeholder={state.user.displayName}
                 value={state.user.displayName}
               />
             ) : (
-              <input disabled placeholder="Null" value="Null" />
+              <Input disabled placeholder="Null" value="Null" />
             )}
           </Form.Field>
           <Form.Select

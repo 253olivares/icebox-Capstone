@@ -12,6 +12,7 @@ import "../css/styles.css";
 
 import State from "../state";
 import { Button, Container, Form, Input } from "semantic-ui-react";
+import { async } from "@firebase/util";
 
 const RestockPage = () => {
 
@@ -36,6 +37,28 @@ const RestockPage = () => {
         navigate("/dashboard");
     }
 
+    const initialFood = {
+        foodName: "",
+        foodType: "",
+        foodExDate: "",
+        foodQuantity: "",
+        fridgeID: "",
+
+    };
+
+    // const [newFood, setNewFood] = React.userState(initialFood);
+
+    // async function createNewFood() {
+    //     // const food = await addFood(newFood);
+    //     // state.addFoodState(food);
+    // }
+
+    // function changeNewFood(e, { value, name }) {
+    //     const newFoodClone = { ...newFood };
+    //     newFoodClone[name] = value;
+    //     setNewFood(newFoodClone);
+    // }
+
     return (
         <React.Fragment>
             <main>
@@ -46,22 +69,36 @@ const RestockPage = () => {
                             <label>Food Name:</label>
                             <Input
                                 placeholder='Food Name...'
+                                name="foodName"
+                            // value={newFood.foodName}
+                            // onChange={changeNewFood}
                             ></Input>
                         </Form.Field>
                         <Form.Select
                             fluid
                             label="Food Type"
                             placeholder="Food Type..."
+                            name="foodType"
                             options={foodOptions}
+                        // value={newFood.foodType}
+                        // onChange={changeNewFood}
                         >
                         </Form.Select>
                         <Form.Field>
                             <label>Expiration Date:</label>
-                            <Input placeholder='Expiration Format: MM/DD/YY'></Input>
+                            <Input
+                                type="date"
+                                name="foodExDate"
+                            // value={newFood.foodExDate}
+                            // onChange={changeNewFood}
+                            ></Input>
                         </Form.Field>
                         <Form.Field>
                             <label>QTY:</label>
-                            <Input placeholder='Quantity of Food...'></Input>
+                            <Input placeholder='Quantity of Food...' name="foodQuantity"
+                            // value={newFood.foodQuantity}
+                            // onChange={changeNewFood}
+                            ></Input>
                         </Form.Field>
                         <Button type="submit" onClick={AddFood}> Submit </Button>
                     </Form>
