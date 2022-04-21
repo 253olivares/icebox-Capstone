@@ -36,14 +36,14 @@ const AddFridge = () => {
     household: "",
   };
 
+  const HouseholdOptions = state.houses;
+
   const [newFridge, setNewFridge] = React.useState(initialFridge);
 
   async function createNewFridge() {
     setNewFridge(newFridge);
     const fridge = await addFridge(newFridge);
-
     console.log(fridge);
-
     state.addFridgeState(fridge);
   }
 

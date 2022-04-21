@@ -96,6 +96,21 @@ export async function addFridge(newFridge) {
   });
   const docSnap = getDoc(docRef);
   const docData = (await docSnap).data();
+  // // docData.id = docSnap.id;
+  // console.log(docSnap.id);
+  return docData;
+}
+
+export async function addFood(newFood) {
+  const docRef = await addDoc(collection(db, "food"), {
+    fridge: newFood.fridge,
+    foodName: newFood.foodName,
+    foodType: newFood.foodType,
+    expDate: newFood.expDate,
+    quantity: newFood.quantity,
+  });
+  const docSnap = getDoc(docRef);
+  const docData = (await docSnap).data();
   return docData;
 }
 
@@ -106,10 +121,34 @@ export async function getHouses(user) {
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     // console.log(doc.id, " => ", doc.data());
+
     houses.push(doc.data());
   });
   // console.log(houses);
   return houses;
+}
+
+export async function getFridges(user) {
+  const fridges = [];
+  const q = query(collection(db, "fridges"), where("owner", "==", user));
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    const info = doc.data();
+    info.id = doc.id;
+    // console.log(info);
+    fridges.push(info);
+  });
+  return fridges;
+}
+
+export async function getFood(fridgeID) {
+  const food = [];
+  const q = query(collection(db, "food"), where("fridge", "==", fridgeID));
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    food.push(doc.data());
+  });
+  return food;
 }
 
 export async function createUser(email, password, first, last) {

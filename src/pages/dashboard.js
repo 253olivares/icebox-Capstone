@@ -32,42 +32,86 @@ const DashboardPage = () => {
     }
   };
 
+  // function setFridge(index) {
+  //   console.log(index);
+  //   state.currentFridge(state.fridges[index]);
+  //   navigate("/fridge");
+  // }
+
   const initialHouses = "";
   const [houseLength, setHouseLength] = React.useState(initialHouses.length);
   const [listHouses, setListHouses] = React.useState(initialHouses);
+  const [listFridges, setListFridges] = React.useState(initialHouses);
 
+  async function grabHouses() {
+    if (!state.houses) {
+      // If state does not exist then we bounce back an error and redirect the user to our 404 page
+      console.log("Houses state does not exist redirecting to 404");
+      navigate("/404");
+    } else {
+      // If our state does exist then we run through the array using map
+      const housesDash = state.houses;
+      const houseList = housesDash.map((house, index) => {
+        return (
+          <React.Fragment key={`house-${index}`}>
+            <div className="householdFridge_One">
+              <img src={HouseImage} width="125px" height="100px"></img>
+              <p>
+                <span>{house.houseName}</span>
+              </p>
+              <p>1 Fridge</p>
+            </div>
+          </React.Fragment>
+        );
+      });
+      setListHouses(houseList);
+      setHouseLength(houseList.length);
+    }
+  }
 
-  // Runs when the page loads 
+  async function grabFridges() {
+    if (!state.fridges) {
+      // If state does not exist then we bounce back an error and redirect the user to our 404 page
+      console.log("Houses state does not exist redirecting to 404");
+      navigate("/404");
+    } else {
+      // If our state does exist then we run through the array using map
+      const fridgesDash = state.fridges;
+      const fridgeList = fridgesDash.map((fridge, index) => {
+        return (
+          <React.Fragment key={`fridge-${index}`}>
+            <div
+              className="fridges_One"
+              onClick={() => {
+                // console.log(fridge);
+                state.currentFridge(fridge);
+                navigate("/fridge");
+              }}
+            >
+              <img src={FridgeImage}></img>
+              <div className="drigeinformation">
+                <h1>{fridge.fridgeName}</h1>
+                <hr></hr>
+                <p>Number of Items: X</p>
+                <p>Recent Expired Items: X</p>
+              </div>
+            </div>
+          </React.Fragment>
+        );
+      });
+      setListFridges(fridgeList);
+      // setListHouses(houseList);
+      // setHouseLength(houseList.length);
+    }
+  }
+
+  // Runs when the page loads
   React.useEffect(() => {
     // bug fix we check to see if a user is logged in at the start of use effect first thing to occur on this page
     console.log("User is currently logged in!", state.user);
     // this function checks and grabs houses in our state and then displays it under where the houses tab exists.
-    async function grabHouses() {
-      if (!state.houses) {
-        // If state does not exist then we bounce back an error and redirect the user to our 404 page
-        console.log("Houses state does not exist redirecting to 404");
-        navigate("/404");
-      } else {
-        // If our state does exist then we run through the array using map 
-        const housesDash = state.houses;
-        const houseList = housesDash.map((house, index) => {
-          return (
-            <React.Fragment key={`house-${index}`}>
-              <div className="householdFridge_One">
-                <img src={HouseImage} width="125px" height="100px"></img>
-                <p>
-                  <span>{house.houseName}</span>
-                </p>
-                <p>1 Fridge</p>
-              </div>
-            </React.Fragment>
-          );
-        });
-        setListHouses(houseList);
-        setHouseLength(houseList.length);
-      }
-    }
     grabHouses();
+    grabFridges();
   }, [""]);
 
   return (
@@ -127,7 +171,7 @@ const DashboardPage = () => {
               </Button>
             </h1>
             <div className="fridges">
-              <Link to="/fridge">
+              {/* <Link to="/fridge">
                 <div className="fridges_One">
                   <img src={FridgeImage}></img>
                   <div className="drigeinformation">
@@ -137,7 +181,8 @@ const DashboardPage = () => {
                     <p>Recent Expired Items: X</p>
                   </div>
                 </div>
-              </Link>
+              </Link> */}
+              {listFridges}
             </div>
           </div>
         </Container>
