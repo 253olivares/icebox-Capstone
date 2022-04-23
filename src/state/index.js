@@ -16,16 +16,23 @@ export const Provider = ({ children }) => {
     // navigate("/fridge");
   }
 
-  function addHouseState(newHouse) {
-    const oldHouses = state.houses || [];
+  async function addHouseState() {
+    // const oldHouses = state.houses || [];
 
-    setState({ ...state, houses: [...oldHouses, newHouse] });
+    // setState({ ...state, houses: [...oldHouses, newHouse] });
+
+    const houses = await getHouses(state.user.uid);
+
+    setState({ ...state, houses });
   }
 
-  function addFridgeState(newFridge) {
-    const oldFridges = state.fridges || [];
+  async function addFridgeState() {
+    // const oldFridges = state.fridges || [];
 
-    setState({ ...state, fridges: [...oldFridges, newFridge] });
+    // setState({ ...state, fridges: [...oldFridges, newFridge] });
+    const fridges = await getFridges(state.user.uid);
+
+    setState({ ...state, fridges });
   }
 
   // main code that will run when user signs in with main objective

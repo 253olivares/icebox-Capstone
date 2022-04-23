@@ -36,15 +36,31 @@ const AddFridge = () => {
     household: "",
   };
 
-  const HouseholdOptions = state.houses;
+  const HouseholdOptions = [];
+
+  async function setHouses() {
+    const houses = state.houses;
+    await houses.map((house) => {
+      const houseInfo = {
+        text: house.houseName,
+        value: house.id,
+      };
+      HouseholdOptions.push(houseInfo);
+    });
+    console.log(HouseholdOptions);
+  }
+
+  React.useEffect(() => {
+    setHouses();
+  }, [""]);
 
   const [newFridge, setNewFridge] = React.useState(initialFridge);
 
   async function createNewFridge() {
     setNewFridge(newFridge);
-    const fridge = await addFridge(newFridge);
-    console.log(fridge);
-    state.addFridgeState(fridge);
+    await addFridge(newFridge);
+    await state.addFridgeState();
+    navigate("/dashboard");
   }
 
   function changeNewFridge(e, { value, name }) {
@@ -104,6 +120,9 @@ const AddFridge = () => {
             label="Household:"
             options={HouseholdOptions}
             placeholder="Select HouseHold..."
+            name="household"
+            value={newFridge.household}
+            onChange={changeNewFridge}
           />
           <Button type="submit" onClick={createNewFridge}>
             Submit

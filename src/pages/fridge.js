@@ -44,90 +44,81 @@ const FridgePage = () => {
 
   async function setFoods() {
     const foods = await getFood(state.selectedFridge.id);
-    // const foods = [
-    //   {
-    //     foodNamme: "test",
-    //     foodType: "Fruit",
-    //     expirationDate: "12/12/12",
-    //     foodQty: "1",
-    //     fridgeId: 1,
-    //   },
-    //   {},
-    // ];
-    // console.log(state.selectedFridge);
     console.log(foods);
-    const foodList = foods.map((food, index) => {
-      if (food.foodType == "Fruits") {
-        console.log(food);
-        return (
-          <React.Fragment key={`food-${index}`}>
-            <div className="item">
-              <img src={Fruits}></img>
-              <h1>{food.foodName}</h1>
-              <p>Exp Date: {food.expDate}</p>
-              <p>Qty: {food.quantity}</p>
-            </div>
-          </React.Fragment>
-        );
-      } else if (food.foodType == "Vegetables") {
-        return (
-          <React.Fragment key={`food-${index}`}>
-            <div className="item">
-              <img src={Vegetables}></img>
-              <h1>{food.foodName}</h1>
-              <p>Exp Date: {food.expDate}</p>
-              <p>Qty: {food.quantity}</p>
-            </div>
-          </React.Fragment>
-        );
-      } else if (food.foodType == "Grains") {
-        console.log(food);
-        return (
-          <React.Fragment key={`food-${index}`}>
-            <div className="item">
-              <img src={Grains}></img>
-              <h1>{food.foodName}</h1>
-              <p>Exp Date: {food.expDate}</p>
-              <p>Qty: {food.quantity}</p>
-            </div>
-          </React.Fragment>
-        );
-      } else if (food.foodType == "Protein") {
-        return (
-          <React.Fragment key={`food-${index}`}>
-            <div className="item">
-              <img src={Protein}></img>
-              <h1>{food.foodName}</h1>
-              <p>Exp Date: {food.expDate}</p>
-              <p>Qty: {food.quanity}</p>
-            </div>
-          </React.Fragment>
-        );
-      } else if (food.foodType == "Dairy") {
-        return (
-          <React.Fragment key={`food-${index}`}>
-            <div className="item">
-              <img src={Dairy}></img>
-              <h1>{food.foodName}</h1>
-              <p>Exp Date: {food.expDate}</p>
-              <p>Qty: {food.quantity}</p>
-            </div>
-          </React.Fragment>
-        );
-      } else if (food.foodType == "Other") {
-        return (
-          <React.Fragment key={`food-${index}`}>
-            <div className="item">
-              <img src={Extra}></img>
-              <h1>{food.foodName}</h1>
-              <p>Exp Date: {food.expDate}</p>
-              <p>Qty: {food.quantity}</p>
-            </div>
-          </React.Fragment>
-        );
-      }
-    });
-    setFoodList(foodList);
+    if (foods) {
+      const foodList = foods.map((food, index) => {
+        if (food.foodType == "Fruits") {
+          console.log(food);
+          return (
+            <React.Fragment key={`food-${index}`}>
+              <div className="item">
+                <img src={Fruits}></img>
+                <h1>{food.foodName}</h1>
+                <p>Exp Date: {food.expDate}</p>
+                <p>Qty: {food.quantity}</p>
+              </div>
+            </React.Fragment>
+          );
+        } else if (food.foodType == "Vegetables") {
+          return (
+            <React.Fragment key={`food-${index}`}>
+              <div className="item">
+                <img src={Vegetables}></img>
+                <h1>{food.foodName}</h1>
+                <p>Exp Date: {food.expDate}</p>
+                <p>Qty: {food.quantity}</p>
+              </div>
+            </React.Fragment>
+          );
+        } else if (food.foodType == "Grains") {
+          return (
+            <React.Fragment key={`food-${index}`}>
+              <div className="item">
+                <img src={Grains}></img>
+                <h1>{food.foodName}</h1>
+                <p>Exp Date: {food.expDate}</p>
+                <p>Qty: {food.quantity}</p>
+              </div>
+            </React.Fragment>
+          );
+        } else if (food.foodType == "Protein") {
+          return (
+            <React.Fragment key={`food-${index}`}>
+              <div className="item">
+                <img src={Protein}></img>
+                <h1>{food.foodName}</h1>
+                <p>Exp Date: {food.expDate}</p>
+                <p>Qty: {food.quanity}</p>
+              </div>
+            </React.Fragment>
+          );
+        } else if (food.foodType == "Dairy") {
+          return (
+            <React.Fragment key={`food-${index}`}>
+              <div className="item">
+                <img src={Dairy}></img>
+                <h1>{food.foodName}</h1>
+                <p>Exp Date: {food.expDate}</p>
+                <p>Qty: {food.quantity}</p>
+              </div>
+            </React.Fragment>
+          );
+        } else if (food.foodType == "Other") {
+          return (
+            <React.Fragment key={`food-${index}`}>
+              <div className="item">
+                <img src={Extra}></img>
+                <h1>{food.foodName}</h1>
+                <p>Exp Date: {food.expDate}</p>
+                <p>Qty: {food.quantity}</p>
+              </div>
+            </React.Fragment>
+          );
+        }
+      });
+      setFoodList(foodList);
+    } else {
+    }
   }
 
   React.useEffect(() => {

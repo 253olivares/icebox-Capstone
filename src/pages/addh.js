@@ -38,9 +38,8 @@ const AddHouse = () => {
 
   async function createNewHouse() {
     setNewHouse(newHouse);
-    const house = await addHouse(newHouse);
-    console.log(house);
-    state.addHouseState(house);
+    await addHouse(newHouse);
+    await state.addHouseState();
     navigate("/dashboard");
   }
 

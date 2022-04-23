@@ -109,10 +109,11 @@ export async function addFridge(newFridge) {
     description: newFridge.description,
     household: newFridge.household,
   });
-  const docSnap = getDoc(docRef);
-  const docData = (await docSnap).data();
-  // // docData.id = docSnap.id;
-  // console.log(docSnap.id);
+  const docSnap = await getDoc(docRef);
+  const docData = docSnap.data();
+  // docData.id = docSnap.id;
+  console.log(docSnap);
+  console.log(docData);
   return docData;
 }
 
@@ -134,10 +135,10 @@ export async function getHouses(user) {
   const q = query(collection(db, "houses"), where("owner", "==", user));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    // console.log(doc.id, " => ", doc.data());
-
-    houses.push(doc.data());
+    const info = doc.data();
+    info.id = doc.id;
+    // console.log(info);
+    houses.push(info);
   });
   // console.log(houses);
   return houses;

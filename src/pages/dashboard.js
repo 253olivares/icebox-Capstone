@@ -67,6 +67,7 @@ const DashboardPage = () => {
       setListHouses(houseList);
       setHouseLength(houseList.length);
     }
+    console.log(state.houses);
   }
 
   async function grabFridges() {
