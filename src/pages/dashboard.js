@@ -40,6 +40,7 @@ const DashboardPage = () => {
 
   const initialHouses = "";
   const [houseLength, setHouseLength] = React.useState(initialHouses.length);
+  const [fridgeLength, setFridgeLength] = React.useState(initialHouses.length);
   const [listHouses, setListHouses] = React.useState(initialHouses);
   const [listFridges, setListFridges] = React.useState(initialHouses);
 
@@ -67,7 +68,6 @@ const DashboardPage = () => {
       setListHouses(houseList);
       setHouseLength(houseList.length);
     }
-    console.log(state.houses);
   }
 
   async function grabFridges() {
@@ -101,6 +101,7 @@ const DashboardPage = () => {
         );
       });
       setListFridges(fridgeList);
+      setFridgeLength(fridgeList.length);
       // setListHouses(houseList);
       // setHouseLength(houseList.length);
     }
@@ -144,7 +145,7 @@ const DashboardPage = () => {
                 DASHBOARD
               </h1>
               <p>Number of Households: {houseLength}</p>
-              <p>Number of Fridges: X</p>
+              <p>Number of Fridges: {fridgeLength}</p>
             </div>
           </div>
         </Container>

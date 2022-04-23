@@ -1,5 +1,5 @@
 import React from "react";
-import { getFridges, getHouses } from "../services/db";
+import { getFridges, getHouses, getFood } from "../services/db";
 
 const State = React.createContext();
 
@@ -11,28 +11,25 @@ export const Provider = ({ children }) => {
   }
 
   function currentFridge(selectedFridge) {
-    // console.log(selectedFridge);
     setState({ ...state, selectedFridge });
-    // navigate("/fridge");
   }
 
   async function addHouseState() {
-    // const oldHouses = state.houses || [];
-
-    // setState({ ...state, houses: [...oldHouses, newHouse] });
-
     const houses = await getHouses(state.user.uid);
 
     setState({ ...state, houses });
   }
 
   async function addFridgeState() {
-    // const oldFridges = state.fridges || [];
-
-    // setState({ ...state, fridges: [...oldFridges, newFridge] });
     const fridges = await getFridges(state.user.uid);
 
     setState({ ...state, fridges });
+  }
+
+  async function addFoodState() {
+    const food = await getFood(state.selectedFridge.id);
+
+    setState({ ...state, food });
   }
 
   // main code that will run when user signs in with main objective
@@ -60,6 +57,7 @@ export const Provider = ({ children }) => {
     addHouseState,
     currentHouse,
     currentFridge,
+    addFoodState,
   };
 
   return <State.Provider value={stateVals}>{children}</State.Provider>;
