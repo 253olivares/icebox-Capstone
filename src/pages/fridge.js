@@ -40,15 +40,22 @@ const FridgePage = () => {
   // const presetFoods = [{ foodNamme: "test", foodType: "Fruit", expirationDate: "12/12/12", foodQty: "1", fridgeId: 1 }, {}];
 
   const foodList = [];
+
+  // const [dateCheck, setDateCheck] = React.useState(initialDate);
+  const dateCheck = new Date();
   const [listFood, setFoodList] = React.useState(foodList);
 
   async function setFoods() {
     const foods = await getFood(state.selectedFridge.id);
-    console.log(foods);
     if (foods) {
       const foodList = foods.map((food, index) => {
+        const expDate = new Date(food.expDate);
+        if (expDate < dateCheck) {
+          console.log("expired");
+        } else {
+          console.log("not expired");
+        }
         if (food.foodType == "Fruits") {
-          console.log(food);
           return (
             <React.Fragment key={`food-${index}`}>
               <div className="item">
