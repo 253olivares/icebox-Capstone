@@ -11,7 +11,7 @@ import Nav from "../components/Nav";
 import MobileNavLogged from "../components/MobileNavLogged";
 import Footer from "../components/Footer";
 
-import { signIn } from "../services/db";
+import { signIn, googleSignIn } from "../services/db";
 
 import State from "../state";
 
@@ -38,10 +38,10 @@ const LoginPage = () => {
     setUserLogin(userLogin);
     const user = await signIn(userLogin.email, userLogin.password);
     if (!user) {
-      newUser()
+      newUser();
     } else {
       state.signedInAndLoadAllInformation(user);
-      navigate('/dashboard');
+      navigate("/dashboard");
     }
   }
 
@@ -49,6 +49,12 @@ const LoginPage = () => {
     const userLoginClone = { ...userLogin };
     userLoginClone[name] = value;
     setUserLogin(userLoginClone);
+  }
+
+  async function newGoogleUser() {
+    const user = await googleSignIn();
+    state.signedInAndLoadAllInformation(user);
+    navigate("/dashboard");
   }
 
   return (
@@ -102,7 +108,9 @@ const LoginPage = () => {
                 <hr></hr>
               </div>
 
-              <Button className="googleBtnSignIn">Sign in with Google</Button>
+              <Button className="googleBtnSignIn" onClick={newGoogleUser}>
+                Sign in with Google
+              </Button>
 
               <p className="newUser">
                 New user? <a href="/create">Create account</a> here!
