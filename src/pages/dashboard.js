@@ -84,7 +84,7 @@ const DashboardPage = () => {
       const fridgeList = fridgesDash.map((fridge, index) => {
         const expiredFood = [];
         async function grabFood() {
-          const foodsDB = getFood(fridge.id);
+          const foodsDB = await getFood(fridge.id);
           return foodsDB;
         }
         const foods = grabFood();
