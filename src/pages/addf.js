@@ -36,17 +36,20 @@ const AddFridge = () => {
     household: "",
   };
 
-  const HouseholdOptions = [];
+  const [HouseholdOptions, setHouseholdOptions] = React.useState([]);
 
   async function setHouses() {
+    // var to hold house options
     const houses = state.houses;
-    await houses.map((house) => {
+    const houseOption = await houses.map((house) => {
       const houseInfo = {
         text: house.houseName,
         value: house.id,
       };
-      HouseholdOptions.push(houseInfo);
+      return houseInfo;
+      // HouseholdOptions.push(houseInfo);
     });
+    setHouseholdOptions(houseOption);
     console.log(HouseholdOptions);
   }
 
