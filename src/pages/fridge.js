@@ -22,7 +22,7 @@ import fridgeIcon from "../images/Icebox_assets/fridge_icon.svg";
 import State from "../state";
 
 import Footer from "../components/Footer";
-import { getFood } from "../services/db";
+import { getFood, deleteFood } from "../services/db";
 
 const FridgePage = () => {
   const state = React.useContext(State);
@@ -48,6 +48,7 @@ const FridgePage = () => {
   async function setFoods() {
     const foods = await getFood(state.selectedFridge.id);
     if (foods) {
+      console.log(foods);
       const foodList = foods.map((food, index) => {
         const expDate = new Date(food.expDate);
         if (expDate < dateCheck) {
@@ -60,7 +61,16 @@ const FridgePage = () => {
             <React.Fragment key={`food-${index}`}>
               <div className="item">
                 <div className="overlayDelete">
-                  <Button color='red'> Delete Food</Button>
+                  <Button
+                    color="red"
+                    onClick={() => {
+                      console.log(food.id);
+                      deleteFood(food.id);
+                    }}
+                  >
+                    {" "}
+                    Delete Food
+                  </Button>
                 </div>
                 <img src={Fruits}></img>
                 <h1>{food.foodName}</h1>
@@ -74,7 +84,16 @@ const FridgePage = () => {
             <React.Fragment key={`food-${index}`}>
               <div className="item">
                 <div className="overlayDelete">
-                  <Button color='red'> Delete Food</Button>
+                  <Button
+                    color="red"
+                    onClick={() => {
+                      console.log(food.id);
+                      deleteFood(food.id);
+                    }}
+                  >
+                    {" "}
+                    Delete Food
+                  </Button>
                 </div>
                 <img src={Vegetables}></img>
                 <h1>{food.foodName}</h1>
@@ -88,7 +107,16 @@ const FridgePage = () => {
             <React.Fragment key={`food-${index}`}>
               <div className="item">
                 <div className="overlayDelete">
-                  <Button color='red'> Delete Food</Button>
+                  <Button
+                    color="red"
+                    onClick={() => {
+                      console.log(food.id);
+                      deleteFood(food.id);
+                    }}
+                  >
+                    {" "}
+                    Delete Food
+                  </Button>
                 </div>
                 <img src={Grains}></img>
                 <h1>{food.foodName}</h1>
@@ -102,7 +130,16 @@ const FridgePage = () => {
             <React.Fragment key={`food-${index}`}>
               <div className="item">
                 <div className="overlayDelete">
-                  <Button color='red'> Delete Food</Button>
+                  <Button
+                    color="red"
+                    onClick={() => {
+                      console.log(food.id);
+                      deleteFood(food.id);
+                    }}
+                  >
+                    {" "}
+                    Delete Food
+                  </Button>
                 </div>
                 <img src={Protein}></img>
                 <h1>{food.foodName}</h1>
@@ -116,7 +153,16 @@ const FridgePage = () => {
             <React.Fragment key={`food-${index}`}>
               <div className="item">
                 <div className="overlayDelete">
-                  <Button color='red'> Delete Food</Button>
+                  <Button
+                    color="red"
+                    onClick={() => {
+                      console.log(food.id);
+                      deleteFood(food.id);
+                    }}
+                  >
+                    {" "}
+                    Delete Food
+                  </Button>
                 </div>
                 <img src={Dairy}></img>
                 <h1>{food.foodName}</h1>
@@ -130,7 +176,16 @@ const FridgePage = () => {
             <React.Fragment key={`food-${index}`}>
               <div className="item">
                 <div className="overlayDelete">
-                  <Button color='red'> Delete Food</Button>
+                  <Button
+                    color="red"
+                    onClick={() => {
+                      console.log(food.id);
+                      deleteFood(food.id);
+                    }}
+                  >
+                    {" "}
+                    Delete Food
+                  </Button>
                 </div>
                 <img src={Extra}></img>
                 <h1>{food.foodName}</h1>

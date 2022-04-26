@@ -18,6 +18,7 @@ import {
   getFirestore,
   setDoc,
   addDoc,
+  deleteDoc,
   collection,
   getDoc,
   getDocs,
@@ -130,6 +131,11 @@ export async function addFood(newFood) {
   return docData;
 }
 
+export async function deleteFood(food) {
+  await deleteDoc(doc(db, "food", food));
+  console.log("deleted");
+}
+
 export async function getHouses(user) {
   const houses = [];
   const q = query(collection(db, "houses"), where("owner", "==", user));
@@ -162,7 +168,9 @@ export async function getFood(fridgeID) {
   const q = query(collection(db, "food"), where("fridge", "==", fridgeID));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
-    food.push(doc.data());
+    const info = doc.data();
+    info.id = doc.id;
+    food.push(info);
   });
   return food;
 }
