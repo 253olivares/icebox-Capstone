@@ -16,6 +16,8 @@ import FridgeImage from "../images/Icebox_assets/fridge_icon.svg";
 
 import State from "../state";
 
+import { getFood } from "../services/db";
+
 import Footer from "../components/Footer";
 
 const DashboardPage = () => {
@@ -39,6 +41,7 @@ const DashboardPage = () => {
   // }
 
   const initialHouses = "";
+  const dateCheck = new Date();
   const [houseLength, setHouseLength] = React.useState(initialHouses.length);
   const [fridgeLength, setFridgeLength] = React.useState(initialHouses.length);
   const [listHouses, setListHouses] = React.useState(initialHouses);
@@ -79,6 +82,22 @@ const DashboardPage = () => {
       // If our state does exist then we run through the array using map
       const fridgesDash = state.fridges;
       const fridgeList = fridgesDash.map((fridge, index) => {
+        const expiredFood = [];
+        async function grabFood() {
+          const foodsDB = getFood(fridge.id);
+          return foodsDB;
+        }
+        const foods = grabFood();
+        console.log(foods);
+        foods.map((food, index) => {
+          const expDate = new Date(food.expDate);
+          if (expDate < dateCheck) {
+            console.log("food expired");
+            expiredFood.push(food);
+          } else {
+            console.log("not expired");
+          }
+        });
         return (
           <React.Fragment key={`fridge-${index}`}>
             <div
@@ -93,8 +112,8 @@ const DashboardPage = () => {
               <div className="drigeinformation">
                 <h1>{fridge.fridgeName}</h1>
                 <hr></hr>
-                <p>Number of Items: X</p>
-                <p>Recent Expired Items: X</p>
+                <p>Number of Items: {foods.length}</p>
+                <p>Recent Expired Items: {expiredFood.length}</p>
               </div>
             </div>
           </React.Fragment>
