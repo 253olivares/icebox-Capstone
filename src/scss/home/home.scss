@@ -1,508 +1,537 @@
 // css for the main page
 .container.ui.iceboxDesc {
+  width: 100%;
+  min-height: 100px;
+  background-color: #fc9e02;
+
+  .decHolder {
+    margin: auto;
     width: 100%;
-    min-height: 100px;
-    background-color: #FC9E02;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 15px 75px 15px;
 
-    .decHolder {
-        margin: auto;
-        width: 100%;
-        max-width: 1280px;
-        display: flex;
-        justify-content: space-around;
-        padding: 80px 15px 75px 15px;
+    .leftFlex {
+      width: 55%;
+      display: flex;
+      justify-content: center;
 
-        .leftFlex {
-            width: 55%;
-            display: flex;
-            justify-content: center;
+      h1 {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        margin-left: -40px;
+      }
 
-            h1 {
-                color: white;
-                font-size: 50px;
-                text-align: center;
-            }
-
-            img {
-                display: block;
-                width: 400px;
-                height: 350px;
-            }
-        }
-
-        .rightFlex {
-            width: 45%;
-            display: flex;
-            justify-content: center;
-            padding-top: 10px;
-
-            p {
-                color: white;
-                font-size: 23px;
-                margin-bottom: 30px;
-            }
-
-            button {
-                padding: 15px 30px 15px 30px;
-                color: white;
-                background-color: #1E85AE;
-                border: none;
-                border-radius: 50px;
-                font-size: 25px;
-                margin: auto;
-                display: block;
-            }
-
-            a {
-                color: white;
-            }
-
-            button:hover {
-                cursor: pointer;
-            }
-        }
+      img {
+        display: block;
+        width: 400px;
+        height: 350px;
+      }
     }
+
+    .rightFlex {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+
+      p {
+        color: white;
+        font-size: 23px;
+        margin-bottom: 30px;
+      }
+
+      button {
+        padding: 15px 30px 15px 30px;
+        color: white;
+        background-color: #1e85ae;
+        border: none;
+        border-radius: 50px;
+        font-size: 25px;
+        margin: auto;
+        display: block;
+      }
+
+      a {
+        color: white;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .container.ui.iceboxTrack {
+  width: 100%;
+  min-height: 100px;
+  background-color: #ffffff;
+
+  .trackHolder {
+    margin: auto;
     width: 100%;
-    min-height: 100px;
-    background-color: #FFFFFF;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 15px 75px 15px;
+    color: #1e85ae;
 
-    .trackHolder {
-        margin: auto;
-        width: 100%;
-        max-width: 1280px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 80px 15px 75px 15px;
-        color: #1E85AE;
+    .leftFlex {
+      h1 {
+        font-style: italic;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-        .leftFlex {
-            h1 {
-                font-style: italic;
-                font-size: 50px;
-                text-align: center;
-                margin-bottom: 20px;
-            }
+      p {
+        font-size: 23px;
+      }
 
-            p {
-                font-size: 23px;
-            }
-
-            width: 45%;
-        }
-
-        .rightFlex {
-            width: 55%;
-            display: flex;
-            justify-content: center;
-
-            img {
-                display: block;
-                width: 400px;
-                height: 350px;
-            }
-        }
+      width: 45%;
     }
+
+    .rightFlex {
+      width: 55%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        display: block;
+        width: 400px;
+        height: 350px;
+      }
+    }
+  }
 }
 
 .container.ui.iceboxShare {
+  width: 100%;
+  min-height: 100px;
+  background-color: #cceaf6;
+
+  .shareHolder {
+    margin: auto;
     width: 100%;
-    min-height: 100px;
-    background-color: #CCEAF6;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 15px 75px 15px;
 
-    .shareHolder {
-        margin: auto;
-        width: 100%;
-        max-width: 1280px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 80px 15px 75px 15px;
+    .leftFlex {
+      width: 55%;
+      display: flex;
+      justify-content: center;
 
-        .leftFlex {
-            width: 55%;
-            display: flex;
-            justify-content: center;
-
-            img {
-                display: block;
-                width: 400px;
-                height: 350px;
-            }
-        }
-
-        .rightFlex {
-            width: 45%;
-            color: #1E85AE;
-
-            h1 {
-                font-style: italic;
-                font-size: 50px;
-                text-align: center;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-size: 23px;
-            }
-        }
+      img {
+        display: block;
+        width: 400px;
+        height: 350px;
+      }
     }
+
+    .rightFlex {
+      width: 45%;
+      color: #1e85ae;
+
+      h1 {
+        font-style: italic;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 23px;
+      }
+    }
+  }
 }
 
 .container.ui.iceboxShopping {
+  width: 100%;
+  min-height: 100px;
+  background-color: #4cb6e1;
+
+  .shoppingHolder {
+    margin: auto;
     width: 100%;
-    min-height: 100px;
-    background-color: #4CB6E1;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 15px 75px 15px;
 
-    .shoppingHolder {
-        margin: auto;
-        width: 100%;
-        max-width: 1280px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 80px 15px 75px 15px;
+    .leftFlex {
+      width: 45%;
 
-        .leftFlex {
-            width: 45%;
+      h1 {
+        font-style: italic;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-            h1 {
-                font-style: italic;
-                font-size: 50px;
-                text-align: center;
-                margin-bottom: 20px;
-            }
+      p {
+        font-size: 23px;
+      }
 
-            p {
-                font-size: 23px;
-            }
-
-            color: white;
-        }
-
-        .rightFlex {
-            display: flex;
-            justify-content: center;
-            width: 55%;
-
-            img {
-                display: block;
-                width: 400px;
-                height: 350px;
-            }
-        }
+      color: white;
     }
+
+    .rightFlex {
+      display: flex;
+      justify-content: center;
+      width: 55%;
+
+      img {
+        display: block;
+        width: 400px;
+        height: 350px;
+      }
+    }
+  }
 }
 
 .container.ui.footer {
+  width: 100%;
+  min-height: 250px;
+  background-color: #1e85ae;
+
+  .footerHolder {
+    margin: auto;
     width: 100%;
-    min-height: 250px;
-    background-color: #1E85AE;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 15px 75px 15px;
 
-    .footerHolder {
-        margin: auto;
-        width: 100%;
-        max-width: 1280px;
+    .pagelogDesc {
+      padding: 10px;
+      width: 30%;
+
+      .imageNText {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 80px 15px 75px 15px;
+        margin-bottom: 20px;
 
-        .pagelogDesc {
-            padding: 10px;
-            width: 30%;
-
-            .imageNText {
-                display: flex;
-                align-items: center;
-                margin-bottom: 20px;
-
-                img {
-                    display: block;
-                    margin-bottom: 20px;
-                    height: 55px;
-                    margin-bottom: 0px;
-                }
-
-                h1 {
-                    margin-left: 20px;
-                    color: white;
-                    margin-top: 0px;
-                }
-            }
-
-            P {
-                font-size: 15px;
-                color: white;
-            }
+        img {
+          display: block;
+          margin-bottom: 20px;
+          height: 55px;
+          margin-bottom: 0px;
         }
 
-        .CatNav {
-            width: 70%;
-            display: flex;
-            justify-content: space-around;
-            padding: 0px 20px 0px 20px;
-
-            .cat {
-                h1 {
-                    font-size: 20px;
-                    margin-bottom: 5px;
-                }
-
-                hr {
-                    margin-bottom: 15px;
-                    height: 2px;
-                    border: none;
-                    background-color: white;
-                }
-
-                p {
-                    font-size: 15px;
-                    margin-bottom: 10px;
-                }
-
-                display: flex;
-                color: white;
-                flex-direction: column;
-            }
+        h1 {
+          margin-left: 20px;
+          color: white;
+          margin-top: 0px;
         }
+      }
+
+      P {
+        font-size: 15px;
+        color: white;
+      }
     }
+
+    .CatNav {
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+      padding: 0px 20px 0px 20px;
+
+      .cat {
+        h1 {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+
+        hr {
+          margin-bottom: 15px;
+          height: 2px;
+          border: none;
+          background-color: white;
+        }
+
+        p {
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+
+        display: flex;
+        color: white;
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 950px) {
-    .container.ui.iceboxDesc {
-        .decHolder {
-            flex-direction: column;
+  .container.ui.iceboxDesc {
+    .decHolder {
+      flex-direction: column;
 
-            .leftFlex {
-                width: 100%;
+      .leftFlex {
+        width: 100%;
 
-                h1 {}
-
-                img {}
-            }
-
-            .rightFlex {
-                padding-top: 50px;
-                margin: auto;
-                width: 80%;
-
-                p {}
-
-                button {}
-
-                button:hover {}
-            }
+        h1 {
         }
-    }
 
-    .container.ui.iceboxTrack {
-        .trackHolder {
-            flex-direction: column;
-
-            .leftFlex {
-                padding-bottom: 50px;
-                margin: auto;
-                width: 80%;
-
-                h1 {}
-
-                p {}
-            }
-
-            .rightFlex {
-                width: 100%;
-
-                img {}
-            }
+        img {
         }
-    }
+      }
 
-    .container.ui.iceboxShare {
-        .shareHolder {
-            flex-direction: column;
+      .rightFlex {
+        padding-top: 50px;
+        margin: auto;
+        width: 80%;
 
-            .leftFlex {
-                width: 100%;
-
-                img {}
-            }
-
-            .rightFlex {
-                padding-top: 50px;
-                margin: auto;
-                width: 80%;
-
-                h1 {}
-
-                p {}
-            }
+        p {
         }
-    }
 
-    .container.ui.iceboxShopping {
-        .shoppingHolder {
-            flex-direction: column;
-
-            .leftFlex {
-                padding-bottom: 50px;
-                margin: auto;
-                width: 80%;
-
-                h1 {}
-
-                p {}
-            }
-
-            .rightFlex {
-                width: 100%;
-
-                img {}
-            }
+        button {
         }
-    }
 
-    .container.ui.footer {
-        display: none;
-
-        .footerHolder {
-            .pagelogDesc {
-                img {}
-
-                P {}
-            }
-
-            .CatNav {
-                .cat {
-                    h1 {}
-
-                    hr {}
-
-                    p {}
-                }
-            }
+        button:hover {
         }
+      }
     }
+  }
+
+  .container.ui.iceboxTrack {
+    .trackHolder {
+      flex-direction: column;
+
+      .leftFlex {
+        padding-bottom: 50px;
+        margin: auto;
+        width: 80%;
+
+        h1 {
+        }
+
+        p {
+        }
+      }
+
+      .rightFlex {
+        width: 100%;
+
+        img {
+        }
+      }
+    }
+  }
+
+  .container.ui.iceboxShare {
+    .shareHolder {
+      flex-direction: column;
+
+      .leftFlex {
+        width: 100%;
+
+        img {
+        }
+      }
+
+      .rightFlex {
+        padding-top: 50px;
+        margin: auto;
+        width: 80%;
+
+        h1 {
+        }
+
+        p {
+        }
+      }
+    }
+  }
+
+  .container.ui.iceboxShopping {
+    .shoppingHolder {
+      flex-direction: column;
+
+      .leftFlex {
+        padding-bottom: 50px;
+        margin: auto;
+        width: 80%;
+
+        h1 {
+        }
+
+        p {
+        }
+      }
+
+      .rightFlex {
+        width: 100%;
+
+        img {
+        }
+      }
+    }
+  }
+
+  .container.ui.footer {
+    display: none;
+
+    .footerHolder {
+      .pagelogDesc {
+        img {
+        }
+
+        P {
+        }
+      }
+
+      .CatNav {
+        .cat {
+          h1 {
+          }
+
+          hr {
+          }
+
+          p {
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .container.ui {
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
+  .container.ui {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .container.ui.iceboxDesc {
-        .decHolder {
-            .leftFlex {
+  .container.ui.iceboxDesc {
+    .decHolder {
+      .leftFlex {
+        div {
+          h1 {
+            margin-left: 0;
+          }
 
-                h1 {}
-
-                img {
-                    width: 250px;
-                    height: 200px;
-                }
-            }
-
-            .rightFlex {
-                p {
-                    font-size: 18px;
-                }
-
-                button {
-                    font-size: 18px;
-                }
-
-                button:hover {}
-            }
+          img {
+            width: 200px;
+            height: 200px;
+            margin-left: 10px;
+          }
         }
-    }
+      }
 
-    .container.ui.iceboxTrack {
-        .trackHolder {
-            .leftFlex {
-                h1 {
-                    font-size: 45px;
-                }
-
-                p {
-                    font-size: 18px;
-                }
-            }
-
-            .rightFlex {
-                img {
-                    width: 250px;
-                    height: 200px;
-                }
-            }
+      .rightFlex {
+        p {
+          font-size: 18px;
         }
-    }
 
-    .container.ui.iceboxShare {
-        .shareHolder {
-            .leftFlex {
-                img {
-                    width: 250px;
-                    height: 200px;
-                }
-            }
-
-            .rightFlex {
-                h1 {
-                    font-size: 45px;
-                }
-
-                p {
-                    font-size: 18px;
-                }
-            }
+        button {
+          font-size: 18px;
         }
-    }
 
-    .container.ui.iceboxShopping {
-        .shoppingHolder {
-            .leftFlex {
-
-                h1 {
-                    font-size: 45px;
-                }
-
-                p {
-                    font-size: 18px;
-                }
-            }
-
-            .rightFlex {
-                img {
-                    width: 250px;
-                    height: 200px;
-                }
-            }
+        button:hover {
         }
+      }
     }
+  }
 
-    .container.ui.footer {
-        .footerHolder {
-            .pagelogDesc {
-                img {}
-
-                P {}
-            }
-
-            .CatNav {
-                .cat {
-                    h1 {}
-
-                    hr {}
-
-                    p {}
-                }
-            }
+  .container.ui.iceboxTrack {
+    .trackHolder {
+      .leftFlex {
+        h1 {
+          font-size: 45px;
         }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .rightFlex {
+        img {
+          width: 250px;
+          height: 200px;
+        }
+      }
     }
+  }
+
+  .container.ui.iceboxShare {
+    .shareHolder {
+      .leftFlex {
+        img {
+          width: 250px;
+          height: 200px;
+        }
+      }
+
+      .rightFlex {
+        h1 {
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .container.ui.iceboxShopping {
+    .shoppingHolder {
+      .leftFlex {
+        h1 {
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .rightFlex {
+        img {
+          width: 250px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .container.ui.footer {
+    .footerHolder {
+      .pagelogDesc {
+        img {
+        }
+
+        P {
+        }
+      }
+
+      .CatNav {
+        .cat {
+          h1 {
+          }
+
+          hr {
+          }
+
+          p {
+          }
+        }
+      }
+    }
+  }
 }

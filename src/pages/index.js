@@ -58,17 +58,19 @@ const HomePage = () => {
             <div className="rightFlex">
               <div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  ICEBOX is a fridge app dedicated to make it easy for users to
+                  create and store information about their food products. We
+                  exist to make life easier so that you can manage your
+                  products, and expiration dates.
+                </p>
+                <p>
+                  This project was made as a Capstone group project in order to
+                  teach ourselves how to use React template and modular
+                  functions by learning and using Gatsby.
                 </p>
                 <button>
-                  <Link to="/login">SIGN UP / LOGIN</Link></button>
+                  <Link to="/login">SIGN UP / LOGIN</Link>
+                </button>
               </div>
             </div>
           </div>
@@ -78,13 +80,9 @@ const HomePage = () => {
             <div className="leftFlex">
               <h1>TRACK FRESHNESS</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Track your produce and other foods with our app, which saves
+                your expiration dates and flags products that are a bit past
+                their "best by" day.
               </p>
             </div>
             <div className="rightFlex">
@@ -95,38 +93,14 @@ const HomePage = () => {
         <Container className="iceboxShare">
           <div className="shareHolder">
             <div className="leftFlex">
-              <img src={sharedFridges} alt="SHARING IMAGE"></img>
+              <img src={easyshop} alt="Household and Fridge"></img>
             </div>
             <div className="rightFlex">
-              <h1>SHARE WITH OTHERS</h1>
+              <h1>ORGANIZATION MADE EASY</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Create individual fridges or fridges saved in households as a
+                collection to organize your spaces in your own way.
               </p>
-            </div>
-          </div>
-        </Container>
-        <Container className="iceboxShopping">
-          <div className="shoppingHolder">
-            <div className="leftFlex">
-              <h1>SHOPPING MADE EASY</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="rightFlex">
-              <img src={easyshop} alt="SHOPPING IMAGE"></img>
             </div>
           </div>
         </Container>
