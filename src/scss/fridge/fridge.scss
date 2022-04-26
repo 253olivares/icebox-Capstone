@@ -98,20 +98,26 @@
                 }
 
                 img {
-                    padding: 15px;
+                    padding-top: 15px;
+                    padding-left: 17px;
+                    padding-right: 17px;
                     width: 175px;
                     height: 125px;
                     display: block;
                 }
 
                 h1 {
-                    padding: 15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
                     text-align: center;
                 }
 
                 p {
-                    padding: 15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-bottom: 15px;
                     font-style: italic;
+                    margin-bottom: 0;
                 }
             }
 

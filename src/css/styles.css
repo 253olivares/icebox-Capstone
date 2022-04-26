@@ -1005,16 +1005,22 @@ p {
           transition: 0.6s;
           border-radius: 10px; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item img {
-          padding: 15px;
+          padding-top: 15px;
+          padding-left: 17px;
+          padding-right: 17px;
           width: 175px;
           height: 125px;
           display: block; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item h1 {
-          padding: 15px;
+          padding-left: 15px;
+          padding-right: 15px;
           text-align: center; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item p {
-          padding: 15px;
-          font-style: italic; }
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-bottom: 15px;
+          font-style: italic;
+          margin-bottom: 0; }
       .container.ui.fridgeItems .marginHolder .itemsHolder .item:hover .overlayDelete {
         opacity: 1;
         top: 0;
