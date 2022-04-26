@@ -92,6 +92,7 @@ const AddFridge = () => {
               name="fridgeName"
               value={newFridge.fridgeName}
               onChange={changeNewFridge}
+              required
             />
           </Form.Field>
           <Form.Field>
@@ -101,6 +102,7 @@ const AddFridge = () => {
               name="description"
               value={newFridge.description}
               onChange={changeNewFridge}
+              required
             />
           </Form.Field>
           <Form.Field>
@@ -110,6 +112,7 @@ const AddFridge = () => {
                 disabled
                 placeholder={state.user.displayName}
                 value={state.user.displayName}
+                required
               />
             ) : (
               <Input disabled placeholder="Null" value="Null" />
@@ -123,6 +126,7 @@ const AddFridge = () => {
             name="household"
             value={newFridge.household}
             onChange={changeNewFridge}
+            required
           />
           <Button type="submit" onClick={createNewFridge}>
             Submit

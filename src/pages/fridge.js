@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, navigate } from "gatsby";
 import "semantic-ui-css/semantic.css";
-import { Container } from "semantic-ui-react";
+import { Button, Container } from "semantic-ui-react";
 import "../css/styles.css";
 
 import MobileNav from "../components/MobileNav";
@@ -59,6 +59,9 @@ const FridgePage = () => {
           return (
             <React.Fragment key={`food-${index}`}>
               <div className="item">
+                <div className="overlayDelete">
+                  <Button color='red'> Delete Food</Button>
+                </div>
                 <img src={Fruits}></img>
                 <h1>{food.foodName}</h1>
                 <p>Exp Date: {food.expDate}</p>
@@ -70,6 +73,9 @@ const FridgePage = () => {
           return (
             <React.Fragment key={`food-${index}`}>
               <div className="item">
+                <div className="overlayDelete">
+                  <Button color='red'> Delete Food</Button>
+                </div>
                 <img src={Vegetables}></img>
                 <h1>{food.foodName}</h1>
                 <p>Exp Date: {food.expDate}</p>
@@ -81,6 +87,9 @@ const FridgePage = () => {
           return (
             <React.Fragment key={`food-${index}`}>
               <div className="item">
+                <div className="overlayDelete">
+                  <Button color='red'> Delete Food</Button>
+                </div>
                 <img src={Grains}></img>
                 <h1>{food.foodName}</h1>
                 <p>Exp Date: {food.expDate}</p>
@@ -92,6 +101,9 @@ const FridgePage = () => {
           return (
             <React.Fragment key={`food-${index}`}>
               <div className="item">
+                <div className="overlayDelete">
+                  <Button color='red'> Delete Food</Button>
+                </div>
                 <img src={Protein}></img>
                 <h1>{food.foodName}</h1>
                 <p>Exp Date: {food.expDate}</p>
@@ -103,6 +115,9 @@ const FridgePage = () => {
           return (
             <React.Fragment key={`food-${index}`}>
               <div className="item">
+                <div className="overlayDelete">
+                  <Button color='red'> Delete Food</Button>
+                </div>
                 <img src={Dairy}></img>
                 <h1>{food.foodName}</h1>
                 <p>Exp Date: {food.expDate}</p>
@@ -114,6 +129,9 @@ const FridgePage = () => {
           return (
             <React.Fragment key={`food-${index}`}>
               <div className="item">
+                <div className="overlayDelete">
+                  <Button color='red'> Delete Food</Button>
+                </div>
                 <img src={Extra}></img>
                 <h1>{food.foodName}</h1>
                 <p>Exp Date: {food.expDate}</p>

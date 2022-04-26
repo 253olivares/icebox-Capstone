@@ -85,7 +85,7 @@ const RestockPage = () => {
                 name="foodName"
                 value={newFood.foodName}
                 onChange={changeNewFood}
-              ></Input>
+                required ></Input>
             </Form.Field>
             <Form.Select
               fluid
@@ -95,7 +95,7 @@ const RestockPage = () => {
               name="foodType"
               value={newFood.foodType}
               onChange={changeNewFood}
-            ></Form.Select>
+              required ></Form.Select>
             <Form.Field>
               <label>Expiration Date:</label>
               <Input
@@ -104,7 +104,7 @@ const RestockPage = () => {
                 name="expDate"
                 value={newFood.expDate}
                 onChange={changeNewFood}
-              ></Input>
+                required ></Input>
             </Form.Field>
             <Form.Field>
               <label>QTY:</label>
@@ -113,7 +113,7 @@ const RestockPage = () => {
                 name="quantity"
                 value={newFood.quantity}
                 onChange={changeNewFood}
-              ></Input>
+                required ></Input>
             </Form.Field>
             <Button type="submit" onClick={createFood}>
               {" "}

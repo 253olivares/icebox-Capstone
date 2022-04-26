@@ -739,7 +739,8 @@ p {
         color: white;
         padding: 30px;
         display: flex;
-        align-items: center; }
+        align-items: center;
+        margin-bottom: 25px; }
         .container.ui.individualFrdges .iFContainer .fridges .fridges_One img {
           margin-right: 50px;
           width: 150px;
@@ -986,17 +987,39 @@ p {
         display: flex;
         flex-direction: column;
         width: 175px;
-        margin: 15px; }
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px; }
+        .container.ui.fridgeItems .marginHolder .itemsHolder .item .overlayDelete {
+          z-index: 5;
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          top: -100%;
+          transition: 0.6s;
+          border-radius: 10px; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item img {
+          padding: 15px;
           width: 175px;
           height: 125px;
-          display: block;
-          margin-bottom: 10px; }
+          display: block; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item h1 {
-          margin-top: 0px;
+          padding: 15px;
           text-align: center; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item p {
+          padding: 15px;
           font-style: italic; }
+      .container.ui.fridgeItems .marginHolder .itemsHolder .item:hover .overlayDelete {
+        opacity: 1;
+        top: 0;
+        justify-content: center;
+        align-items: center; }
 
 @media screen and (max-width: 750px) {
   .container.ui.fridgeInformation .fridgeInfoHolder {
@@ -1070,7 +1093,9 @@ p {
 
 .container.ui.addFoodItems {
   margin-top: 75px;
-  margin-bottom: 75px; }
+  margin-bottom: 75px;
+  margin-left: 10px;
+  margin-right: 10px; }
   .container.ui.addFoodItems form.ui.addfoodForm {
     border-style: solid;
     border-width: 2px;
