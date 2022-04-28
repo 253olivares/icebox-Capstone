@@ -23,6 +23,16 @@
     }
 }
 
+.modal {
+    position: absolute;
+    z-index: 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 .container.ui.dashboardHouseholds {
     width: 100%;
     padding-top: 75px;

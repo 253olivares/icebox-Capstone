@@ -16,6 +16,7 @@ import Grains from "../images/Icebox_assets/GrainsIcon.png";
 import Protein from "../images/Icebox_assets/MeatsIcon.png";
 import Dairy from "../images/Icebox_assets/DairyIcon.png";
 import Extra from "../images/Icebox_assets/Dish_icon.png";
+import expired from "../images/Icebox_assets/expired.png";
 
 import fridgeIcon from "../images/Icebox_assets/fridge_icon.svg";
 
@@ -53,147 +54,304 @@ const FridgePage = () => {
         const expDate = new Date(food.expDate);
         if (expDate < dateCheck) {
           console.log("expired");
+          if (food.foodType == "Fruits") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <div className="expiredImage">
+                    <img src={expired}></img>
+                  </div>
+                  <img src={Fruits}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
+                </div>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Vegetables") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <div className="expiredImage">
+                    <img src={expired}></img>
+                  </div>
+                  <img src={Vegetables}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
+                </div>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Grains") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <div className="expiredImage">
+                    <img src={expired}></img>
+                  </div>
+                  <img src={Grains}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
+                </div>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Protein") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <div className="expiredImage">
+                    <img src={expired}></img>
+                  </div>
+                  <img src={Protein}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quanity}</p>
+                </div>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Dairy") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <div className="expiredImage">
+                    <img src={expired}></img>
+                  </div>
+                  <img src={Dairy}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
+                </div>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Other") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <div className="expiredImage">
+                    <img src={expired}></img>
+                  </div>
+                  <img src={Extra}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
+                </div>
+              </React.Fragment>
+            );
+          }
         } else {
           console.log("not expired");
-        }
-        if (food.foodType == "Fruits") {
-          return (
-            <React.Fragment key={`food-${index}`}>
-              <div className="item">
-                <div className="overlayDelete">
-                  <Button
-                    color="red"
-                    onClick={() => {
-                      console.log(food.id);
-                      deleteFood(food.id);
-                    }}
-                  >
-                    {" "}
-                    Delete Food
-                  </Button>
+          if (food.foodType == "Fruits") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <img src={Fruits}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
                 </div>
-                <img src={Fruits}></img>
-                <h1>{food.foodName}</h1>
-                <p>Exp Date: {food.expDate}</p>
-                <p>Qty: {food.quantity}</p>
-              </div>
-            </React.Fragment>
-          );
-        } else if (food.foodType == "Vegetables") {
-          return (
-            <React.Fragment key={`food-${index}`}>
-              <div className="item">
-                <div className="overlayDelete">
-                  <Button
-                    color="red"
-                    onClick={() => {
-                      console.log(food.id);
-                      deleteFood(food.id);
-                    }}
-                  >
-                    {" "}
-                    Delete Food
-                  </Button>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Vegetables") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <img src={Vegetables}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
                 </div>
-                <img src={Vegetables}></img>
-                <h1>{food.foodName}</h1>
-                <p>Exp Date: {food.expDate}</p>
-                <p>Qty: {food.quantity}</p>
-              </div>
-            </React.Fragment>
-          );
-        } else if (food.foodType == "Grains") {
-          return (
-            <React.Fragment key={`food-${index}`}>
-              <div className="item">
-                <div className="overlayDelete">
-                  <Button
-                    color="red"
-                    onClick={() => {
-                      console.log(food.id);
-                      deleteFood(food.id);
-                    }}
-                  >
-                    {" "}
-                    Delete Food
-                  </Button>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Grains") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <img src={Grains}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
                 </div>
-                <img src={Grains}></img>
-                <h1>{food.foodName}</h1>
-                <p>Exp Date: {food.expDate}</p>
-                <p>Qty: {food.quantity}</p>
-              </div>
-            </React.Fragment>
-          );
-        } else if (food.foodType == "Protein") {
-          return (
-            <React.Fragment key={`food-${index}`}>
-              <div className="item">
-                <div className="overlayDelete">
-                  <Button
-                    color="red"
-                    onClick={() => {
-                      console.log(food.id);
-                      deleteFood(food.id);
-                    }}
-                  >
-                    {" "}
-                    Delete Food
-                  </Button>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Protein") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <img src={Protein}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quanity}</p>
                 </div>
-                <img src={Protein}></img>
-                <h1>{food.foodName}</h1>
-                <p>Exp Date: {food.expDate}</p>
-                <p>Qty: {food.quanity}</p>
-              </div>
-            </React.Fragment>
-          );
-        } else if (food.foodType == "Dairy") {
-          return (
-            <React.Fragment key={`food-${index}`}>
-              <div className="item">
-                <div className="overlayDelete">
-                  <Button
-                    color="red"
-                    onClick={() => {
-                      console.log(food.id);
-                      deleteFood(food.id);
-                    }}
-                  >
-                    {" "}
-                    Delete Food
-                  </Button>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Dairy") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <img src={Dairy}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
                 </div>
-                <img src={Dairy}></img>
-                <h1>{food.foodName}</h1>
-                <p>Exp Date: {food.expDate}</p>
-                <p>Qty: {food.quantity}</p>
-              </div>
-            </React.Fragment>
-          );
-        } else if (food.foodType == "Other") {
-          return (
-            <React.Fragment key={`food-${index}`}>
-              <div className="item">
-                <div className="overlayDelete">
-                  <Button
-                    color="red"
-                    onClick={() => {
-                      console.log(food.id);
-                      deleteFood(food.id);
-                    }}
-                  >
-                    {" "}
-                    Delete Food
-                  </Button>
+              </React.Fragment>
+            );
+          } else if (food.foodType == "Other") {
+            return (
+              <React.Fragment key={`food-${index}`}>
+                <div className="item">
+                  <div className="overlayDelete">
+                    <Button
+                      color="red"
+                      onClick={() => {
+                        console.log(food.id);
+                        deleteFood(food.id);
+                      }}
+                    >
+                      {" "}
+                      Delete Food
+                    </Button>
+                  </div>
+                  <img src={Extra}></img>
+                  <h1>{food.foodName}</h1>
+                  <p>Exp Date: {food.expDate}</p>
+                  <p>Qty: {food.quantity}</p>
                 </div>
-                <img src={Extra}></img>
-                <h1>{food.foodName}</h1>
-                <p>Exp Date: {food.expDate}</p>
-                <p>Qty: {food.quantity}</p>
-              </div>
-            </React.Fragment>
-          );
+              </React.Fragment>
+            );
+          }
         }
       });
       setFoodList(foodList);

@@ -25,6 +25,7 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import Nav from "../components/Nav";
 
 // sign in function (?) - pulled from firebase docs
 const auth = getAuth(app);
@@ -134,6 +135,7 @@ export async function addFood(newFood) {
 export async function deleteFood(food) {
   await deleteDoc(doc(db, "food", food));
   console.log("deleted");
+  navigate("/dashboard");
 }
 
 export async function getHouses(user) {
@@ -172,6 +174,7 @@ export async function getFood(fridgeID) {
     info.id = doc.id;
     food.push(info);
   });
+  console.log(food);
   return food;
 }
 

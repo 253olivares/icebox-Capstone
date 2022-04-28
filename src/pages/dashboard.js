@@ -2,7 +2,7 @@ import React from "react";
 
 import "semantic-ui-css/semantic.css";
 import { Link, navigate } from "gatsby";
-import { Container, Button } from "semantic-ui-react";
+import { Container, Button, Modal } from "semantic-ui-react";
 import "../css/styles.css";
 
 import MobileNav from "../components/MobileNav";
@@ -19,11 +19,13 @@ import State from "../state";
 import { getFood } from "../services/db";
 
 import Footer from "../components/Footer";
+import { async } from "@firebase/util";
 
 const DashboardPage = () => {
   const state = React.useContext(State);
 
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   const openCloseNav = () => {
     setMobileNavOpen(!mobileNavOpen);
@@ -63,7 +65,6 @@ const DashboardPage = () => {
               <p>
                 <span>{house.houseName}</span>
               </p>
-              <p>1 Fridge</p>
             </div>
           </React.Fragment>
         );
@@ -81,23 +82,27 @@ const DashboardPage = () => {
     } else {
       // If our state does exist then we run through the array using map
       const fridgesDash = state.fridges;
+      const expiredFood = [];
       const fridgeList = fridgesDash.map((fridge, index) => {
-        const expiredFood = [];
+        const foods = [];
         async function grabFood() {
           const foodsDB = await getFood(fridge.id);
-          return foodsDB;
+          foodsDB.map((f) => {
+            const expDate = new Date(f.expDate);
+            if (expDate < dateCheck) {
+              console.log("food expired");
+              expiredFood.push(f);
+            } else {
+              console.log("not expired");
+            }
+            console.log(f);
+            foods.push(f);
+          })
         }
-        const foods = grabFood();
+        grabFood();
         console.log(foods);
-        foods.map((food, index) => {
-          const expDate = new Date(food.expDate);
-          if (expDate < dateCheck) {
-            console.log("food expired");
-            expiredFood.push(food);
-          } else {
-            console.log("not expired");
-          }
-        });
+        console.log(expiredFood);
+
         return (
           <React.Fragment key={`fridge-${index}`}>
             <div
@@ -112,8 +117,6 @@ const DashboardPage = () => {
               <div className="drigeinformation">
                 <h1>{fridge.fridgeName}</h1>
                 <hr></hr>
-                <p>Number of Items: {foods.length}</p>
-                <p>Recent Expired Items: {expiredFood.length}</p>
               </div>
             </div>
           </React.Fragment>
@@ -123,7 +126,12 @@ const DashboardPage = () => {
       setFridgeLength(fridgeList.length);
       // setListHouses(houseList);
       // setHouseLength(houseList.length);
+      // if (expiredFood != []) {
+      //   document.getElementsByClassName("modal").style.display = "flex";
+      //   console.log("changing style");
+      // };
     }
+
   }
 
   // Runs when the page loads
@@ -149,6 +157,11 @@ const DashboardPage = () => {
             {mobileNavOpen ? <MobileNav></MobileNav> : null}
           </>
         )}
+        {/* <div className="Modal">
+          <div className="InsideModal">
+            test
+          </div>
+        </div> */}
         <Container className="dashboardName">
           <div className="dashcontainer">
             <img src={DashImage} className="dashboardImage"></img>
@@ -210,7 +223,7 @@ const DashboardPage = () => {
 
         <Footer></Footer>
       </main>
-    </React.Fragment>
+    </React.Fragment >
   );
 };
 

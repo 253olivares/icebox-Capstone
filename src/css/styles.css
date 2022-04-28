@@ -647,6 +647,13 @@ p {
     .container.ui.dashboardName .dashcontainer .dashboardInformation .userName {
       color: #FC9E02; }
 
+.modal {
+  position: absolute;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+
 .container.ui.dashboardHouseholds {
   width: 100%;
   padding-top: 75px;
@@ -1004,6 +1011,8 @@ p {
           top: -100%;
           transition: 0.6s;
           border-radius: 10px; }
+        .container.ui.fridgeItems .marginHolder .itemsHolder .item .expiredImage {
+          position: absolute; }
         .container.ui.fridgeItems .marginHolder .itemsHolder .item img {
           padding-top: 15px;
           padding-left: 17px;
