@@ -44,8 +44,10 @@ export const Provider = ({ children }) => {
     setState({ ...state, user: null });
   }
 
-  function createNstore(user) {
-    setState({ ...state, user });
+  async function createNstore(user) {
+    const houses = await getHouses(user.uid);
+    const fridges = await getFridges(user.uid);
+    setState({ ...state, user, houses, fridges });
   }
 
   const stateVals = {
