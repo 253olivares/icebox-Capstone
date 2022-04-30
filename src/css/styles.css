@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; }
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+}
 
 html,
 body {
@@ -12,10 +13,12 @@ body {
   position: relative;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow: scroll; }
+  overflow: scroll;
+}
 
 body::-webkit-scrollbar {
-  display: none; }
+  display: none;
+}
 
 h1,
 h2,
@@ -24,7 +27,8 @@ h4,
 h5,
 h6,
 p {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+}
 
 .menu.ui.navbar {
   background-color: #1E85AE;
@@ -33,25 +37,38 @@ p {
   height: 85px;
   margin: 0px;
   display: flex;
-  justify-content: center; }
-  .menu.ui.navbar .navbarHolder {
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: left; }
-    .menu.ui.navbar .navbarHolder .item {
-      color: white;
-      font-size: 25px; }
-      .menu.ui.navbar .navbarHolder .item a {
-        color: white; }
-    .menu.ui.navbar .navbarHolder .item:hover {
-      cursor: pointer;
-      background-color: #2196c4;
-      transition: all .8s; }
-    .menu.ui.navbar .navbarHolder .item:before {
-      width: 0px; }
-  .menu.ui.navbar .navbarHolderMobile {
-    display: none; }
+  justify-content: center;
+}
+
+.menu.ui.navbar .navbarHolder {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: left;
+}
+
+.menu.ui.navbar .navbarHolder .item {
+  color: white;
+  font-size: 25px;
+}
+
+.menu.ui.navbar .navbarHolder .item a {
+  color: white;
+}
+
+.menu.ui.navbar .navbarHolder .item:hover {
+  cursor: pointer;
+  background-color: #2196c4;
+  transition: all .8s;
+}
+
+.menu.ui.navbar .navbarHolder .item:before {
+  width: 0px;
+}
+
+.menu.ui.navbar .navbarHolderMobile {
+  display: none;
+}
 
 .menu.ui.MobileNavMenu {
   background-color: #4CB6E1;
@@ -62,597 +79,863 @@ p {
   border: 0px;
   border-radius: 0px;
   position: absolute;
-  z-index: 5; }
-  .menu.ui.MobileNavMenu .MobileNavHolder {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100%; }
-    .menu.ui.MobileNavMenu .MobileNavHolder .MNWelcome {
-      color: white;
-      font-size: 30px;
-      margin-left: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px; }
-    .menu.ui.MobileNavMenu .MobileNavHolder .MNMore {
-      color: white;
-      font-size: 20px;
-      margin-left: 10px;
-      padding-top: 5px;
-      padding-bottom: 5px; }
-      .menu.ui.MobileNavMenu .MobileNavHolder .MNMore a {
-        color: white; }
-    .menu.ui.MobileNavMenu .MobileNavHolder .firsthr {
-      height: 5px;
-      background-color: white;
-      border: none;
-      color: white; }
-    .menu.ui.MobileNavMenu .MobileNavHolder .followinghr {
-      background-color: white;
-      border: none;
-      height: 2px; }
-    .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo {
-      margin: auto;
-      width: 100%;
-      bottom: 0;
-      color: white;
-      position: absolute; }
-      .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo .imageNTextNav {
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo .imageNTextNav img {
-          display: block;
-          margin-bottom: 20px;
-          height: 55px;
-          margin-bottom: 0px; }
-        .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo .imageNTextNav h1 {
-          margin-left: 20px;
-          color: white;
-          margin-top: 0px; }
-      .menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo p {
-        padding-top: 20px;
-        text-align: center;
-        margin: auto;
-        width: 75%;
-        font-size: 15px;
-        padding-bottom: 20px; }
+  z-index: 5;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNWelcome {
+  color: white;
+  font-size: 30px;
+  margin-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNMore {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNMore a {
+  color: white;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .firsthr {
+  height: 5px;
+  background-color: white;
+  border: none;
+  color: white;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .followinghr {
+  background-color: white;
+  border: none;
+  height: 2px;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo {
+  margin: auto;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  position: absolute;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo .imageNTextNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo .imageNTextNav img {
+  display: block;
+  margin-bottom: 20px;
+  height: 55px;
+  margin-bottom: 0px;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo .imageNTextNav h1 {
+  margin-left: 20px;
+  color: white;
+  margin-top: 0px;
+}
+
+.menu.ui.MobileNavMenu .MobileNavHolder .MNbottomInfo p {
+  padding-top: 20px;
+  text-align: center;
+  margin: auto;
+  width: 75%;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
 
 @media screen and (max-width: 950px) {
   .menu.ui.navbar .navbarHolder {
-    justify-content: center; } }
+    justify-content: center;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .menu.ui.navbar .navbarHolder .item {
-    font-size: 20px; } }
+    font-size: 20px;
+  }
+}
 
 @media screen and (min-width: 601px) {
   .menu.ui.MobileNavMenu {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .menu.ui.navbar .navbarHolder {
-    display: none; }
+    display: none;
+  }
+
   .menu.ui.navbar .navbarHolderMobile {
     position: relative;
     width: 100%;
-    display: flex !important; }
-    .menu.ui.navbar .navbarHolderMobile .navbarMenu {
-      width: 80px;
-      position: absolute;
-      z-index: 5; }
-      .menu.ui.navbar .navbarHolderMobile .navbarMenu img {
-        margin-top: 10px;
-        margin-left: 5px;
-        width: 60px; }
-    .menu.ui.navbar .navbarHolderMobile .appTitle {
-      z-index: 0;
-      position: absolute;
-      width: 100%; }
-      .menu.ui.navbar .navbarHolderMobile .appTitle h1 {
-        font-size: 50px;
-        color: white;
-        line-height: 85px;
-        text-align: center; } }
+    display: flex !important;
+  }
+
+  .menu.ui.navbar .navbarHolderMobile .navbarMenu {
+    width: 80px;
+    position: absolute;
+    z-index: 5;
+  }
+
+  .menu.ui.navbar .navbarHolderMobile .navbarMenu img {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 60px;
+  }
+
+  .menu.ui.navbar .navbarHolderMobile .appTitle {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .menu.ui.navbar .navbarHolderMobile .appTitle h1 {
+    font-size: 50px;
+    color: white;
+    line-height: 85px;
+    text-align: center;
+  }
+}
 
 @media screen and (max-width: 3500px) {
   .menu.ui.navbar {
-    height: 80px; }
-    .menu.ui.navbar .navbarHolderMobile .navbarMenu img {
-      width: 40px;
-      margin-top: 20px; }
-    .menu.ui.navbar .navbarHolderMobile .appTitle h1 {
-      font-size: 45px;
-      line-height: 80px; } }
+    height: 80px;
+  }
+
+  .menu.ui.navbar .navbarHolderMobile .navbarMenu img {
+    width: 40px;
+    margin-top: 20px;
+  }
+
+  .menu.ui.navbar .navbarHolderMobile .appTitle h1 {
+    font-size: 45px;
+    line-height: 80px;
+  }
+}
 
 .container.ui.iceboxDesc {
   width: 100%;
   min-height: 100px;
-  background-color: #fc9e02; }
-  .container.ui.iceboxDesc .decHolder {
-    margin: auto;
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-around;
-    padding: 80px 15px 75px 15px; }
-    .container.ui.iceboxDesc .decHolder .leftFlex {
-      width: 55%;
-      display: flex;
-      justify-content: center; }
-      .container.ui.iceboxDesc .decHolder .leftFlex h1 {
-        color: white;
-        font-size: 50px;
-        text-align: center;
-        margin-left: -40px; }
-      .container.ui.iceboxDesc .decHolder .leftFlex img {
-        display: block;
-        width: 400px;
-        height: 350px; }
-    .container.ui.iceboxDesc .decHolder .rightFlex {
-      width: 45%;
-      display: flex;
-      justify-content: center;
-      padding-top: 40px; }
-      .container.ui.iceboxDesc .decHolder .rightFlex p {
-        color: white;
-        font-size: 23px;
-        margin-bottom: 30px; }
-      .container.ui.iceboxDesc .decHolder .rightFlex button {
-        padding: 15px 30px 15px 30px;
-        color: white;
-        background-color: #1e85ae;
-        border: none;
-        border-radius: 50px;
-        font-size: 25px;
-        margin: auto;
-        display: block; }
-      .container.ui.iceboxDesc .decHolder .rightFlex a {
-        color: white; }
-      .container.ui.iceboxDesc .decHolder .rightFlex button:hover {
-        cursor: pointer; }
+  background-color: #fc9e02;
+}
+
+.container.ui.iceboxDesc .decHolder {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 15px 75px 15px;
+}
+
+.container.ui.iceboxDesc .decHolder .leftFlex {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.container.ui.iceboxDesc .decHolder .leftFlex h1 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-left: -40px;
+}
+
+.container.ui.iceboxDesc .decHolder .leftFlex img {
+  display: block;
+  width: 400px;
+  height: 350px;
+}
+
+.container.ui.iceboxDesc .decHolder .rightFlex {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.container.ui.iceboxDesc .decHolder .rightFlex p {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 30px;
+}
+
+.container.ui.iceboxDesc .decHolder .rightFlex button {
+  padding: 15px 30px 15px 30px;
+  color: white;
+  background-color: #1e85ae;
+  border: none;
+  border-radius: 50px;
+  font-size: 25px;
+  margin: auto;
+  display: block;
+}
+
+.container.ui.iceboxDesc .decHolder .rightFlex a {
+  color: white;
+}
+
+.container.ui.iceboxDesc .decHolder .rightFlex button:hover {
+  cursor: pointer;
+}
 
 .container.ui.iceboxTrack {
   width: 100%;
   min-height: 100px;
-  background-color: #ffffff; }
-  .container.ui.iceboxTrack .trackHolder {
-    margin: auto;
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 80px 15px 75px 15px;
-    color: #1e85ae; }
-    .container.ui.iceboxTrack .trackHolder .leftFlex {
-      width: 45%; }
-      .container.ui.iceboxTrack .trackHolder .leftFlex h1 {
-        font-style: italic;
-        font-size: 50px;
-        text-align: center;
-        margin-bottom: 20px; }
-      .container.ui.iceboxTrack .trackHolder .leftFlex p {
-        font-size: 23px; }
-    .container.ui.iceboxTrack .trackHolder .rightFlex {
-      width: 55%;
-      display: flex;
-      justify-content: center; }
-      .container.ui.iceboxTrack .trackHolder .rightFlex img {
-        display: block;
-        width: 400px;
-        height: 350px; }
+  background-color: #ffffff;
+}
+
+.container.ui.iceboxTrack .trackHolder {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 15px 75px 15px;
+  color: #1e85ae;
+}
+
+.container.ui.iceboxTrack .trackHolder .leftFlex {
+  width: 45%;
+}
+
+.container.ui.iceboxTrack .trackHolder .leftFlex h1 {
+  font-style: italic;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container.ui.iceboxTrack .trackHolder .leftFlex p {
+  font-size: 23px;
+}
+
+.container.ui.iceboxTrack .trackHolder .rightFlex {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.container.ui.iceboxTrack .trackHolder .rightFlex img {
+  display: block;
+  width: 400px;
+  height: 350px;
+}
 
 .container.ui.iceboxShare {
   width: 100%;
   min-height: 100px;
-  background-color: #cceaf6; }
-  .container.ui.iceboxShare .shareHolder {
-    margin: auto;
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 80px 15px 75px 15px; }
-    .container.ui.iceboxShare .shareHolder .leftFlex {
-      width: 55%;
-      display: flex;
-      justify-content: center; }
-      .container.ui.iceboxShare .shareHolder .leftFlex img {
-        display: block;
-        width: 400px;
-        height: 350px; }
-    .container.ui.iceboxShare .shareHolder .rightFlex {
-      width: 45%;
-      color: #1e85ae; }
-      .container.ui.iceboxShare .shareHolder .rightFlex h1 {
-        font-style: italic;
-        font-size: 50px;
-        text-align: center;
-        margin-bottom: 20px; }
-      .container.ui.iceboxShare .shareHolder .rightFlex p {
-        font-size: 23px; }
+  background-color: #cceaf6;
+}
+
+.container.ui.iceboxShare .shareHolder {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 15px 75px 15px;
+}
+
+.container.ui.iceboxShare .shareHolder .leftFlex {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.container.ui.iceboxShare .shareHolder .leftFlex img {
+  display: block;
+  width: 400px;
+  height: 350px;
+}
+
+.container.ui.iceboxShare .shareHolder .rightFlex {
+  width: 45%;
+  color: #1e85ae;
+}
+
+.container.ui.iceboxShare .shareHolder .rightFlex h1 {
+  font-style: italic;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container.ui.iceboxShare .shareHolder .rightFlex p {
+  font-size: 23px;
+}
 
 .container.ui.iceboxShopping {
   width: 100%;
   min-height: 100px;
-  background-color: #4cb6e1; }
-  .container.ui.iceboxShopping .shoppingHolder {
-    margin: auto;
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 80px 15px 75px 15px; }
-    .container.ui.iceboxShopping .shoppingHolder .leftFlex {
-      width: 45%;
-      color: white; }
-      .container.ui.iceboxShopping .shoppingHolder .leftFlex h1 {
-        font-style: italic;
-        font-size: 50px;
-        text-align: center;
-        margin-bottom: 20px; }
-      .container.ui.iceboxShopping .shoppingHolder .leftFlex p {
-        font-size: 23px; }
-    .container.ui.iceboxShopping .shoppingHolder .rightFlex {
-      display: flex;
-      justify-content: center;
-      width: 55%; }
-      .container.ui.iceboxShopping .shoppingHolder .rightFlex img {
-        display: block;
-        width: 400px;
-        height: 350px; }
+  background-color: #4cb6e1;
+}
+
+.container.ui.iceboxShopping .shoppingHolder {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 15px 75px 15px;
+}
+
+.container.ui.iceboxShopping .shoppingHolder .leftFlex {
+  width: 45%;
+  color: white;
+}
+
+.container.ui.iceboxShopping .shoppingHolder .leftFlex h1 {
+  font-style: italic;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container.ui.iceboxShopping .shoppingHolder .leftFlex p {
+  font-size: 23px;
+}
+
+.container.ui.iceboxShopping .shoppingHolder .rightFlex {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+}
+
+.container.ui.iceboxShopping .shoppingHolder .rightFlex img {
+  display: block;
+  width: 400px;
+  height: 350px;
+}
 
 .container.ui.footer {
   width: 100%;
   min-height: 250px;
-  background-color: #1e85ae; }
-  .container.ui.footer .footerHolder {
-    margin: auto;
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 15px 75px 15px; }
-    .container.ui.footer .footerHolder .pagelogDesc {
-      padding: 10px;
-      width: 30%; }
-      .container.ui.footer .footerHolder .pagelogDesc .imageNText {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px; }
-        .container.ui.footer .footerHolder .pagelogDesc .imageNText img {
-          display: block;
-          margin-bottom: 20px;
-          height: 55px;
-          margin-bottom: 0px; }
-        .container.ui.footer .footerHolder .pagelogDesc .imageNText h1 {
-          margin-left: 20px;
-          color: white;
-          margin-top: 0px; }
-      .container.ui.footer .footerHolder .pagelogDesc P {
-        font-size: 15px;
-        color: white; }
-    .container.ui.footer .footerHolder .CatNav {
-      width: 70%;
-      display: flex;
-      justify-content: space-around;
-      padding: 0px 20px 0px 20px; }
-      .container.ui.footer .footerHolder .CatNav .cat {
-        display: flex;
-        color: white;
-        flex-direction: column; }
-        .container.ui.footer .footerHolder .CatNav .cat h1 {
-          font-size: 20px;
-          margin-bottom: 5px; }
-        .container.ui.footer .footerHolder .CatNav .cat hr {
-          margin-bottom: 15px;
-          height: 2px;
-          border: none;
-          background-color: white; }
-        .container.ui.footer .footerHolder .CatNav .cat p {
-          font-size: 15px;
-          margin-bottom: 10px; }
+  background-color: #1e85ae;
+}
+
+.container.ui.footer .footerHolder {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 15px 75px 15px;
+}
+
+.container.ui.footer .footerHolder .pagelogDesc {
+  padding: 10px;
+  width: 30%;
+}
+
+.container.ui.footer .footerHolder .pagelogDesc .imageNText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container.ui.footer .footerHolder .pagelogDesc .imageNText img {
+  display: block;
+  margin-bottom: 20px;
+  height: 55px;
+  margin-bottom: 0px;
+}
+
+.container.ui.footer .footerHolder .pagelogDesc .imageNText h1 {
+  margin-left: 20px;
+  color: white;
+  margin-top: 0px;
+}
+
+.container.ui.footer .footerHolder .pagelogDesc P {
+  font-size: 15px;
+  color: white;
+}
+
+.container.ui.footer .footerHolder .CatNav {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 20px 0px 20px;
+}
+
+.container.ui.footer .footerHolder .CatNav .cat {
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+.container.ui.footer .footerHolder .CatNav .cat h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.container.ui.footer .footerHolder .CatNav .cat hr {
+  margin-bottom: 15px;
+  height: 2px;
+  border: none;
+  background-color: white;
+}
+
+.container.ui.footer .footerHolder .CatNav .cat p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width: 950px) {
   .container.ui.iceboxDesc .decHolder {
-    flex-direction: column; }
-    .container.ui.iceboxDesc .decHolder .leftFlex {
-      width: 100%; }
-    .container.ui.iceboxDesc .decHolder .rightFlex {
-      padding-top: 50px;
-      margin: auto;
-      width: 80%; }
+    flex-direction: column;
+  }
+
+  .container.ui.iceboxDesc .decHolder .leftFlex {
+    width: 100%;
+  }
+
+  .container.ui.iceboxDesc .decHolder .rightFlex {
+    padding-top: 50px;
+    margin: auto;
+    width: 80%;
+  }
+
   .container.ui.iceboxTrack .trackHolder {
-    flex-direction: column; }
-    .container.ui.iceboxTrack .trackHolder .leftFlex {
-      padding-bottom: 50px;
-      margin: auto;
-      width: 80%; }
-    .container.ui.iceboxTrack .trackHolder .rightFlex {
-      width: 100%; }
+    flex-direction: column;
+  }
+
+  .container.ui.iceboxTrack .trackHolder .leftFlex {
+    padding-bottom: 50px;
+    margin: auto;
+    width: 80%;
+  }
+
+  .container.ui.iceboxTrack .trackHolder .rightFlex {
+    width: 100%;
+  }
+
   .container.ui.iceboxShare .shareHolder {
-    flex-direction: column; }
-    .container.ui.iceboxShare .shareHolder .leftFlex {
-      width: 100%; }
-    .container.ui.iceboxShare .shareHolder .rightFlex {
-      padding-top: 50px;
-      margin: auto;
-      width: 80%; }
+    flex-direction: column;
+  }
+
+  .container.ui.iceboxShare .shareHolder .leftFlex {
+    width: 100%;
+  }
+
+  .container.ui.iceboxShare .shareHolder .rightFlex {
+    padding-top: 50px;
+    margin: auto;
+    width: 80%;
+  }
+
   .container.ui.iceboxShopping .shoppingHolder {
-    flex-direction: column; }
-    .container.ui.iceboxShopping .shoppingHolder .leftFlex {
-      padding-bottom: 50px;
-      margin: auto;
-      width: 80%; }
-    .container.ui.iceboxShopping .shoppingHolder .rightFlex {
-      width: 100%; }
+    flex-direction: column;
+  }
+
+  .container.ui.iceboxShopping .shoppingHolder .leftFlex {
+    padding-bottom: 50px;
+    margin: auto;
+    width: 80%;
+  }
+
+  .container.ui.iceboxShopping .shoppingHolder .rightFlex {
+    width: 100%;
+  }
+
   .container.ui.footer {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .container.ui {
     margin-left: auto !important;
-    margin-right: auto !important; } }
+    margin-right: auto !important;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .container.ui.iceboxDesc .decHolder .leftFlex div h1 {
-    margin-left: 0; }
+    margin-left: 0;
+  }
+
   .container.ui.iceboxDesc .decHolder .leftFlex div img {
     width: 200px;
     height: 200px;
-    margin-left: 10px; }
+    margin-left: 10px;
+  }
+
   .container.ui.iceboxDesc .decHolder .rightFlex p {
-    font-size: 18px; }
+    font-size: 18px;
+  }
+
   .container.ui.iceboxDesc .decHolder .rightFlex button {
-    font-size: 18px; }
+    font-size: 18px;
+  }
+
   .container.ui.iceboxTrack .trackHolder .leftFlex h1 {
-    font-size: 45px; }
+    font-size: 45px;
+  }
+
   .container.ui.iceboxTrack .trackHolder .leftFlex p {
-    font-size: 18px; }
+    font-size: 18px;
+  }
+
   .container.ui.iceboxTrack .trackHolder .rightFlex img {
     width: 250px;
-    height: 200px; }
+    height: 200px;
+  }
+
   .container.ui.iceboxShare .shareHolder .leftFlex img {
     width: 250px;
-    height: 200px; }
+    height: 200px;
+  }
+
   .container.ui.iceboxShare .shareHolder .rightFlex h1 {
-    font-size: 45px; }
+    font-size: 45px;
+  }
+
   .container.ui.iceboxShare .shareHolder .rightFlex p {
-    font-size: 18px; }
+    font-size: 18px;
+  }
+
   .container.ui.iceboxShopping .shoppingHolder .leftFlex h1 {
-    font-size: 45px; }
+    font-size: 45px;
+  }
+
   .container.ui.iceboxShopping .shoppingHolder .leftFlex p {
-    font-size: 18px; }
+    font-size: 18px;
+  }
+
   .container.ui.iceboxShopping .shoppingHolder .rightFlex img {
     width: 250px;
-    height: 200px; } }
+    height: 200px;
+  }
+}
 
 .container.ui.loginBox {
   min-height: 100px;
   padding-top: 100px;
-  padding-bottom: 100px; }
-  .container.ui.loginBox .loginContainer {
-    width: 100%;
-    min-height: 600px;
-    border-radius: 25px;
-    display: flex;
-    overflow: hidden;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #707070; }
-    .container.ui.loginBox .loginContainer .leftBox {
-      display: flex;
-      width: 50%;
-      background-image: url(../images/Icebox_assets/stockphoto_2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: right 30% center; }
-    .container.ui.loginBox .loginContainer .rightBox {
-      width: 50%;
-      text-align: center;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      position: relative; }
-      .container.ui.loginBox .loginContainer .rightBox .bigHead {
-        color: #4CB6E1;
-        margin-bottom: 0px;
-        font-size: 35px; }
-      .container.ui.loginBox .loginContainer .rightBox .subHead {
-        color: #4CB6E1;
-        margin-bottom: 0px;
-        font-size: 20px;
-        padding-bottom: 85px; }
-      .container.ui.loginBox .loginContainer .rightBox .emailInput {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        margin-bottom: 20px;
-        color: #4CB6E1; }
-      .container.ui.loginBox .loginContainer .rightBox .passwordInput {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px; }
-      .container.ui.loginBox .loginContainer .rightBox .subForgor {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        text-align: left;
-        margin-bottom: 15px; }
-      .container.ui.loginBox .loginContainer .rightBox .logOption {
-        background-color: #FC9E02;
-        width: 150px;
-        padding: 10px;
-        border-radius: 25px;
-        border: none;
-        color: white;
-        font-size: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        font-weight: bold;
-        box-shadow: 0px 8px 6px #888888; }
-      .container.ui.loginBox .loginContainer .rightBox .divider {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-content: center;
-        height: 20px;
-        margin-bottom: 15px; }
-        .container.ui.loginBox .loginContainer .rightBox .divider p {
-          margin-bottom: 0px;
-          height: 20px;
-          padding-left: 5px;
-          padding-right: 5px; }
-        .container.ui.loginBox .loginContainer .rightBox .divider hr {
-          line-height: 20px;
-          width: 20px;
-          background-color: black;
-          height: 1px;
-          border: none;
-          margin-top: 10px; }
-      .container.ui.loginBox .loginContainer .rightBox .googleBtnSignIn {
-        width: 200px;
-        margin-left: auto;
-        margin-right: auto; }
-      .container.ui.loginBox .loginContainer .rightBox .newUser {
-        position: absolute;
-        bottom: 20px;
-        left: 20px; }
+  padding-bottom: 100px;
+}
+
+.container.ui.loginBox .loginContainer {
+  width: 100%;
+  min-height: 600px;
+  border-radius: 25px;
+  display: flex;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #707070;
+}
+
+.container.ui.loginBox .loginContainer .leftBox {
+  display: flex;
+  width: 50%;
+  background-image: url(../images/Icebox_assets/stockphoto_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 30% center;
+}
+
+.container.ui.loginBox .loginContainer .rightBox {
+  width: 50%;
+  text-align: center;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .bigHead {
+  color: #4CB6E1;
+  margin-bottom: 0px;
+  font-size: 35px;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .subHead {
+  color: #4CB6E1;
+  margin-bottom: 0px;
+  font-size: 20px;
+  padding-bottom: 85px;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .emailInput {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-bottom: 20px;
+  color: #4CB6E1;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .passwordInput {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .subForgor {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .logOption {
+  background-color: #FC9E02;
+  width: 150px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .divider {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .divider p {
+  margin-bottom: 0px;
+  height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .divider hr {
+  line-height: 20px;
+  width: 20px;
+  background-color: black;
+  height: 1px;
+  border: none;
+  margin-top: 10px;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .googleBtnSignIn {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.loginBox .loginContainer .rightBox .newUser {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
 
 @media screen and (max-width: 830px) {
   .container.ui.loginBox .loginContainer {
     max-width: 500px;
     margin-left: auto;
-    margin-right: auto; }
-    .container.ui.loginBox .loginContainer .leftBox {
-      display: none; }
-    .container.ui.loginBox .loginContainer .rightBox {
-      width: 100%; }
-      .container.ui.loginBox .loginContainer .rightBox .bigHead {
-        margin-top: 50px; }
-      .container.ui.loginBox .loginContainer .rightBox .subHead {
-        padding-bottom: 50px; }
-      .container.ui.loginBox .loginContainer .rightBox .newUser {
-        width: 100%;
-        text-align: center;
-        left: 0; } }
+    margin-right: auto;
+  }
+
+  .container.ui.loginBox .loginContainer .leftBox {
+    display: none;
+  }
+
+  .container.ui.loginBox .loginContainer .rightBox {
+    width: 100%;
+  }
+
+  .container.ui.loginBox .loginContainer .rightBox .bigHead {
+    margin-top: 50px;
+  }
+
+  .container.ui.loginBox .loginContainer .rightBox .subHead {
+    padding-bottom: 50px;
+  }
+
+  .container.ui.loginBox .loginContainer .rightBox .newUser {
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+}
 
 @media screen and (max-width: 580px) {
   .container.ui.loginBox .loginContainer {
     max-width: 250px;
     margin-left: auto;
-    margin-right: auto; }
-    .container.ui.loginBox .loginContainer .rightBox .bigHead {
-      font-size: 25px; }
-    .container.ui.loginBox .loginContainer .rightBox .subHead {
-      font-size: 15px; }
-    .container.ui.loginBox .loginContainer .rightBox .logOption {
-      font-size: 15px; } }
+    margin-right: auto;
+  }
+
+  .container.ui.loginBox .loginContainer .rightBox .bigHead {
+    font-size: 25px;
+  }
+
+  .container.ui.loginBox .loginContainer .rightBox .subHead {
+    font-size: 15px;
+  }
+
+  .container.ui.loginBox .loginContainer .rightBox .logOption {
+    font-size: 15px;
+  }
+}
 
 .container.ui.createBox {
   min-height: 100px;
   padding-top: 100px;
-  padding-bottom: 100px; }
-  .container.ui.createBox .createContainer {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 275px;
-    min-height: 600px;
-    border-radius: 25px;
-    display: flex;
-    overflow: hidden;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #707070;
-    flex-direction: column;
-    padding: 40px; }
-    .container.ui.createBox .createContainer h1 {
-      color: #4CB6E1;
-      margin-bottom: 45px;
-      text-align: center; }
-    .container.ui.createBox .createContainer .firstName {
-      width: 80%;
-      margin-bottom: 35px;
-      margin-left: auto;
-      margin-right: auto; }
-    .container.ui.createBox .createContainer .lastName {
-      width: 80%;
-      margin-bottom: 35px;
-      margin-left: auto;
-      margin-right: auto; }
-    .container.ui.createBox .createContainer .email {
-      width: 80%;
-      margin-bottom: 35px;
-      margin-left: auto;
-      margin-right: auto; }
-    .container.ui.createBox .createContainer .password {
-      width: 80%;
-      margin-bottom: 35px;
-      margin-left: auto;
-      margin-right: auto; }
-    .container.ui.createBox .createContainer p {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      color: #FF3636;
-      margin-bottom: 5px; }
-    .container.ui.createBox .createContainer .createAccount {
-      background-color: #FC9E02;
-      width: 150px;
-      padding: 10px;
-      border-radius: 25px;
-      border: none;
-      color: white;
-      font-size: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      font-weight: bold;
-      box-shadow: 0px 8px 6px  #888888; }
+  padding-bottom: 100px;
+}
+
+.container.ui.createBox .createContainer {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 275px;
+  min-height: 600px;
+  border-radius: 25px;
+  display: flex;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #707070;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.container.ui.createBox .createContainer h1 {
+  color: #4CB6E1;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.container.ui.createBox .createContainer .firstName {
+  width: 80%;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.createBox .createContainer .lastName {
+  width: 80%;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.createBox .createContainer .email {
+  width: 80%;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.createBox .createContainer .password {
+  width: 80%;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.createBox .createContainer p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FF3636;
+  margin-bottom: 5px;
+}
+
+.container.ui.createBox .createContainer .createAccount {
+  background-color: #FC9E02;
+  width: 150px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+}
 
 @media screen and (max-width: 830px) {
   .container.ui.createBox .createContainer .firstName {
-    width: 100%; }
+    width: 100%;
+  }
+
   .container.ui.createBox .createContainer .lastName {
-    width: 100%; }
+    width: 100%;
+  }
+
   .container.ui.createBox .createContainer .email {
-    width: 100%; }
+    width: 100%;
+  }
+
   .container.ui.createBox .createContainer .password {
-    width: 100%; }
+    width: 100%;
+  }
+
   .container.ui.createBox .createContainer p {
     font-size: 12px;
-    width: 100%; } }
+    width: 100%;
+  }
+}
 
 .container.ui.dashboardName {
   margin-top: 100px;
   margin-bottom: 100px;
   padding-left: 25px;
-  padding-right: 25px; }
-  .container.ui.dashboardName .dashcontainer {
-    display: flex;
-    align-items: center; }
-    .container.ui.dashboardName .dashcontainer .dashboardImage {
-      width: 300px;
-      height: 175px;
-      margin-right: 60px;
-      border-width: 1px; }
-    .container.ui.dashboardName .dashcontainer .dashboardInformation .userName {
-      color: #FC9E02; }
+  padding-right: 25px;
+}
+
+.container.ui.dashboardName .dashcontainer {
+  display: flex;
+  align-items: center;
+}
+
+.container.ui.dashboardName .dashcontainer .dashboardImage {
+  width: 300px;
+  height: 175px;
+  margin-right: 60px;
+  border-width: 1px;
+}
+
+.container.ui.dashboardName .dashcontainer .dashboardInformation .userName {
+  color: #FC9E02;
+}
 
 .modal {
   position: absolute;
   z-index: 5;
   display: none;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .container.ui.dashboardHouseholds {
   width: 100%;
@@ -660,393 +943,558 @@ p {
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 75px;
-  background-color: #CCEAF6; }
-  .container.ui.dashboardHouseholds .houseContainer {
-    max-width: 1127px;
-    margin-left: auto;
-    margin-right: auto; }
-    .container.ui.dashboardHouseholds .houseContainer .hCHead {
-      display: flex;
-      justify-content: space-between; }
-      .container.ui.dashboardHouseholds .houseContainer .hCHead .button.ui.addH {
-        background-color: #FC9E02;
-        color: white;
-        font-weight: bold;
-        box-shadow: 0px 8px 6px #888888;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        font-size: 15px; }
-        .container.ui.dashboardHouseholds .houseContainer .hCHead .button.ui.addH a {
-          color: white; }
-    .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
-      padding: 40px;
-      border-radius: 25px;
-      background-color: white;
-      width: 100%;
-      min-height: 200px;
-      border: 1px solid black;
-      margin-top: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; }
-      .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 225px;
-        height: 200px;
-        margin-bottom: 20px; }
-        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One img {
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 10px; }
-        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One p {
-          font-size: 20px;
-          margin-bottom: 5px; }
-        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One span {
-          color: #FC9E02; }
+  background-color: #CCEAF6;
+}
+
+.container.ui.dashboardHouseholds .houseContainer {
+  max-width: 1127px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .hCHead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .hCHead .button.ui.addH {
+  background-color: #FC9E02;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .hCHead .button.ui.addH a {
+  color: white;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .householdsContainer {
+  padding: 40px;
+  border-radius: 25px;
+  background-color: white;
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid black;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 225px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One p {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One span {
+  color: #FC9E02;
+}
 
 .container.ui.individualFrdges {
   width: 100%;
   padding-top: 75px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 100px; }
-  .container.ui.individualFrdges .iFContainer {
-    max-width: 1127px;
-    margin-left: auto;
-    margin-right: auto; }
-    .container.ui.individualFrdges .iFContainer .iFCHead {
-      display: flex;
-      justify-content: space-between; }
-      .container.ui.individualFrdges .iFContainer .iFCHead .button.ui.addF {
-        background-color: #FC9E02;
-        color: white;
-        font-weight: bold;
-        box-shadow: 0px 8px 6px #888888;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        font-size: 15px; }
-        .container.ui.individualFrdges .iFContainer .iFCHead .button.ui.addF a {
-          color: white; }
-    .container.ui.individualFrdges .iFContainer .fridges {
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 50px; }
-      .container.ui.individualFrdges .iFContainer .fridges .fridges_One {
-        border: 1px solid black;
-        border-width: 1px;
-        border-radius: 25px;
-        background-color: #FC9E02;
-        color: white;
-        padding: 30px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 25px; }
-        .container.ui.individualFrdges .iFContainer .fridges .fridges_One img {
-          margin-right: 50px;
-          width: 150px;
-          height: 100px; }
-        .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation h1 {
-          margin-bottom: 5px;
-          font-size: 30px; }
-        .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation hr {
-          border: none;
-          background-color: white;
-          height: 5px;
-          margin-bottom: 10px; }
-        .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation P {
-          margin-bottom: 5px; }
+  padding-bottom: 100px;
+}
+
+.container.ui.individualFrdges .iFContainer {
+  max-width: 1127px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.individualFrdges .iFContainer .iFCHead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container.ui.individualFrdges .iFContainer .iFCHead .button.ui.addF {
+  background-color: #FC9E02;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+.container.ui.individualFrdges .iFContainer .iFCHead .button.ui.addF a {
+  color: white;
+}
+
+.container.ui.individualFrdges .iFContainer .fridges {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.container.ui.individualFrdges .iFContainer .fridges .fridges_One {
+  border: 1px solid black;
+  border-width: 1px;
+  border-radius: 25px;
+  background-color: #FC9E02;
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.container.ui.individualFrdges .iFContainer .fridges .fridges_One img {
+  margin-right: 50px;
+  width: 150px;
+  height: 100px;
+}
+
+.container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation h1 {
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation hr {
+  border: none;
+  background-color: white;
+  height: 5px;
+  margin-bottom: 10px;
+}
+
+.container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation P {
+  margin-bottom: 5px;
+}
 
 @media screen and (max-width: 830px) {
   .container.ui.dashboardName .dashcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-    .container.ui.dashboardName .dashcontainer .dashboardImage {
-      margin-bottom: 30px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto; }
-    .container.ui.dashboardName .dashcontainer .dashboardInformation .userName {
-      text-align: center; }
-    .container.ui.dashboardName .dashcontainer .dashboardInformation p {
-      text-align: center; }
+    align-items: center;
+  }
+
+  .container.ui.dashboardName .dashcontainer .dashboardImage {
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container.ui.dashboardName .dashcontainer .dashboardInformation .userName {
+    text-align: center;
+  }
+
+  .container.ui.dashboardName .dashcontainer .dashboardInformation p {
+    text-align: center;
+  }
+
   .container.ui.dashboardHouseholds .houseContainer .hCHead {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-    .container.ui.dashboardHouseholds .houseContainer .hCHead .button.ui.addH {
-      margin-top: 15px; }
+    align-items: center;
+  }
+
+  .container.ui.dashboardHouseholds .houseContainer .hCHead .button.ui.addH {
+    margin-top: 15px;
+  }
+
   .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
-    justify-content: center; }
+    justify-content: center;
+  }
+
   .container.ui.individualFrdges .iFContainer .iFCHead {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-    .container.ui.individualFrdges .iFContainer .iFCHead .button.ui.addF {
-      margin-top: 15px; }
+    align-items: center;
+  }
+
+  .container.ui.individualFrdges .iFContainer .iFCHead .button.ui.addF {
+    margin-top: 15px;
+  }
+
   .container.ui.individualFrdges .iFContainer .fridges {
-    align-items: center; }
-    .container.ui.individualFrdges .iFContainer .fridges .fridges_One {
-      flex-direction: column;
-      width: 250px; }
-      .container.ui.individualFrdges .iFContainer .fridges .fridges_One img {
-        width: 100%;
-        margin: auto; }
-      .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation h1 {
-        margin-top: 10px;
-        font-size: 20px; }
-      .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation hr {
-        width: 100%; }
-      .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation p {
-        text-align: center; } }
+    align-items: center;
+  }
+
+  .container.ui.individualFrdges .iFContainer .fridges .fridges_One {
+    flex-direction: column;
+    width: 250px;
+  }
+
+  .container.ui.individualFrdges .iFContainer .fridges .fridges_One img {
+    width: 100%;
+    margin: auto;
+  }
+
+  .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation h1 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation hr {
+    width: 100%;
+  }
+
+  .container.ui.individualFrdges .iFContainer .fridges .fridges_One .drigeinformation p {
+    text-align: center;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .container.ui.dashboardName {
-    text-align: center; }
-    .container.ui.dashboardName .dashcontainer .dashboardImage {
-      width: 275px;
-      height: 150px; }
-    .container.ui.dashboardName .dashcontainer .dashboardInformation h1 {
-      font-size: 20px; }
+    text-align: center;
+  }
+
+  .container.ui.dashboardName .dashcontainer .dashboardImage {
+    width: 275px;
+    height: 150px;
+  }
+
+  .container.ui.dashboardName .dashcontainer .dashboardInformation h1 {
+    font-size: 20px;
+  }
+
   .container.ui.dashboardHouseholds {
     padding-left: 10px;
-    padding-right: 10px; }
-    .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
-      padding: 20px; }
-      .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One {
-        width: 200px; }
-        .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One img {
-          width: 200px; }
+    padding-right: 10px;
+  }
+
+  .container.ui.dashboardHouseholds .houseContainer .householdsContainer {
+    padding: 20px;
+  }
+
+  .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One {
+    width: 200px;
+  }
+
+  .container.ui.dashboardHouseholds .houseContainer .householdsContainer .householdFridge_One img {
+    width: 200px;
+  }
+
   .container.ui.individualFrdges {
     padding-left: 10px;
-    padding-right: 10px; } }
+    padding-right: 10px;
+  }
+}
 
 .container.ui.profileSection {
   margin-top: 75px;
-  margin-bottom: 75px; }
-  .container.ui.profileSection h1 {
-    margin-bottom: 0px;
-    color: #4CB6E1;
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 50px; }
-  .container.ui.profileSection .profileInformationHolder {
-    display: flex;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center; }
-    .container.ui.profileSection .profileInformationHolder .profileImageChangeButton {
-      display: flex;
-      flex-direction: column;
-      width: 45%; }
-      .container.ui.profileSection .profileInformationHolder .profileImageChangeButton img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 50px;
-        border-radius: 100px;
-        width: 200px; }
-      .container.ui.profileSection .profileInformationHolder .profileImageChangeButton .changeIcon {
-        background-color: #FC9E02;
-        width: 150px;
-        padding: 7px;
-        border-radius: 10px;
-        border: none;
-        color: white;
-        font-size: 18px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        font-weight: bold;
-        box-shadow: 0px 8px 6px #888888; }
-    .container.ui.profileSection .profileInformationHolder .profileInformation {
-      display: flex;
-      flex-direction: column;
-      width: 55%;
-      padding-left: 50px;
-      padding-right: 50px; }
-      .container.ui.profileSection .profileInformationHolder .profileInformation .inputPad {
-        margin-bottom: 30px; }
-      .container.ui.profileSection .profileInformationHolder .profileInformation .uI {
-        color: #4CB6E1;
-        font-size: 25px;
-        margin-bottom: 25px;
-        text-align: center; }
-      .container.ui.profileSection .profileInformationHolder .profileInformation .emailChange {
-        color: #FF3636;
-        margin-bottom: 2px; }
-  .container.ui.profileSection .buttonDiv {
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    .container.ui.profileSection .buttonDiv .updateProfileButton {
-      background-color: #FC9E02;
-      width: 250px;
-      padding: 8px;
-      border-radius: 10px;
-      border: none;
-      color: white;
-      font-size: 15px;
-      margin-top: 50px;
-      margin-bottom: 30px;
-      font-weight: bold;
-      box-shadow: 0px 8px 6px #888888;
-      margin-left: auto;
-      margin-right: auto; }
+  margin-bottom: 75px;
+}
+
+.container.ui.profileSection h1 {
+  margin-bottom: 0px;
+  color: #4CB6E1;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.container.ui.profileSection .profileInformationHolder {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.container.ui.profileSection .profileInformationHolder .profileImageChangeButton {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.container.ui.profileSection .profileInformationHolder .profileImageChangeButton img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  border-radius: 100px;
+  width: 200px;
+}
+
+.container.ui.profileSection .profileInformationHolder .profileImageChangeButton .changeIcon {
+  background-color: #FC9E02;
+  width: 150px;
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+}
+
+.container.ui.profileSection .profileInformationHolder .profileInformation {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.container.ui.profileSection .profileInformationHolder .profileInformation .inputPad {
+  margin-bottom: 30px;
+}
+
+.container.ui.profileSection .profileInformationHolder .profileInformation .uI {
+  color: #4CB6E1;
+  font-size: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.container.ui.profileSection .profileInformationHolder .profileInformation .emailChange {
+  color: #FF3636;
+  margin-bottom: 2px;
+}
+
+.container.ui.profileSection .buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container.ui.profileSection .buttonDiv .updateProfileButton {
+  background-color: #FC9E02;
+  width: 250px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media screen and (max-width: 1000px) {
   .container.ui.profileSection .profileInformationHolder .profileInformation {
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px;
+  }
+}
 
 @media screen and (max-width: 830px) {
   .container.ui.profileSection .profileInformationHolder {
     flex-direction: column;
-    align-items: center; }
-    .container.ui.profileSection .profileInformationHolder .profileImageChangeButton {
-      width: 60%; }
-    .container.ui.profileSection .profileInformationHolder .profileInformation {
-      padding-left: 30px;
-      padding-right: 30px;
-      width: 75%; } }
+    align-items: center;
+  }
+
+  .container.ui.profileSection .profileInformationHolder .profileImageChangeButton {
+    width: 60%;
+  }
+
+  .container.ui.profileSection .profileInformationHolder .profileInformation {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 75%;
+  }
+}
 
 @media screen and (max-width: 400px) {
   .container.ui.profileSection .profileInformationHolder .profileImageChangeButton {
-    width: 60%; }
+    width: 60%;
+  }
+
   .container.ui.profileSection .profileInformationHolder .profileInformation {
     padding-left: 15px;
     padding-right: 15px;
-    width: 100%; }
+    width: 100%;
+  }
+
   .container.ui.profileSection .buttonDiv .updateProfileButton {
-    width: 225px; } }
+    width: 225px;
+  }
+}
 
 .container.ui.fridgeInformation {
   margin-top: 100px;
-  margin-bottom: 100px; }
-  .container.ui.fridgeInformation .fridgeInfoHolder {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; }
-    .container.ui.fridgeInformation .fridgeInfoHolder .fridgeImage {
-      width: 30%;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeImage img {
-        height: 200px; }
-    .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn {
-      position: relative;
-      width: 70%; }
-      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn h1 {
-        font-size: 30px;
-        color: #FC9E02;
-        margin-bottom: 25px; }
-      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn p {
-        margin-bottom: 25px; }
-      .container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn button {
-        position: absolute;
-        background-color: #FC9E02;
-        right: 20px;
-        bottom: 0;
-        width: 150px;
-        padding: 7px;
-        border-radius: 10px;
-        border: none;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        box-shadow: 0px 8px 6px #888888; }
+  margin-bottom: 100px;
+}
+
+.container.ui.fridgeInformation .fridgeInfoHolder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container.ui.fridgeInformation .fridgeInfoHolder .fridgeImage {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.ui.fridgeInformation .fridgeInfoHolder .fridgeImage img {
+  height: 200px;
+}
+
+.container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn {
+  position: relative;
+  width: 70%;
+}
+
+.container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn h1 {
+  font-size: 30px;
+  color: #FC9E02;
+  margin-bottom: 25px;
+}
+
+.container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn p {
+  margin-bottom: 25px;
+}
+
+.container.ui.fridgeInformation .fridgeInfoHolder .fridgeIn button {
+  position: absolute;
+  background-color: #FC9E02;
+  right: 20px;
+  bottom: 0;
+  width: 150px;
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+}
 
 .container.ui.fridgeItems {
   width: 100%;
   padding-top: 75px;
   padding-bottom: 75px;
-  background-color: #FC9E02; }
-  .container.ui.fridgeItems .marginHolder {
-    max-width: 1127px;
-    margin-left: auto;
-    margin-right: auto; }
-    .container.ui.fridgeItems .marginHolder .itemsHolder {
-      padding: 40px;
-      border-radius: 25px;
-      background-color: white;
-      margin: auto;
-      width: 95%;
-      min-height: 200px;
-      border: 1px solid black;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap; }
-      .container.ui.fridgeItems .marginHolder .itemsHolder .item {
-        display: flex;
-        flex-direction: column;
-        width: 175px;
-        margin: 15px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px; }
-        .container.ui.fridgeItems .marginHolder .itemsHolder .item .overlayDelete {
-          z-index: 5;
-          position: absolute;
-          background-color: rgba(0, 0, 0, 0.5);
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          opacity: 0;
-          top: -100%;
-          transition: 0.6s;
-          border-radius: 10px; }
-        .container.ui.fridgeItems .marginHolder .itemsHolder .item .expiredImage {
-          position: absolute; }
-        .container.ui.fridgeItems .marginHolder .itemsHolder .item img {
-          padding-top: 15px;
-          padding-left: 17px;
-          padding-right: 17px;
-          width: 175px;
-          height: 125px;
-          display: block; }
-        .container.ui.fridgeItems .marginHolder .itemsHolder .item h1 {
-          padding-left: 15px;
-          padding-right: 15px;
-          text-align: center; }
-        .container.ui.fridgeItems .marginHolder .itemsHolder .item p {
-          padding-left: 15px;
-          padding-right: 15px;
-          padding-bottom: 15px;
-          font-style: italic;
-          margin-bottom: 0; }
-      .container.ui.fridgeItems .marginHolder .itemsHolder .item:hover .overlayDelete {
-        opacity: 1;
-        top: 0;
-        justify-content: center;
-        align-items: center; }
+  background-color: #FC9E02;
+}
+
+.container.ui.fridgeItems .marginHolder {
+  max-width: 1127px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder {
+  padding: 40px;
+  border-radius: 25px;
+  background-color: white;
+  margin: auto;
+  width: 95%;
+  min-height: 200px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder .item {
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder .item .overlayDelete {
+  z-index: 5;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  top: -100%;
+  transition: 0.6s;
+  border-radius: 10px;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder .item .expiredImage {
+  position: absolute;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder .item img {
+  padding-top: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
+  width: 175px;
+  height: 125px;
+  display: block;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder .item h1 {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder .item p {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.container.ui.fridgeItems .marginHolder .itemsHolder .item:hover .overlayDelete {
+  opacity: 1;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 750px) {
   .container.ui.fridgeInformation .fridgeInfoHolder {
-    flex-direction: column; }
+    flex-direction: column;
+  }
+
   .container.ui.fridgeInformation .fridgeImage {
-    margin: auto; }
+    margin: auto;
+  }
+
   .container.ui.fridgeInformation .fridgeIn {
     padding-top: 10px;
     margin: auto;
-    text-align: center; }
-    .container.ui.fridgeInformation .fridgeIn button {
-      position: static !important; } }
+    text-align: center;
+  }
+
+  .container.ui.fridgeInformation .fridgeIn button {
+    position: static !important;
+  }
+}
 
 .container.ui.addFridgePage .form.ui.addFridgeForm {
   border-style: solid;
@@ -1055,27 +1503,36 @@ p {
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 25px;
-  padding: 25px 5px 30px 5px; }
-  .container.ui.addFridgePage .form.ui.addFridgeForm .field {
-    padding: 10px; }
-  .container.ui.addFridgePage .form.ui.addFridgeForm .button.ui.button {
-    margin-left: 10px;
-    margin-top: 10px;
-    background-color: #FC9E02;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0px 8px 6px #888888;
-    border-radius: 10px;
-    border: none;
-    font-size: 15px; }
+  padding: 25px 5px 30px 5px;
+}
+
+.container.ui.addFridgePage .form.ui.addFridgeForm .field {
+  padding: 10px;
+}
+
+.container.ui.addFridgePage .form.ui.addFridgeForm .button.ui.button {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #FC9E02;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
 
 @media screen and (max-width: 767px) {
   .container.ui.addFridgePage {
     width: 100%;
-    margin-top: 100px; }
-    .container.ui.addFridgePage .form.ui.addFridgeForm {
-      width: 95%;
-      margin: auto; } }
+    margin-top: 100px;
+  }
+
+  .container.ui.addFridgePage .form.ui.addFridgeForm {
+    width: 95%;
+    margin: auto;
+  }
+}
 
 .container.ui.addHousePage .form.ui.addhouseForm {
   border-style: solid;
@@ -1084,50 +1541,66 @@ p {
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 25px;
-  padding: 25px 5px 30px 5px; }
-  .container.ui.addHousePage .form.ui.addhouseForm .field {
-    padding: 10px; }
-  .container.ui.addHousePage .form.ui.addhouseForm .button.ui.button {
-    margin-left: 10px;
-    margin-top: 10px;
-    background-color: #FC9E02;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0px 8px 6px #888888;
-    border-radius: 10px;
-    border: none;
-    font-size: 15px; }
+  padding: 25px 5px 30px 5px;
+}
+
+.container.ui.addHousePage .form.ui.addhouseForm .field {
+  padding: 10px;
+}
+
+.container.ui.addHousePage .form.ui.addhouseForm .button.ui.button {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #FC9E02;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
 
 @media screen and (max-width: 767px) {
   .container.ui.addHousePage {
     width: 100%;
-    margin-top: 100px; }
-    .container.ui.addHousePage .form.ui.addhouseForm {
-      width: 95%;
-      margin: auto; } }
+    margin-top: 100px;
+  }
+
+  .container.ui.addHousePage .form.ui.addhouseForm {
+    width: 95%;
+    margin: auto;
+  }
+}
 
 .container.ui.addFoodItems {
   margin-top: 75px;
   margin-bottom: 75px;
   margin-left: 10px;
-  margin-right: 10px; }
-  .container.ui.addFoodItems form.ui.addfoodForm {
-    border-style: solid;
-    border-width: 2px;
-    border-color: #707070;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border-radius: 25px;
-    padding: 25px 5px 30px 5px; }
-    .container.ui.addFoodItems form.ui.addfoodForm .field {
-      padding: 10px; }
-    .container.ui.addFoodItems form.ui.addfoodForm .button.ui.button {
-      margin-left: 10px;
-      margin-top: 10px;
-      background-color: #FC9E02;
-      color: white;
-      font-weight: bold;
-      box-shadow: 0px 8px 6px #888888;
-      border-radius: 10px;
-      border: none;
-      font-size: 15px; }
+  margin-right: 10px;
+}
+
+.container.ui.addFoodItems form.ui.addfoodForm {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #707070;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 25px;
+  padding: 25px 5px 30px 5px;
+}
+
+.container.ui.addFoodItems form.ui.addfoodForm .field {
+  padding: 10px;
+}
+
+.container.ui.addFoodItems form.ui.addfoodForm .button.ui.button {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #FC9E02;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 8px 6px #888888;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
