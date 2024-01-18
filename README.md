@@ -1,4 +1,4 @@
-#ICEBOX APPLICATION 
+# ICEBOX APPLICATION
 
 Senior project create for the School Of Informatics and Computing in my Senior year. The project is currently not functional and am currently in the process of updating project files and reconstructing the project. 
 
